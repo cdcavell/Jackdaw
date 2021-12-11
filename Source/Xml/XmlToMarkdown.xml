@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XmlToMarkdown</name>
+    </assembly>
+    <members>
+        <member name="T:XmlToMarkdown.Program">
+            <summary>
+            Command console program to transform all xml files in current directory utilizing supplied 
+            template file to Wiki Markdown files.
+            
+            Usage: dotnet XmlToMarkdown.dll [Template file]
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.1 | 10/16/2021 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:XmlToMarkdown.Program.Main(System.String[])">
+            <summary>
+            Entry point method
+            </summary>
+            <param name="args">string[]</param>
+            <method>Main(string[] args)</method>
+        </member>
+    </members>
+</doc>

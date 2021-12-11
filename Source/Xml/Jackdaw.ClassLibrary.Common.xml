@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Jackdaw.ClassLibrary.Common</name>
+    </assembly>
+    <members>
+        <member name="T:Jackdaw.ClassLibrary.Common.AsciiCodes">
+            <summary>
+            Static class for converting ascii decimal value to string equivalent.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.1 | 12/11/2021 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.NUL">
+            <value>(null)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.SOH">
+            <value>(start of heading)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.STX">
+            <value>(start of text)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.ETX">
+            <value>(end of text)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.EOT">
+            <value>(end of transmission)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.ENQ">
+            <value>(enquiry)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.ACK">
+            <value>(acknowledge)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.BEL">
+            <value>(bell)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.BS">
+            <value>(backspace)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.TAB">
+            <value>(horizontal tab)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.LF">
+            <value>(NL line feed, new line)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.VT">
+            <value>(vertical tab)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.FF">
+            <value>(NP form feed, new page)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.CR">
+            <value>(carriage return)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.SO">
+            <value>(shift out)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.SI">
+            <value>(shift in)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.DLE">
+            <value>(data link escape)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.DC1">
+            <value>(device control 1)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.DC2">
+            <value>(device control 2)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.DC3">
+            <value>(device control 3)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.DC4">
+            <value>(device control 4)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.NAK">
+            <value>(negative acknowledge)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.SYN">
+            <value>(synchronous idle)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.ETB">
+            <value>(end of trans. block)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.CAN">
+            <value>(cancel)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.EM">
+            <value>(end of medium)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.SUB">
+            <value>(substitute)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.ESC">
+            <value>(escape)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.FS">
+            <value>(file separator)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.GS">
+            <value>(group separator)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.RS">
+            <value>(record separator)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.US">
+            <value>(unit separator)</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Common.AsciiCodes.CRLF">
+            <value>(carriage return) + (NL line feed, new line)</value>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Common.AsciiCodes.ToChar(System.Int32)">
+            <summary>
+            Method to return char value of given ascii decimal
+            </summary>
+            <param name="dec">int</param>
+            <returns>char</returns>
+            <method>ToChar(int dec)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Common.AsciiCodes.ToString(System.Int32)">
+            <summary>
+            Method to return string value of given ascii decimal
+            </summary>
+            <param name="dec">int</param>
+            <returns>string</returns>
+            <method>ToString(int dec)</method>
+        </member>
+        <member name="T:Jackdaw.ClassLibrary.Common.Xml.Transform">
+            <summary>
+            Class to perform XSLT Transformation
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.1 | 12/11/2020 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Common.Xml.Transform.Write(System.String,System.String,System.String)">
+            <summary>
+            Method to perform XSLT Transformation and write out file
+            </summary>
+            <param name="inputXslt">string</param>
+            <param name="inputXml">string</param>
+            <param name="outputFile">string</param>
+            <method>Write(string inputXslt, string inputXml, string outputFile)</method>
+        </member>
+    </members>
+</doc>
