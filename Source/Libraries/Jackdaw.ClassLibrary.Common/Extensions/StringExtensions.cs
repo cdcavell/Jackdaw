@@ -34,7 +34,7 @@ namespace System
                                       RegexOptions.None, TimeSpan.FromMilliseconds(200));
 
                 // Examines the domain part of the email and normalizes it.
-                string DomainMapper(Match match)
+                static string DomainMapper(Match match)
                 {
                     // Use IdnMapping class to convert Unicode domain names.
                     var idn = new IdnMapping();
@@ -45,11 +45,11 @@ namespace System
                     return match.Groups[1].Value + domainName;
                 }
             }
-            catch (RegexMatchTimeoutException e)
+            catch (RegexMatchTimeoutException)
             {
                 return false;
             }
-            catch (ArgumentException e)
+            catch (ArgumentException)
             {
                 return false;
             }
@@ -89,7 +89,7 @@ namespace System
         /// <method>IsValidGuid(this string value)</method>
         public static bool IsValidGuid(this string value)
         {
-            Regex isGuid = new Regex(@"^(\{){0,1}[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}(\}){0,1}$", RegexOptions.Compiled);
+            Regex isGuid = new(@"^(\{){0,1}[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}(\}){0,1}$", RegexOptions.Compiled);
             bool isValid = false;
 
             if (!string.IsNullOrEmpty(value))
@@ -110,6 +110,7 @@ namespace System
             return value.Replace("\\", string.Empty).Trim(new char[1] { '"' });
         }
 
+
         /// <summary>
         /// Strip suffix from end of string
         /// </summary>
@@ -118,6 +119,7 @@ namespace System
         /// <param name="comparisonType">StringComparison</param>
         /// <returns>string</returns>
         /// <method>TrimEnd(this string input, string suffixToRemove, StringComparison comparisonType = StringComparison.CurrentCulture)</method>
+        [Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0057:Use range operator", Justification = "<Pending>")]
         public static string TrimEnd(this string input, string suffixToRemove, StringComparison comparisonType = StringComparison.CurrentCulture)
         {
             if (suffixToRemove != null && input.EndsWith(suffixToRemove, comparisonType))
@@ -128,6 +130,7 @@ namespace System
             return input;
         }
 
+
         /// <summary>
         /// Strip all from end of string starting at first char
         /// </summary>
@@ -135,6 +138,7 @@ namespace System
         /// <param name="startTrim">string</param>
         /// <returns>string</returns>
         /// <method>TrimFromFirstChar(this string input, char startTrim)</method>
+        [Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0057:Use range operator", Justification = "<Pending>")]
         public static string TrimFromFirstChar(this string input, char startTrim)
         {
             int index = input.IndexOf(startTrim);

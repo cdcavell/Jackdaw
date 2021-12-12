@@ -20,7 +20,7 @@
         /// <method>DistinctBy&lt;TSource, TKey&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource, TKey&gt; keySelector)</method>
         public static IEnumerable<TSource> DistinctBy<TSource, TKey>(this IEnumerable<TSource> source, Func<TSource, TKey> keySelector)
         {
-            HashSet<TKey> seenKeys = new HashSet<TKey>();
+            HashSet<TKey> seenKeys = new();
             foreach (TSource element in source)
             {
                 if (seenKeys.Add(keySelector(element)))
