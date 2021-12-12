@@ -14,7 +14,7 @@ namespace XmlToMarkdown
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.1 | 10/16/2021 | Initial Development |~ 
+    /// | Christopher D. Cavell | 0.0.0.1 | 12/11/2021 | Initial Development |~ 
     /// </revision>
     class Program
     {
