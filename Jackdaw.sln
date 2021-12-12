@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{
 		.github\workflows\main-codeql-analysis.yml = .github\workflows\main-codeql-analysis.yml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jackdaw.ClassLibrary.Mvc", "Source\Libraries\Jackdaw.ClassLibrary.Mvc\Jackdaw.ClassLibrary.Mvc.csproj", "{5146DEED-5BD7-48D8-A630-CEC2B7003134}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jackdaw.ClassLibrary.Mvc", "Source\Libraries\Jackdaw.ClassLibrary.Mvc\Jackdaw.ClassLibrary.Mvc.csproj", "{5146DEED-5BD7-48D8-A630-CEC2B7003134}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jackdaw.Public", "Source\Web\Jackdaw.Public\Jackdaw.Public.csproj", "{13DCB759-25DE-4F0F-AF9E-8C0DD78FF5BC}"
 EndProject

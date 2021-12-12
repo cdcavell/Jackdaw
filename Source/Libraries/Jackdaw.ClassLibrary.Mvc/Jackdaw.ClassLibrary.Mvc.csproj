@@ -21,6 +21,15 @@
     <ProjectReference Include="..\Jackdaw.ClassLibrary.Common\Jackdaw.ClassLibrary.Common.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\lib\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
+  </ItemGroup>
+
 
 
 </Project>
