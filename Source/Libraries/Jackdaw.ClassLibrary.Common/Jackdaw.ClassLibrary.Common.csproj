@@ -12,15 +12,4 @@
     <PackageLicenseFile>../../../LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
-	<ItemGroup>
-		<_findDllFile Include="../../../Source/Xml/XmlToMarkdown.dll" />
-		<_findJsonFile Include="../../../Source/Xml/XmlToMarkdown.runtimeconfig.json" />
-		<_findLibraryFile Include="../../../Source/Xml/Jackdaw.ClassLibrary.Common.dll" />
-	</ItemGroup>
-
-	<Target Name="BuildXmlToMarkdown" AfterTargets="AfterBuild" DependsOnTargets="AfterBuild" Condition="Exists('@(_findDllFile)') AND Exists('@(_findJsonFile)') AND Exists('@(_findLibraryFile)')">
-		<Exec Command="cd ../../../Source/Xml/" />
-		<Exec Command="dotnet XmlToMarkdown.dll Transform.xsl" WorkingDirectory="../../../Source/Xml/" />
-	</Target>
-
 </Project>
