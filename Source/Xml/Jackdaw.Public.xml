@@ -4,5 +4,23 @@
         <name>Jackdaw.Public</name>
     </assembly>
     <members>
+        <member name="T:Jackdaw.Public.Controllers.HomeController">
+            <summary>
+            Home controller class
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.1 | 12/12/2021 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:Jackdaw.Public.Controllers.HomeController.Index">
+            <summary>
+            Index method
+            </summary>
+            <returns>IActionResult</returns>
+            <method>Index()</method>
+        </member>
     </members>
 </doc>

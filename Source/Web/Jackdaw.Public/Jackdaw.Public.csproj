@@ -12,6 +12,14 @@
 	<PackageLicenseFile>../../../LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<NoWarn>MSB3073;MSB4181</NoWarn>
+	</PropertyGroup>
+	
+  <ItemGroup>
+    <PackageReference Include="Serilog.AspNetCore" Version="4.1.0" />
+  </ItemGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\..\Libraries\Jackdaw.ClassLibrary.Mvc\Jackdaw.ClassLibrary.Mvc.csproj" />
   </ItemGroup>
@@ -29,12 +37,13 @@
 
 	<Target Name="UpdateWiki" AfterTargets="BuildXmlToMarkdown" DependsOnTargets="BuildXmlToMarkdown" Condition="Exists('@(_findDllFile)') AND Exists('@(_findJsonFile)') AND Exists('@(_findLibraryFile)')">
 		<Exec Command="cd ../../../Source/Xml/wiki/" />
-		<Exec Command="git status" WorkingDirectory="../../../Source/Xml/wiki/" />
+		<Exec Command="git status" WorkingDirectory="../../../Source/Xml/wiki/" ContinueOnError="true" />
 		<Exec Command="git add ." WorkingDirectory="../../../Source/Xml/wiki/" />
 		<Exec Command="git commit -m &quot;Update wiki submodule&quot;" WorkingDirectory="../../../Source/Xml/wiki/" ContinueOnError="true">
 			<Output TaskParameter="ExitCode" ItemName="ErrorCode" />
 		</Exec>
-		<Exec Command="git push origin master" WorkingDirectory="../../../Source/Xml/wiki/" ContinueOnError="true" />
+		<Exec Command="Echo Skipped wiki origin push" Condition=" '@(ErrorCode)' != '0'" />
+		<Exec Command="git push origin master" WorkingDirectory="../../../Source/Xml/wiki/" Condition=" '@(ErrorCode)' == '0'" ContinueOnError="true" />
 	</Target>
 
 </Project>
