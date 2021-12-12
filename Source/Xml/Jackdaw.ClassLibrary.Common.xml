@@ -150,5 +150,141 @@
             <param name="outputFile">string</param>
             <method>Write(string inputXslt, string inputXml, string outputFile)</method>
         </member>
+        <member name="T:System.DateTimeExtensions">
+            <summary>
+            Extension methods for existing DateTime types.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.1 | 12/11/2021 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:System.DateTimeExtensions.Timestamp(System.DateTime)">
+            <summary>
+            Method to return timestamp of current DateTime value
+            </summary>
+            <param name="value">this DateTime</param>
+            <returns>string</returns>
+            <method>Timestamp(this DateTime value)</method>
+        </member>
+        <member name="T:System.Linq.EnumerableExtentions">
+            <summary>
+            Extension methods for existing Enumerable types.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.1 | 12/11/2021 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:System.Linq.EnumerableExtentions.DistinctBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
+            <summary>
+            Returns elements from a sequence with given distinct column
+            </summary>
+            <param name="source">this IEnumerable&lt;TSource&gt;</param>
+            <param name="keySelector">Func&lt;TSource, TKey&gt;</param>
+            <returns>IEnumerable&lt;TSource&gt;</returns>
+            <method>DistinctBy&lt;TSource, TKey&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource, TKey&gt; keySelector)</method>
+        </member>
+        <member name="T:System.IntegerExtensions">
+            <summary>
+            Extension methods for existing Integer types.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.1 | 12/11/2021 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:System.IntegerExtensions.Length(System.Int32)">
+            <summary>
+            Method to return number of didgits in integer
+            </summary>
+            <param name="n">this int</param>
+            <returns>int</returns>
+            <method>Length(this int n)</method>
+        </member>
+        <member name="M:System.IntegerExtensions.ToArray(System.Int32)">
+            <summary>
+            Method to return int[] of integer
+            </summary>
+            <param name="n">this int</param>
+            <returns>int[]</returns>
+            <method>ToArray(this int n)</method>
+        </member>
+        <member name="T:System.StringExtensions">
+            <summary>
+            Extension methods for existing string types.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.1 | 12/11/2021 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:System.StringExtensions.IsValidEmail(System.String)">
+            <summary>
+            Method to determine if string is a valid email address
+            </summary>
+            <param name="value">this string</param>
+            <returns>bool</returns>
+            <method>IsValidEmail(this string value)</method>
+        </member>
+        <member name="M:System.StringExtensions.Clean(System.String)">
+            <summary>
+            Method to remove "Carriage Return" and "Line Feed" as well as Html filtering to provide proper neutralization.
+            </summary>
+            <param name="value">this string</param>
+            <returns>string</returns>
+            <method>Clean(this string value)</method>
+        </member>
+        <member name="M:System.StringExtensions.IsValidGuid(System.String)">
+            <summary>
+            Method to determine if string is a valid Guid
+            </summary>
+            <param name="value">this string</param>
+            <returns>bool</returns>
+            <method>IsValidGuid(this string value)</method>
+        </member>
+        <member name="M:System.StringExtensions.CleanJsonResult(System.String)">
+            <summary>
+            Strip escape slash and beginning/ending quotes from Json result string
+            </summary>
+            <param name="value">this string</param>
+            <returns>string</returns>
+            <method>CleanJsonResult(this string result)</method>
+        </member>
+        <member name="M:System.StringExtensions.TrimEnd(System.String,System.String,System.StringComparison)">
+            <summary>
+            Strip suffix from end of string
+            </summary>
+            <param name="input">this string</param>
+            <param name="suffixToRemove">string</param>
+            <param name="comparisonType">StringComparison</param>
+            <returns>string</returns>
+            <method>TrimEnd(this string input, string suffixToRemove, StringComparison comparisonType = StringComparison.CurrentCulture)</method>
+        </member>
+        <member name="M:System.StringExtensions.TrimFromFirstChar(System.String,System.Char)">
+            <summary>
+            Strip all from end of string starting at first char
+            </summary>
+            <param name="input">this string</param>
+            <param name="startTrim">string</param>
+            <returns>string</returns>
+            <method>TrimFromFirstChar(this string input, char startTrim)</method>
+        </member>
+        <member name="M:System.StringExtensions.UTF8(System.String)">
+            <summary>
+            UTF8 Encoding
+            </summary>
+            <param name="input">this string</param>
+            <returns>string</returns>
+            <method>UTF8(this string input)</method>
+        </member>
     </members>
 </doc>
