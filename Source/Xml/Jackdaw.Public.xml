@@ -22,5 +22,60 @@
             <returns>IActionResult</returns>
             <method>Index()</method>
         </member>
+        <member name="T:Jackdaw.Public.Filters.SecurityHeadersAttribute">
+            <summary>
+            Security Headers Attribute Filter from Brock Allen &amp; Dominick Baier.
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Brock Allen &amp; Dominick Baier. All rights reserved.
+            Licensed under the Apache License, Version 2.0. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.1 | 12/12/2021 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:Jackdaw.Public.Filters.SecurityHeadersAttribute.#ctor(Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService)">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <method>SecurityHeadersAttribute(AppSettings appSettings)</method>
+        </member>
+        <member name="M:Jackdaw.Public.Filters.SecurityHeadersAttribute.OnResultExecuting(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext)">
+            <summary>
+            Executes before result execution
+            &lt;br /&gt;&lt;br /&gt;
+            CSP Evaluator: https://csp-evaluator.appspot.com/
+            </summary>
+            <param name="context">ResultExecutingContext</param>
+            <method>OnResultExecuting(ResultExecutingContext context)</method>
+        </member>
+        <member name="M:Jackdaw.Public.Filters.SecurityHeadersAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            Executes after action method execution to set script nonce
+            </summary>
+            <param name="context">ActionExecutedContext</param>
+            <method>OnActionExecuted(ActionExecutedContext context)</method>
+        </member>
+        <member name="T:Jackdaw.Public.Models.AppSettings.AppSettings">
+            <summary>
+            Application settings information.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.1 | 12/12/2021 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:Jackdaw.Public.Models.AppSettings.AppSettings.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="configuration">IConfiguration</param>
+            <method>AppSettings(IConfiguration configuration)</method>
+        </member>
     </members>
 </doc>
