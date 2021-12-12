@@ -4,5 +4,201 @@
         <name>Jackdaw.ClassLibrary.Mvc</name>
     </assembly>
     <members>
+        <member name="T:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.AppSettingsService">
+            <summary>
+            AppSettings Web Service
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.1 | 12/12/2021 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.#ctor(Microsoft.Extensions.Options.IOptions{Jackdaw.ClassLibrary.Mvc.Services.AppSettings.AppSettingsServiceOptions})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="options">IOptions&lt;AppSettingsServiceOptions&gt;</param>
+            <method>UserAuthorizationService(IOptions&lt;UserAuthorizationServiceOptions&gt; options)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.AssemblyName">
+            <summary>
+            Get AssemblyName value
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.AssemblyVersion">
+            <summary>
+            Get AssemblyVersion value
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.LastModifiedDate">
+            <summary>
+            Get LastModifiedDate value
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.EnvironmentName">
+            <summary>
+            Get EnvironmentName value
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.IsDevelopment">
+            <summary>
+            Get IsDevelopment value
+            </summary>
+            <returns>bool</returns>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.IsProduction">
+            <summary>
+            Get IsProduction value
+            </summary>
+            <returns>bool</returns>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.ToJson">
+            <summary>
+            Get raw json string value
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.ToObject``1">
+            <summary>
+            Get full json dynamic object
+            </summary>
+            <returns>T?</returns>
+            <method>public T? ToObject&lt;T&gt;()</method>
+            <exception>NullReferenceException</exception>
+        </member>
+        <member name="T:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.AppSettingsServiceOptions">
+            <summary>
+            AppSettings Service Options
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.1 | 12/12/2021 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.AppSettingsServiceOptions.AppSettings">
+            <value>object</value>
+        </member>
+        <member name="T:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.AppSettingsServiceOptionsExtention">
+            <summary>
+            AppSettings Web Service Options Extension
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.1 | 12/12/2021 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.AppSettingsServiceOptionsExtention.AddAppSettingsService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Jackdaw.ClassLibrary.Mvc.Services.AppSettings.AppSettingsServiceOptions})">
+            <summary>
+            Add AppSettings Web Service Options Extention
+            </summary>
+            <param name="serviceCollection">IServiceCollection</param>
+            <param name="options">Action&lt;UserAuthorizationServiceOptions&gt;</param>
+            <method>AddAppSettingsService(this IServiceCollection serviceCollection, Action&lt;UserAuthorizationServiceOptions&gt; options)</method>
+        </member>
+        <member name="T:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService">
+            <summary>
+            AppSettings Web Service Interface
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.1 | 12/12/2021 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService.AssemblyName">
+            <summary>
+            Get AssemblyName value
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService.AssemblyVersion">
+            <summary>
+            Get AssemblyVersion value
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService.LastModifiedDate">
+            <summary>
+            Get LastModifiedDate value
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService.EnvironmentName">
+            <summary>
+            Get EnvironmentName value
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService.IsDevelopment">
+            <summary>
+            Get IsDevelopment value
+            </summary>
+            <returns>bool</returns>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService.IsProduction">
+            <summary>
+            Get IsProduction value
+            </summary>
+            <returns>bool</returns>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService.ToJson">
+            <summary>
+            Get raw json string value
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService.ToObject``1">
+            <summary>
+            Get dynamic object
+            </summary>
+            <returns>T?</returns>
+            <method>public T ToObject&lt;T&gt;()</method>
+        </member>
+        <member name="T:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.Models.AppSettings">
+            <summary>
+            Application settings information.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.1 | 12/12/2021 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.Models.AppSettings.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Contstructor 
+            </summary>
+            <param name="configuration">IConfiguration</param>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.Models.AppSettings.AssemblyName">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.Models.AppSettings.AssemblyVersion">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.Models.AppSettings.EnvironmentName">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.Models.AppSettings.IsDevelopment">
+            <value>bool</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.Models.AppSettings.IsProduction">
+            <value>bool</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.Models.AppSettings.LastModifiedDateTime">
+            <value>DateTime</value>
+        </member>
     </members>
 </doc>

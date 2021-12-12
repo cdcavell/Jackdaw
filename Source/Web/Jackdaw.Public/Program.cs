@@ -1,3 +1,6 @@
+using Jackdaw.ClassLibrary.Mvc.Services.AppSettings;
+using Jackdaw.Public.Filters;
+using Jackdaw.Public.Models.AppSettings;
 using Serilog;
 using Serilog.Events;
 
@@ -15,8 +18,15 @@ try
 
     Log.Information("Adding services to the container");
 
+    builder.Services.AddAppSettingsService(options => 
+    { 
+        options.AppSettings = new AppSettings(builder.Configuration); 
+    });
+
     builder.Services.AddHttpContextAccessor();
     builder.Services.AddControllersWithViews();
+
+    builder.Services.AddScoped<SecurityHeadersAttribute>();
 
     var app = builder.Build();
     Log.Information("Configuring the HTTP request pipeline");
