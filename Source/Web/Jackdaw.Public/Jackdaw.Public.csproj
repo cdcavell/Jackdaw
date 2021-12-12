@@ -31,16 +31,16 @@
 		<Exec Command="dotnet XmlToMarkdown.dll Transform.xsl" WorkingDirectory="../../../Source/Xml/" />
 	</Target>
 
-	
-	<Target Name="UpdateWiki" AfterTargets="BuildXmlToMarkdown" DependsOnTargets="BuildXmlToMarkdown" Condition="Exists('@(_findDllFile)') AND Exists('@(_findJsonFile)') AND Exists('@(_findLibraryFile)')">
 
-		<ItemGroup>
-			<Commands Include="cd ../../../Source/Xml/wiki/" />
-			<Commands Include="git status" />
-			<Commands Include="git add ." />
-			<Commands Include="git commit -m &quot;Update wiki submodule&quot;" />
-			<Commands Include="git push origin master" />
-		</ItemGroup>
+	<ItemGroup>
+		<Commands Include="cd ../../../Source/Xml/wiki/" />
+		<Commands Include="git status" />
+		<Commands Include="git add ." />
+		<Commands Include="git commit -m &quot;Update wiki submodule&quot;" />
+		<Commands Include="git push origin master" />
+	</ItemGroup>
+
+	<Target Name="UpdateWiki" AfterTargets="BuildXmlToMarkdown" DependsOnTargets="BuildXmlToMarkdown" Condition="Exists('@(_findDllFile)') AND Exists('@(_findJsonFile)') AND Exists('@(_findLibraryFile)')">
 
 		<Exec Command="%(Commands.Identity)" ContinueOnError="true">
 			<Output TaskParameter="ExitCode" ItemName="ExitCodes"/>
