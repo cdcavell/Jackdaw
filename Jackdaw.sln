@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{86D41950-6121-4C2C-84F8-F668143C41C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jackdaw.ClassLibrary.Common", "Source\Libraries\Jackdaw.ClassLibrary.Common\Jackdaw.ClassLibrary.Common.csproj", "{3F9E9153-2179-44F7-96C5-F06F3145B16D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jackdaw.ClassLibrary.Common", "Source\Libraries\Jackdaw.ClassLibrary.Common\Jackdaw.ClassLibrary.Common.csproj", "{3F9E9153-2179-44F7-96C5-F06F3145B16D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Console", "Console", "{704AF653-1A8F-4C49-9EF5-4A0F8C936302}"
 EndProject
@@ -15,7 +15,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlToMarkdown", "Source\Console\XmlToMarkdown\XmlToMarkdown.csproj", "{5B25750A-A417-45AF-B7F5-6C5CC2F2EB32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlToMarkdown", "Source\Console\XmlToMarkdown\XmlToMarkdown.csproj", "{5B25750A-A417-45AF-B7F5-6C5CC2F2EB32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{DA0BD41C-7AD9-49E5-A187-1400B24E292C}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\develop-codeql-analysis.yml = .github\workflows\develop-codeql-analysis.yml
+		.github\workflows\main-codeql-analysis.yml = .github\workflows\main-codeql-analysis.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
