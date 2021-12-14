@@ -4,6 +4,45 @@
         <name>Jackdaw.ClassLibrary.Mvc</name>
     </assembly>
     <members>
+        <member name="T:Jackdaw.ClassLibrary.Mvc.Controllers.WebBaseController`1">
+            <class>WebBaseController</class>
+            <summary>
+            Base controller class for web application
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.1 | 12/14/2021 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="F:Jackdaw.ClassLibrary.Mvc.Controllers.WebBaseController`1._logger">
+            <value>ILogger</value>
+        </member>
+        <member name="F:Jackdaw.ClassLibrary.Mvc.Controllers.WebBaseController`1._webHostEnvironment">
+            <value>IWebHostEnvironment</value>
+        </member>
+        <member name="F:Jackdaw.ClassLibrary.Mvc.Controllers.WebBaseController`1._httpContextAccessor">
+            <value>IWebHostEnvironment</value>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Controllers.WebBaseController`1.#ctor(Microsoft.Extensions.Logging.ILogger{`0},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <method>WebBaseController(ILogger&lt;T&gt; logger, IWebHostEnvironment webHostEnvironment, IHttpContextAccessor httpContextAccessor)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Controllers.WebBaseController`1.ValidateModel``1(``0)">
+            <summary>
+            Global model validation method (View found in HomeSite.ClassLibrary.Razor)
+            </summary>
+            <param name="model">Model</param>
+            <returns>KeyValuePair&lt;int, string&gt;</returns>
+            <method>ValidateModel&lt;M&gt;(M model)</method>
+            <exception>ArgumentNullException</exception>
+        </member>
         <member name="T:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.AppSettingsService">
             <summary>
             AppSettings Web Service

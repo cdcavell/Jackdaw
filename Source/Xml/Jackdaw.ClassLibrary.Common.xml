@@ -130,6 +130,236 @@
             <returns>string</returns>
             <method>ToString(int dec)</method>
         </member>
+        <member name="T:Jackdaw.ClassLibrary.Common.Html.Tags">
+            <summary>
+            Class to return string of Html tag.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.1 | 12/14/2021 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Common.Html.Tags.LineBreak">
+            <summary>
+            Method to return one new line
+            </summary>
+            <returns>
+            string
+            </returns>
+            <method>LineBreak()</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Common.Html.Tags.LineBreak(System.Int32)">
+            <summary>
+            Method to return multple new lines
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="count">int</param>
+            <method>LineBreak(int count)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Common.Html.Tags.Space">
+            <summary>
+            Method to return one space
+            </summary>
+            <returns>
+            string
+            </returns>
+            <method>Space()</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Common.Html.Tags.Space(System.Int32)">
+            <summary>
+            Method to return multipe spaces
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="count">int</param>
+            <method>Space(int count)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Common.Html.Tags.Brackets(System.String)">
+            <summary>
+            Method to wrap given string in brakets
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Brackets(string item)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Common.Html.Tags.Bold(System.String)">
+            <summary>
+            Method to wrap given string in bold tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Bold(string item)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Common.Html.Tags.Italic(System.String)">
+            <summary>
+            Method to wrap given string in italic tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Italic(string item)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Common.Html.Tags.Important(System.String)">
+            <summary>
+            Method to wrap given string in strong tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Important(string item)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Common.Html.Tags.Emphasized(System.String)">
+            <summary>
+            Method to wrap given string in em tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Emphasized(string item)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Common.Html.Tags.Marked(System.String)">
+            <summary>
+            Method to wrap given string in mark tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Marked(string item)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Common.Html.Tags.Small(System.String)">
+            <summary>
+            Method to wrap given string in small tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Small(string item)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Common.Html.Tags.Deleted(System.String)">
+            <summary>
+            Method to wrap given string in del tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Deleted(string item)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Common.Html.Tags.Inserted(System.String)">
+            <summary>
+            Method to wrap given string in ins tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Inserted(string item)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Common.Html.Tags.Subscript(System.String)">
+            <summary>
+            Method to wrap given string in sub tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Subscript(string item)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Common.Html.Tags.Superscript(System.String)">
+            <summary>
+            Method to wrap given string in sup tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Superscript(string item)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Common.Html.Tags.Quote(System.String)">
+            <summary>
+            Method to wrap given string in q tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Quote(string item)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Common.Html.Tags.BlockQuote(System.String,System.String)">
+            <summary>
+            Method to wrap given string in blockquote tags with given citing
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <param name="cite">string</param>
+            <method>BlockQuote(string item, string cite)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Common.Html.Tags.Abbreviation(System.String)">
+            <summary>
+            Method to wrap given string in abbr tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Abbreviation(string item)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Common.Html.Tags.Address(System.String)">
+            <summary>
+            Method to wrap given string in address tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Address(string item)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Common.Html.Tags.Cite(System.String)">
+            <summary>
+            Method to wrap given string in cite tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Cite(string item)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Common.Html.Tags.BidirectionalOverride(System.String)">
+            <summary>
+            Method to wrap given string in bdo tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>BidirectionalOverride(string item)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Common.Html.Tags.Paragraph(System.String)">
+            <summary>
+            Method to wrap given string in p tags
+            </summary>
+            <returns>
+            string
+            </returns>
+            <param name="item">string</param>
+            <method>Paragraph(string item)</method>
+        </member>
         <member name="T:Jackdaw.ClassLibrary.Common.Xml.Transform">
             <summary>
             Class to perform XSLT Transformation

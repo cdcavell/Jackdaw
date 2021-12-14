@@ -4,6 +4,38 @@
         <name>Jackdaw.Public</name>
     </assembly>
     <members>
+        <member name="T:Jackdaw.Public.Controllers.ApplicationBaseController`1">
+            <class>ApplicationBaseController</class>
+            <summary>
+            Base controller class for application
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.1 | 12/14/2020 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="F:Jackdaw.Public.Controllers.ApplicationBaseController`1._appSettings">
+            <value>AppSettings</value>
+        </member>
+        <member name="M:Jackdaw.Public.Controllers.ApplicationBaseController`1.#ctor(Microsoft.Extensions.Logging.ILogger{`0},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService)">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <method>
+            ApplicationBaseController(
+                ILogger&lt;T&gt; logger, 
+                IWebHostEnvironment webHostEnvironment, 
+                IHttpContextAccessor httpContextAccessor,
+                IAppSettingsService appSettingsService
+            )
+            </method>
+        </member>
         <member name="T:Jackdaw.Public.Controllers.HomeController">
             <summary>
             Home controller class
@@ -12,8 +44,25 @@
             __Revisions:__~~
             | Contributor | Build | Revison Date | Description |~
             |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.1 | 12/12/2021 | Initial Development |~ 
+            | Christopher D. Cavell | 0.0.0.1 | 12/14/2021 | Initial Development |~ 
             </revision>
+        </member>
+        <member name="M:Jackdaw.Public.Controllers.HomeController.#ctor(Microsoft.Extensions.Logging.ILogger{Jackdaw.Public.Controllers.HomeController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService)">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <method>
+            public HomeController(
+                ILogger&lt;HomeController&gt; logger,
+                IWebHostEnvironment webHostEnvironment,
+                IHttpContextAccessor httpContextAccessor,
+                IAppSettingsService appSettingsService
+            ) : base(logger, webHostEnvironment, httpContextAccessor, appSettingsService)
+            </method>
         </member>
         <member name="M:Jackdaw.Public.Controllers.HomeController.Index">
             <summary>
@@ -33,7 +82,7 @@
             __Revisions:__~~
             | Contributor | Build | Revison Date | Description |~
             |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.1 | 12/12/2021 | Initial Development |~ 
+            | Christopher D. Cavell | 0.0.0.1 | 12/14/2021 | Initial Development |~ 
             </revision>
         </member>
         <member name="M:Jackdaw.Public.Filters.SecurityHeadersAttribute.#ctor(Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService)">
