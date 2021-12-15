@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="_content/Jackdaw.ClassLibrary.Mvc/lib/bootstrap-5.1.3-dist/css/bootstrap.min.css" asp-append-version="true" nonce="@ViewBag.StyleNonce" />
     <link rel="stylesheet" type="text/css" media="screen" href="_content/Jackdaw.ClassLibrary.Mvc/lib/fontawesome-free-5.15.4-web/css/all.min.css" asp-append-version="true" nonce="@ViewBag.StyleNonce" />
 
+    <link rel="stylesheet" type="text/css" media="screen" href="_content/Jackdaw.ClassLibrary.Mvc/lib/Kitzu/css/bootstrap-custom.css" asp-append-version="true" nonce="@ViewBag.StyleNonce" />
     <link rel="stylesheet" type="text/css" media="screen" href="_content/Jackdaw.ClassLibrary.Mvc/lib/Kitzu/css/ionicons.min.css" asp-append-version="true" nonce="@ViewBag.StyleNonce" />
     <link rel="stylesheet" type="text/css" media="screen" href="_content/Jackdaw.ClassLibrary.Mvc/lib/Kitzu/css/tiny-slider.css" asp-append-version="true" nonce="@ViewBag.StyleNonce" />
     <link rel="stylesheet" type="text/css" media="screen" href="_content/Jackdaw.ClassLibrary.Mvc/lib/Kitzu/css/lity.min.css" asp-append-version="true" nonce="@ViewBag.StyleNonce" />
@@ -34,8 +35,14 @@
     </div>
     <div id="overlay-effect"></div>
     <partial name="_Navbar" />
+    <section class="home-area element-cover-bg video-variant bkg-img" id="home">
     <!-- Content -->
     @RenderBody()
+    <div class="fixed-wrapper">
+    <partial name="_Language" />
+    <partial name="_Socialmedia" />
+    </div>
+    </section>
 
     <script type="text/javascript" src="_content/Jackdaw.ClassLibrary.Mvc/lib/jquery-3.6.0.min.js" asp-append-version="true" nonce="@ViewBag.ScriptNonce"></script>
     <script type="text/javascript" src="_content/Jackdaw.ClassLibrary.Mvc/lib/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js" asp-append-version="true" nonce="@ViewBag.ScriptNonce"></script>
