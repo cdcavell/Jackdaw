@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Personal website for Christopher D. Cavell</title>
     <base href="/" />
@@ -25,7 +25,16 @@
     <link rel="stylesheet" type="text/css" media="screen" href="_content/Jackdaw.ClassLibrary.Mvc/css/site.min.css" asp-append-version="true" nonce="@ViewBag.StyleNonce" />
 <head>
 </head>
-<body>
+<body class="theme-dark">
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="preloader-block">
+        <div class="preloader-icon"><span class="loading-dot loading-dot-1"></span><span class="loading-dot loading-dot-2"></span><span class="loading-dot loading-dot-3"></span></div>
+      </div>
+    </div>
+    <div id="overlay-effect"></div>
+    <partial name="_Navbar" />
+    <!-- Content -->
     @RenderBody()
 
     <script type="text/javascript" src="_content/Jackdaw.ClassLibrary.Mvc/lib/jquery-3.6.0.min.js" asp-append-version="true" nonce="@ViewBag.ScriptNonce"></script>
