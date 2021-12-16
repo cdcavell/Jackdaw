@@ -2,6 +2,7 @@
 using Jackdaw.Public.Models.AppSettings;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using System.Net;
 using System.Security.Cryptography;
 
 namespace Jackdaw.Public.Filters
@@ -133,7 +134,7 @@ namespace Jackdaw.Public.Filters
                 {
                     context.HttpContext.Response.Headers.Add(
                         "Last-Modified",
-                        _AppSettings.LastModifiedDateTime.ToString("ddd, dd MM yyyy HH:mm:ss 'GMT'")
+                        WebUtility.UrlEncode(_AppSettings.LastModifiedDateTime.ToString("ddd, dd MM yyyy HH:mm:ss 'GMT'"))
                     );
                 }
 

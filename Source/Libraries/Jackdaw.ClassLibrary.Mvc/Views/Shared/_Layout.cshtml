@@ -1,13 +1,4 @@
-﻿@{
-    string hreflangENG = ViewBag.CurrentUrl + "culture=en-US&ui-culture=en-US";
-    string hreflangDUT = ViewBag.CurrentUrl + "culture=nl&ui-culture=nl";
-    string hreflangFRE = ViewBag.CurrentUrl + "culture=fr&ui-culture=fr";
-    string hreflangSPA = ViewBag.CurrentUrl + "culture=es&ui-culture=es";
-    string hreflangJAP = ViewBag.CurrentUrl + "culture=ja&ui-culture=ja";
-    string hreflangARA = ViewBag.CurrentUrl + "culture=ar&ui-culture=ar";
-}
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-US">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,7 +7,7 @@
 
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="cdcavell.name" />
-    <meta property="og:title" content="Personal website for Christopher D. Cavell." />
+    <meta property="og:title" content="@SharedLocalizer["title"]" />
     <meta property="og:description" content="An ongoing development of a .NET 6.0 MVC application." />
     <meta property="og:image" content="https://cdcavell.name/img/thumbnail.png" />
     <meta property="og:url" content="https://cdcavell.name/">
@@ -26,7 +17,7 @@
     <meta property="twitter:card" content="summary" />
     <meta property="twitter:site" content="@@CDCavell" />
     <meta property="twitter:creator" content="@@CDCavell" />
-    <meta property="twitter:title" content="Personal website for Christopher D. Cavell" />
+    <meta property="twitter:title" content="@SharedLocalizer["title"]" />
     <meta property="twitter:description" content="An ongoing development of a .NET 6.0 MVC application." />
     <meta property="twitter:image" content="https://cdcavell.name/img/twitter-thumbnail.png" />
 
@@ -35,18 +26,17 @@
     <meta name="googlebot" content="index, follow">
     <meta name="google-site-verification" content="v2DPETQobg3Ip1zEugzvNdHM9-oqH5TdPKq2ycrn1w0">
 
-    <title>Personal website for Christopher D. Cavell</title>
+    <title>@SharedLocalizer["title"]</title>
     <base href="/" />
 
     <link rel="icon" type="image/x-icon" href="_content/Jackdaw.ClassLibrary.Mvc/img/favicon.ico" />
     <link rel="shortcut icon" type="image/x-icon" href="_content/Jackdaw.ClassLibrary.Mvc/img/favicon.ico" />
 
-    <link rel="alternate" hreflang="en-US" href="@Html.Raw(hreflangENG)" />
-    <link rel="alternate" hreflang="nl" href="@Html.Raw(hreflangDUT)" />
-    <link rel="alternate" hreflang="fr" href="@Html.Raw(hreflangFRE)" />
-    <link rel="alternate" hreflang="es" href="@Html.Raw(hreflangSPA)" />
-    <link rel="alternate" hreflang="ja" href="@Html.Raw(hreflangJAP)" />
-    <link rel="alternate" hreflang="ar" href="@Html.Raw(hreflangARA)" />
+    <link rel="alternate" hreflang="en-US" href="@Html.Raw($"{ViewBag.CurrentUrl}culture=en-US&ui-culture=en-US")" />
+    <link rel="alternate" hreflang="nl" href="@Html.Raw($"{ViewBag.CurrentUrl}culture=nl&ui-culture=nl")" />
+    <link rel="alternate" hreflang="fr" href="@Html.Raw($"{ViewBag.CurrentUrl}culture=fr&ui-culture=fr")" />
+    <link rel="alternate" hreflang="es" href="@Html.Raw($"{ViewBag.CurrentUrl}culture=es&ui-culture=es")" />
+    <link rel="alternate" hreflang="ja" href="@Html.Raw($"{ViewBag.CurrentUrl}culture=ja&ui-culture=ja")" />
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&amp;display=swap" nonce="@ViewBag.StyleNonce" />
 

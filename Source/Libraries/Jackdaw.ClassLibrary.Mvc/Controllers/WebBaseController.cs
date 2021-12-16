@@ -97,7 +97,6 @@ namespace Jackdaw.ClassLibrary.Mvc.Controllers
                 "fr" => "État du modèle non valide",
                 "es" => "Estado de modelo no válido",
                 "ja" => "無効なモデル状態",
-                "ar" => "حالة النموذج غير صالحة",
                 _ => "Invalid Model State"
             };
 

@@ -3,6 +3,7 @@ using Jackdaw.ClassLibrary.Mvc.Services.AppSettings;
 using Jackdaw.Public.Filters;
 using Jackdaw.Public.Models.AppSettings;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Serilog;
 using Serilog.Events;
 using System.Globalization;
@@ -27,7 +28,9 @@ try
     });
 
     builder.Services.AddHttpContextAccessor();
-    builder.Services.AddControllersWithViews();
+    builder.Services.AddControllersWithViews()
+        .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+        .AddDataAnnotationsLocalization();
 
     builder.Services.AddSingleton<SharedResource>();
     builder.Services.AddScoped<SecurityHeadersAttribute>();
