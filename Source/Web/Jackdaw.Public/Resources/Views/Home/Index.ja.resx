@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name=".Net 6.0 MVC development" xml:space="preserve">
-    <value>.Net 6.0MVC開発</value>
+    <value>.Net 6.0 MVC開発</value>
   </data>
   <data name="A new" xml:space="preserve">
     <value>新しい</value>
