@@ -1,6 +1,7 @@
 ﻿using Jackdaw.ClassLibrary.Common;
 using Jackdaw.ClassLibrary.Common.Html;
 using Jackdaw.ClassLibrary.Mvc.Localization;
+using Jackdaw.ClassLibrary.Mvc.Models.Home;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
@@ -24,7 +25,7 @@ namespace Jackdaw.ClassLibrary.Mvc.Controllers
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.1 | 12/14/2021 | Initial Development |~ 
+    /// | Christopher D. Cavell | 0.0.0.1 | 12/16/2021 | Initial Development |~ 
     /// </revision>
     [Controller]
     [Authorize]
@@ -184,7 +185,7 @@ namespace Jackdaw.ClassLibrary.Mvc.Controllers
         /// <returns>IActionResult</returns>
         [AllowAnonymous]
         [HttpPost]
-        protected IActionResult SetCulture(string culture)
+        public IActionResult SetCulture(CultureModel model)
         {
             if (ModelState.IsValid)
             {
@@ -192,7 +193,7 @@ namespace Jackdaw.ClassLibrary.Mvc.Controllers
                 {
                     Response.Cookies.Append(
                         CookieRequestCultureProvider.DefaultCookieName,
-                        CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                        CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(model.Culture)),
                         new CookieOptions
                         {
                             SameSite = SameSiteMode.Strict,
@@ -202,11 +203,11 @@ namespace Jackdaw.ClassLibrary.Mvc.Controllers
                         }
                     );
 
-                    return Ok();
+                    return Json(model);
                 }
                 catch (Exception exception)
                 {
-                    _logger.LogError(exception, $"SetCulture(string {culture})");
+                    _logger.LogError(exception, $"SetCulture(string {model})");
                     return BadRequest(ExceptionMessage(exception));
                 }
             }

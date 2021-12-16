@@ -1,4 +1,5 @@
 ﻿using Jackdaw.ClassLibrary.Mvc.Localization;
+using Jackdaw.ClassLibrary.Mvc.Models.Home;
 using Jackdaw.ClassLibrary.Mvc.Services.AppSettings;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

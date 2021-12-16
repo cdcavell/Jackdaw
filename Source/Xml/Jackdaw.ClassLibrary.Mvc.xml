@@ -13,7 +13,7 @@
             __Revisions:__~~
             | Contributor | Build | Revison Date | Description |~
             |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.1 | 12/14/2021 | Initial Development |~ 
+            | Christopher D. Cavell | 0.0.0.1 | 12/16/2021 | Initial Development |~ 
             </revision>
         </member>
         <member name="F:Jackdaw.ClassLibrary.Mvc.Controllers.WebBaseController`1._logger">
@@ -71,6 +71,18 @@
             <method>ValidateModel&lt;M&gt;(M model)</method>
             <exception>ArgumentNullException</exception>
         </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Controllers.WebBaseController`1.ExceptionMessage(System.Exception)">
+            <summary>
+            Exception Message
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Controllers.WebBaseController`1.SetCulture(Jackdaw.ClassLibrary.Mvc.Models.Home.CultureModel)">
+            <summary>
+            Set current culture language
+            </summary>
+            <returns>IActionResult</returns>
+        </member>
         <member name="T:Jackdaw.ClassLibrary.Mvc.Localization.CultureHelper">
             <class>CultureHelper</class>
             <summary>
@@ -107,6 +119,21 @@
             |-------------|-------|--------------|-------------|~
             | Christopher D. Cavell | 0.0.0.1 | 12/15/2021 | Initial Development |~ 
             </revision>
+        </member>
+        <member name="T:Jackdaw.ClassLibrary.Mvc.Models.Home.CultureModel">
+            <class>CultureModel</class>
+            <summary>
+            Culture model class
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.1 | 12/16/2021 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Mvc.Models.Home.CultureModel.Culture">
+            <value>string</value>
         </member>
         <member name="T:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.AppSettingsService">
             <summary>
