@@ -28,7 +28,57 @@
 
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="Resources\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\Localization\SharedResource.ar.Designer.cs">
+      <DependentUpon>SharedResource.ar.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resources\Localization\SharedResource.ja.Designer.cs">
+      <DependentUpon>SharedResource.ja.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resources\Localization\SharedResource.es.Designer.cs">
+      <DependentUpon>SharedResource.es.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resources\Localization\SharedResource.fr.Designer.cs">
+      <DependentUpon>SharedResource.fr.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resources\Localization\SharedResource.nl.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SharedResource.nl.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Localization\SharedResource.ar.resx">
+      <LastGenOutput>SharedResource.ar.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\SharedResource.ja.resx">
+      <LastGenOutput>SharedResource.ja.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\SharedResource.es.resx">
+      <LastGenOutput>SharedResource.es.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\SharedResource.fr.resx">
+      <LastGenOutput>SharedResource.fr.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\SharedResource.nl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SharedResource.nl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 

@@ -1,3 +1,4 @@
+using Jackdaw.ClassLibrary.Mvc.Localization;
 using Jackdaw.ClassLibrary.Mvc.Services.AppSettings;
 using Jackdaw.Public.Filters;
 using Jackdaw.Public.Models.AppSettings;
@@ -28,6 +29,7 @@ try
     builder.Services.AddHttpContextAccessor();
     builder.Services.AddControllersWithViews();
 
+    builder.Services.AddSingleton<SharedResource>();
     builder.Services.AddScoped<SecurityHeadersAttribute>();
 
     // Enable localization
