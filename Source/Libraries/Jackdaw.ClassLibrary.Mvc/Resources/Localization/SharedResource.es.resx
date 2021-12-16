@@ -132,17 +132,29 @@
   <data name="About_P3" xml:space="preserve">
     <value>Feliz de haber estado en el inicio de la revolución digital y emocionado de avanzar hacia la nueva frontera de la información.</value>
   </data>
+  <data name="Age" xml:space="preserve">
+    <value>Envejecer</value>
+  </data>
   <data name="Contact" xml:space="preserve">
     <value>Contacto</value>
   </data>
   <data name="description" xml:space="preserve">
     <value>Un desarrollo continuo de una aplicación .NET 6.0 MVC.</value>
   </data>
+  <data name="Email" xml:space="preserve">
+    <value>Correo electrónico</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>Desde</value>
+  </data>
   <data name="Get to know me" xml:space="preserve">
     <value>Llegar a conocerme</value>
   </data>
   <data name="I'm a vintage Developer" xml:space="preserve">
     <value>Soy una desarrolladora vintage</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nombre</value>
   </data>
   <data name="title" xml:space="preserve">
     <value>Sitio web personal de Christopher D. Cavell</value>
