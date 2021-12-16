@@ -120,13 +120,34 @@
   <data name="About" xml:space="preserve">
     <value>عن</value>
   </data>
+  <data name="About Me" xml:space="preserve">
+    <value>عني</value>
+  </data>
+  <data name="About_P1" xml:space="preserve">
+    <value>الألف إلى الياء. العمل في عمليات الكمبيوتر لعدة سنوات ، وتنضج في تطوير التطبيقات. يتعرض لكل شيء من Cobol و Basic و Java والآن</value>
+  </data>
+  <data name="About_P2" xml:space="preserve">
+    <value>العمليات القديمةأبدًا ، بل أتطلع إلى تجديد وتعزيزأفخر بنفسي لأنني لا أشعر بالرضا.</value>
+  </data>
+  <data name="About_P3" xml:space="preserve">
+    <value>حدود المعلومات الجديدةالرقمية ومتحمسًا للمضي قدمًا فييسعدني أن أكون في بداية الثورة.</value>
+  </data>
   <data name="Contact" xml:space="preserve">
     <value>اتصل</value>
   </data>
   <data name="description" xml:space="preserve">
     <value>تطوير مستمر لتطبيق .NET 6.0 MVC</value>
   </data>
+  <data name="Get to know me" xml:space="preserve">
+    <value>تعرف علي</value>
+  </data>
+  <data name="I'm a vintage Developer" xml:space="preserve">
+    <value>أنا مطور قديم</value>
+  </data>
   <data name="title" xml:space="preserve">
     <value>موقع شخصي لكريستوفر دي كافيل</value>
+  </data>
+  <data name="Who am i?" xml:space="preserve">
+    <value>من أنا؟</value>
   </data>
 </root>

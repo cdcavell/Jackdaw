@@ -120,13 +120,34 @@
   <data name="About" xml:space="preserve">
     <value>約</value>
   </data>
+  <data name="About Me" xml:space="preserve">
+    <value>私について</value>
+  </data>
+  <data name="About_P1" xml:space="preserve">
+    <value>私のキャリアをゼロから始めました。数年間コンピュータ操作に従事し、アプリケーション開発に成熟しました。 Cobol、Basic、Java、そして現在はCSharpからすべてに公開されています。</value>
+  </data>
+  <data name="About_P2" xml:space="preserve">
+    <value>決して満足することはなく、時代遅れのプロセスを刷新して強化することを目指していることに誇りを持ってください。</value>
+  </data>
+  <data name="About_P3" xml:space="preserve">
+    <value>デジタル革命の始まりにあり、新しい情報フロンティアに前進することに興奮していることを嬉しく思います。</value>
+  </data>
   <data name="Contact" xml:space="preserve">
     <value>コンタクト</value>
   </data>
   <data name="description" xml:space="preserve">
     <value>.NET 6.0MVCアプリケーションの進行中の開発。</value>
   </data>
+  <data name="Get to know me" xml:space="preserve">
+    <value>私を知ってください</value>
+  </data>
+  <data name="I'm a vintage Developer" xml:space="preserve">
+    <value>私はビンテージ開発者です</value>
+  </data>
   <data name="title" xml:space="preserve">
     <value>Christopher D.Cavellの個人ウェブサイト</value>
+  </data>
+  <data name="Who am i?" xml:space="preserve">
+    <value>私は誰？</value>
   </data>
 </root>

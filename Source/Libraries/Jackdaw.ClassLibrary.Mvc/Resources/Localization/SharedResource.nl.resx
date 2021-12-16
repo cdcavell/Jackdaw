@@ -120,13 +120,34 @@
   <data name="About" xml:space="preserve">
     <value>Over</value>
   </data>
+  <data name="About Me" xml:space="preserve">
+    <value>Over mij</value>
+  </data>
+  <data name="About_P1" xml:space="preserve">
+    <value>Begon mijn carrier van de grond af. Meerdere jaren werkzaam geweest in computeroperaties, uitgroeiend tot applicatieontwikkeling. Blootgesteld aan alles van Cobol, Basic, Java en nu C Sharp.</value>
+  </data>
+  <data name="About_P2" xml:space="preserve">
+    <value>Ik ben er trots op dat ik nooit tevreden ben, maar eerder op zoek ben naar het vernieuwen en verbeteren van verouderde processen.</value>
+  </data>
+  <data name="About_P3" xml:space="preserve">
+    <value>Blij dat ik aan het begin van de digitale revolutie heb gestaan ​​en enthousiast om door te gaan naar de nieuwe informatiegrens.</value>
+  </data>
   <data name="Contact" xml:space="preserve">
     <value>Contact</value>
   </data>
   <data name="description" xml:space="preserve">
     <value>Een doorlopende ontwikkeling van een .NET 6.0 MVC-toepassing.</value>
   </data>
+  <data name="Get to know me" xml:space="preserve">
+    <value>Leer mij kennen</value>
+  </data>
+  <data name="I'm a vintage Developer" xml:space="preserve">
+    <value>Ik ben een vintage ontwikkelaar</value>
+  </data>
   <data name="title" xml:space="preserve">
     <value>Persoonlijke website voor Christopher D. Cavell</value>
+  </data>
+  <data name="Who am i?" xml:space="preserve">
+    <value>Wie ben ik?</value>
   </data>
 </root>
