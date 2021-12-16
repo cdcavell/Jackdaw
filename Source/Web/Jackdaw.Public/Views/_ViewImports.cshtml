@@ -1,7 +1,10 @@
 ﻿@using Jackdaw.ClassLibrary.Mvc.Localization
+@using Jackdaw.ClassLibrary.Mvc.Services.AppSettings
 @using Microsoft.AspNetCore.Mvc.TagHelpers
 @using Microsoft.AspNetCore.Mvc.Localization
+@using System
 
+@inject IAppSettingsService AppSettings
 @inject IViewLocalizer Localizer
 @inject IHtmlLocalizer<SharedResource> SharedLocalizer
 

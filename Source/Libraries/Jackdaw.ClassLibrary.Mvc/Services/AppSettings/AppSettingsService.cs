@@ -56,6 +56,15 @@ namespace Jackdaw.ClassLibrary.Mvc.Services.AppSettings
         }
 
         /// <summary>
+        /// Get Author's age
+        /// </summary>
+        /// <returns>int</returns>
+        public int AuthorAge()
+        {
+            return new DateTime(1967, 07, 01).Age();
+        }
+
+        /// <summary>
         /// Get EnvironmentName value
         /// </summary>
         /// <returns>string</returns>

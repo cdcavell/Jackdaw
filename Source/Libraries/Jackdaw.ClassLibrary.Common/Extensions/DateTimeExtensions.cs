@@ -21,5 +21,18 @@
         {
             return value.ToString("yyyyMMddHHmmssffff");
         }
+
+        /// <summary>
+        /// Method to return age of current DateTime value in years
+        /// </summary>
+        /// <param name="value">this DateTime</param>
+        /// <returns>string</returns>
+        /// <method>Timestamp(this DateTime value)</method>
+        public static int Age(this DateTime value)
+        {
+            int age = 0;
+            age = DateTime.Now.AddYears(-value.Year).Year;
+            return age;
+        }
     }
 }

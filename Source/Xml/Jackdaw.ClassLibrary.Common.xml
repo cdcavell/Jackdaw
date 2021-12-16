@@ -399,6 +399,14 @@
             <returns>string</returns>
             <method>Timestamp(this DateTime value)</method>
         </member>
+        <member name="M:System.DateTimeExtensions.Age(System.DateTime)">
+            <summary>
+            Method to return age of current DateTime value in years
+            </summary>
+            <param name="value">this DateTime</param>
+            <returns>string</returns>
+            <method>Timestamp(this DateTime value)</method>
+        </member>
         <member name="T:System.Linq.EnumerableExtentions">
             <summary>
             Extension methods for existing Enumerable types.

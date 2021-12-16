@@ -171,6 +171,12 @@
             </summary>
             <returns>string</returns>
         </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.AuthorAge">
+            <summary>
+            Get Author's age
+            </summary>
+            <returns>int</returns>
+        </member>
         <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.EnvironmentName">
             <summary>
             Get EnvironmentName value
@@ -264,6 +270,12 @@
             Get LastModifiedDate value
             </summary>
             <returns>string</returns>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService.AuthorAge">
+            <summary>
+            Get Author's age
+            </summary>
+            <returns>int</returns>
         </member>
         <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService.EnvironmentName">
             <summary>
