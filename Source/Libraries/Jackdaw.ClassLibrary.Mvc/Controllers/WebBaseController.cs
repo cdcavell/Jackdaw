@@ -97,6 +97,7 @@ namespace Jackdaw.ClassLibrary.Mvc.Controllers
                 "fr" => "État du modèle non valide",
                 "es" => "Estado de modelo no válido",
                 "ja" => "無効なモデル状態",
+                "ar" => "حالة النموذج غير صالحة",
                 _ => "Invalid Model State"
             };
 
@@ -160,6 +161,57 @@ namespace Jackdaw.ClassLibrary.Mvc.Controllers
             }
 
             return new KeyValuePair<int, string>(key, value);
+        }
+
+        /// <summary>
+        /// Exception Message
+        /// </summary>
+        /// <returns>string</returns>
+        protected string ExceptionMessage(Exception exception)
+        {
+            _logger.LogError(exception, $"ExceptionMessage");
+
+            string errorMessage = $"Exception: {exception.Message}";
+            if (exception.InnerException != null)
+                errorMessage += $"{AsciiCodes.CRLF}Inner Exception: {exception.InnerException.Message}";
+
+            return errorMessage;
+        }
+
+        /// <summary>
+        /// Set current culture language
+        /// </summary>
+        /// <returns>IActionResult</returns>
+        [AllowAnonymous]
+        [HttpPost]
+        protected IActionResult SetCulture(string culture)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    Response.Cookies.Append(
+                        CookieRequestCultureProvider.DefaultCookieName,
+                        CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                        new CookieOptions
+                        {
+                            SameSite = SameSiteMode.Strict,
+                            IsEssential = true,
+                            Secure = true,
+                            HttpOnly = true
+                        }
+                    );
+
+                    return Ok();
+                }
+                catch (Exception exception)
+                {
+                    _logger.LogError(exception, $"SetCulture(string {culture})");
+                    return BadRequest(ExceptionMessage(exception));
+                }
+            }
+
+            return InvalidModelState();
         }
     }
 }
