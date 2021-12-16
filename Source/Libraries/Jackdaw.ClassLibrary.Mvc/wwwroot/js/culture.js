@@ -20,14 +20,20 @@ $(document).ready(function () {
         var token = $('input[name="__RequestVerificationToken"]', form).val();
         var model = { Culture: $(this).attr('href') };
 
-        ajaxPost(url, token, model)
-            .then(function (data) {
-                console.debug(data);
-                window.location = new URL(window.location);
-            })
-            .catch((error) => {
-                ajaxError(error)
-            });
+        $('.preloader').delay(500).fadeIn('slow', function () {
+            $('.preloader-icon').fadeIn(400);
+            ajaxPost(url, token, model)
+                .then(function (data) {
+                    console.debug(data);
+                    $('.preloader').fadeIn('fast', function () {
+                        $('.preloader-icon').fadeIn(400);
+                        window.location = new URL(window.location);
+                    });
+                })
+                .catch((error) => {
+                    ajaxError(error)
+                });
+        });
 
     });
 
