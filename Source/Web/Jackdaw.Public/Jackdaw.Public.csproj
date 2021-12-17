@@ -10,6 +10,7 @@
 	<Authors>Christopher D. Cavell</Authors>
 	<Copyright>2021 - Christopher D. Cavell</Copyright>
 	<PackageLicenseFile>../../../LICENSE</PackageLicenseFile>
+	<IsTransformWebConfigDisabled>true</IsTransformWebConfigDisabled>
   </PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
