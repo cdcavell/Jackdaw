@@ -8,6 +8,8 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/cdcavell/Jackdaw)
 ![GitHub language count](https://img.shields.io/github/languages/count/cdcavell/Jackdaw)
 [![CodeQL Analysis](https://github.com/cdcavell/Jackdaw/workflows/CodeQL%20Analysis/badge.svg)](https://github.com/cdcavell/Jackdaw/actions?query=workflow%3A%22CodeQL+Analysis%22)
+[![W3C Validation](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fcdcavell.name)](https://validator.nu/?doc=https%3A%2F%2Fcdcavell.name)
+[![Security Headers](https://img.shields.io/security-headers?url=https%3A%2F%2Fcdcavell.name)](https://securityheaders.com/?q=https%3A%2F%2Fcdcavell.name)
 
 <hr />
 
