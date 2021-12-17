@@ -171,8 +171,50 @@
   <data name="license-content-description-1-p5" xml:space="preserve">
     <value>LE LOGICIEL EST FOURNI « EN L'ÉTAT », SANS GARANTIE D'AUCUNE SORTE, EXPRESSE OU IMPLICITE, Y COMPRIS, MAIS SANS S'Y LIMITER, LES GARANTIES DE QUALITÉ MARCHANDE, D'ADAPTATION À UN USAGE PARTICULIER ET D'ABSENCE DE CONTREFAÇON. EN AUCUN CAS LES AUTEURS OU TITULAIRES DE DROITS D'AUTEUR NE SERONT RESPONSABLES DE TOUTE RÉCLAMATION, DOMMAGES OU AUTRE RESPONSABILITÉ, QU'IL SOIT DANS UNE ACTION DE CONTRAT, DÉLIT OU AUTRE, DÉCOULANT DE, OU EN RELATION AVEC LE LOGICIEL OU L'UTILISATION OU D'AUTRES TRANSACTIONS DANS LE LOGICIEL.</value>
   </data>
+  <data name="license-content-description-2-p1a" xml:space="preserve">
+    <value>est développé par</value>
+  </data>
+  <data name="license-content-description-2-p1b" xml:space="preserve">
+    <value>et licencié sous le</value>
+  </data>
+  <data name="license-content-description-3-p1" xml:space="preserve">
+    <value>Les actifs ci-dessus sont sous licence MIT/ISC :</value>
+  </data>
+  <data name="license-content-description-3-p10" xml:space="preserve">
+    <value>Sous licence GPLv3 pour une utilisation open source ou Isotope Commercial License pour une utilisation commerciale.</value>
+  </data>
+  <data name="license-content-description-3-p2" xml:space="preserve">
+    <value>L'autorisation est par la présente accordée, gratuitement, à toute personne obtenant une copie de ce logiciel et des fichiers de documentation associés (le "Logiciel"), de traiter le Logiciel sans restriction, y compris, sans limitation, les droits d'utilisation, de copie, de modification, de fusion , publier, distribuer, sous-licencier et/ou vendre des copies du Logiciel, et permettre aux personnes auxquelles le Logiciel est fourni de le faire, sous réserve des conditions suivantes :</value>
+  </data>
+  <data name="license-content-description-3-p3" xml:space="preserve">
+    <value>L'avis de droit d'auteur ci-dessus et cet avis d'autorisation doivent être inclus dans toutes les copies ou parties substantielles du logiciel.</value>
+  </data>
+  <data name="license-content-description-3-p4" xml:space="preserve">
+    <value>LE LOGICIEL EST FOURNI « EN L'ÉTAT », SANS GARANTIE D'AUCUNE SORTE, EXPRESSE OU IMPLICITE, Y COMPRIS, MAIS SANS S'Y LIMITER, LES GARANTIES DE QUALITÉ MARCHANDE, D'ADAPTATION À UN USAGE PARTICULIER ET D'ABSENCE DE CONTREFAÇON. EN AUCUN CAS LES AUTEURS OU TITULAIRES DE DROITS D'AUTEUR NE SERONT RESPONSABLES DE TOUTE RÉCLAMATION, DOMMAGES OU AUTRE RESPONSABILITÉ, QU'IL SOIT DANS UNE ACTION DE CONTRAT, DÉLIT OU AUTRE, DÉCOULANT DE, OU EN RELATION AVEC LE LOGICIEL OU L'UTILISATION OU D'AUTRES TRANSACTIONS DANS LE LOGICIEL.</value>
+  </data>
+  <data name="license-content-description-3-p5" xml:space="preserve">
+    <value>Publié sous la licence BSD-3-Clause.</value>
+  </data>
+  <data name="license-content-description-3-p6" xml:space="preserve">
+    <value>Copyright 2018 Amber Creative Lab Ltd, CodyHouse.co</value>
+  </data>
+  <data name="license-content-description-3-p7" xml:space="preserve">
+    <value>La redistribution et l'utilisation sous forme source et binaire, avec ou sans modification, sont autorisées à condition que les conditions suivantes soient remplies :</value>
+  </data>
+  <data name="license-content-description-3-p8" xml:space="preserve">
+    <value>Les redistributions du code source doivent conserver l'avis de droit d'auteur ci-dessus, cette liste de conditions et la clause de non-responsabilité suivante. Les redistributions sous forme binaire doivent reproduire l'avis de droit d'auteur ci-dessus, cette liste de conditions et la clause de non-responsabilité suivante dans la documentation et/ou d'autres documents fournis avec la distribution. Ni le nom du détenteur du droit d'auteur ni les noms de ses contributeurs ne peuvent être utilisés pour approuver ou promouvoir des produits dérivés de ce logiciel sans autorisation écrite préalable spécifique.</value>
+  </data>
+  <data name="license-content-description-3-p9" xml:space="preserve">
+    <value>CE LOGICIEL EST FOURNI PAR LES TITULAIRES DES DROITS D'AUTEUR ET LES CONTRIBUTEURS « EN L'ÉTAT » ET TOUTE GARANTIE EXPRESSE OU IMPLICITE, Y COMPRIS, MAIS SANS S'Y LIMITER, LES GARANTIES IMPLICITES DE QUALITÉ MARCHANDE ET D'ADAPTATION À UN USAGE PARTICULIER SONT EXCLUES. EN AUCUN CAS LE TITULAIRE DU DROIT D'AUTEUR OU LES CONTRIBUTEURS NE SERONT RESPONSABLES DE TOUT DOMMAGE DIRECT, INDIRECT, ACCESSOIRE, SPÉCIAL, EXEMPLAIRE OU CONSÉCUTIF (Y COMPRIS, MAIS SANS S'Y LIMITER, L'ACHAT DE BIENS OU DE SERVICES DE REMPLACEMENT ; LA PERTE D'UTILISATION, DE DONNÉES OU DE BÉNÉFICES ; OU INTERRUPTION DES ACTIVITÉS) TOUTEFOIS CAUSÉ ET SUR TOUTE THÉORIE DE RESPONSABILITÉ, QUE CE SOIT DANS UN CONTRAT, UNE RESPONSABILITÉ STRICTE OU DÉLICTUELLE (Y COMPRIS LA NÉGLIGENCE OU AUTRE) DÉCOULANT DE QUELQUE MANIÈRE QUE CE SOIT DE L'UTILISATION DE CE LOGICIEL, MÊME SI AVISÉ DE LA POSSIBILITÉ D'UNE TELLE POSSIBILITÉ.</value>
+  </data>
   <data name="license-content-subtitle-1" xml:space="preserve">
     <value>Site Web principal</value>
+  </data>
+  <data name="license-content-subtitle-2" xml:space="preserve">
+    <value>Modèle de portfolio personnel Kitzu</value>
+  </data>
+  <data name="license-content-subtitle-3" xml:space="preserve">
+    <value>Actifs de soutien</value>
   </data>
   <data name="license-section-description" xml:space="preserve">
     <value>Comment les actifs du site Web sont licenciés</value>

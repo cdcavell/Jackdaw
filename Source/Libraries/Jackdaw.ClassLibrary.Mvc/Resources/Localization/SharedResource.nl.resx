@@ -171,8 +171,50 @@
   <data name="license-content-description-1-p5" xml:space="preserve">
     <value>DE SOFTWARE WORDT GELEVERD "AS IS", ZONDER ENIGE GARANTIE, EXPLICIET OF IMPLICIET, INCLUSIEF MAAR NIET BEPERKT TOT DE GARANTIES VAN VERKOOPBAARHEID, GESCHIKTHEID VOOR EEN BEPAALD DOEL EN NIET-INBREUK. IN GEEN GEVAL ZULLEN DE AUTEURS OF AUTEURSRECHTHOUDERS AANSPRAKELIJK ZIJN VOOR ENIGE CLAIM, SCHADE OF ANDERE AANSPRAKELIJKHEID, HETZIJ IN EEN OVEREENKOMST, ONRECHTMATIGHEID OF ANDERSZINS, VOORTVLOEIEND UIT, UIT OF IN VERBAND MET DE SOFTWARE OF HET GEBRUIK IN OF DE ANDERE HANDELINGEN SOFTWARE.</value>
   </data>
+  <data name="license-content-description-2-p1a" xml:space="preserve">
+    <value>is ontwikkeld door</value>
+  </data>
+  <data name="license-content-description-2-p1b" xml:space="preserve">
+    <value>en gelicentieerd onder de</value>
+  </data>
+  <data name="license-content-description-3-p1" xml:space="preserve">
+    <value>Bovenstaande activa vallen onder de MIT/ISC-licentie:</value>
+  </data>
+  <data name="license-content-description-3-p10" xml:space="preserve">
+    <value>Gelicentieerde GPLv3 voor open source gebruik of Isotope Commercial License voor commercieel gebruik.</value>
+  </data>
+  <data name="license-content-description-3-p2" xml:space="preserve">
+    <value>Hierbij wordt kosteloos toestemming verleend aan elke persoon die een kopie van deze software en bijbehorende documentatiebestanden (de "Software") verkrijgt, om zonder beperking in de Software te handelen, inclusief maar niet beperkt tot de rechten om te gebruiken, kopiëren, wijzigen, samenvoegen , publiceren, distribueren, in sublicentie geven en/of verkopen van kopieën van de Software, en om personen aan wie de Software wordt geleverd toe te staan ​​dit te doen, onder de volgende voorwaarden:</value>
+  </data>
+  <data name="license-content-description-3-p3" xml:space="preserve">
+    <value>De bovenstaande copyrightkennisgeving en deze toestemmingskennisgeving zullen worden opgenomen in alle kopieën of substantiële delen van de Software.</value>
+  </data>
+  <data name="license-content-description-3-p4" xml:space="preserve">
+    <value>DE SOFTWARE WORDT GELEVERD "AS IS", ZONDER ENIGE GARANTIE, EXPLICIET OF IMPLICIET, INCLUSIEF MAAR NIET BEPERKT TOT DE GARANTIES VAN VERKOOPBAARHEID, GESCHIKTHEID VOOR EEN BEPAALD DOEL EN NIET-INBREUK. IN GEEN GEVAL ZULLEN DE AUTEURS OF AUTEURSRECHTHOUDERS AANSPRAKELIJK ZIJN VOOR ENIGE CLAIM, SCHADE OF ANDERE AANSPRAKELIJKHEID, HETZIJ IN EEN OVEREENKOMST, ONRECHTMATIGHEID OF ANDERSZINS, VOORTVLOEIEND UIT, UIT OF IN VERBAND MET DE SOFTWARE OF HET GEBRUIK IN OF DE ANDERE HANDELINGEN SOFTWARE.</value>
+  </data>
+  <data name="license-content-description-3-p5" xml:space="preserve">
+    <value>Uitgegeven onder de BSD-3-Clause-licentie.</value>
+  </data>
+  <data name="license-content-description-3-p6" xml:space="preserve">
+    <value>Copyright 2018 Amber Creative Lab Ltd, CodyHouse.co</value>
+  </data>
+  <data name="license-content-description-3-p7" xml:space="preserve">
+    <value>Herdistributie en gebruik in bron- en binaire vorm, met of zonder wijziging, is toegestaan ​​mits aan de volgende voorwaarden wordt voldaan:</value>
+  </data>
+  <data name="license-content-description-3-p8" xml:space="preserve">
+    <value>Herdistributies van de broncode moeten de bovenstaande copyrightvermelding, deze lijst met voorwaarden en de volgende disclaimer bevatten. Herdistributies in binaire vorm moeten de bovenstaande copyrightvermelding, deze lijst met voorwaarden en de volgende disclaimer reproduceren in de documentatie en/of andere materialen die bij de distributie worden geleverd. Noch de naam van de houder van het auteursrecht, noch de namen van zijn medewerkers mogen worden gebruikt om producten die zijn afgeleid van deze software te onderschrijven of te promoten zonder specifieke voorafgaande schriftelijke toestemming.</value>
+  </data>
+  <data name="license-content-description-3-p9" xml:space="preserve">
+    <value>DEZE SOFTWARE WORDT GELEVERD DOOR DE HOUDERS EN BIJDRAGERS VAN HET AUTEURSRECHT "AS IS" EN ELKE UITDRUKKELIJKE OF IMPLICIETE GARANTIES, MET INBEGRIP VAN, MAAR NIET BEPERKT TOT, DE IMPLICIETE GARANTIES VAN VERKOOPBAARHEID EN GESCHIKTHEID VOOR EEN BEPAALD DOEL. IN GEEN GEVAL ZAL DE HOUDER VAN HET AUTEURSRECHT OF DE BIJDRAGERS AANSPRAKELIJK ZIJN VOOR ENIGE DIRECTE, INDIRECTE, INCIDENTELE, SPECIALE, VOORBEELD- OF GEVOLGSCHADE (INCLUSIEF, MAAR NIET BEPERKT TOT, VERKOOP VAN VERVANGENDE GOEDEREN OF DIENSTEN; D; VERLIES VAN DIENSTEN; D; OF ONDERBREKING VAN HET BEDRIJF) WELKE ER OORZAAKT EN OP ENIGE THEORIE VAN AANSPRAKELIJKHEID, HETZIJ IN CONTRACT, STRIKTE AANSPRAKELIJKHEID OF ONRECHTMATIGHEID (INCLUSIEF NALATIGHEID OF ANDERSZINS) DIE OP ENIGE WIJZE UIT HET GEBRUIK VAN DEZE SOFTWARE VOORTVLOEIT, ZELFS INDIEN HET GOED GEADVISEERD IS.</value>
+  </data>
   <data name="license-content-subtitle-1" xml:space="preserve">
     <value>Hoofdwebsite</value>
+  </data>
+  <data name="license-content-subtitle-2" xml:space="preserve">
+    <value>Sjabloon voor persoonlijke portfolio's van Kitzu</value>
+  </data>
+  <data name="license-content-subtitle-3" xml:space="preserve">
+    <value>Ondersteunende activa</value>
   </data>
   <data name="license-section-description" xml:space="preserve">
     <value>Hoe website-items worden gelicentieerd</value>

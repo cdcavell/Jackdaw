@@ -171,8 +171,50 @@
   <data name="license-content-description-1-p5" xml:space="preserve">
     <value>本ソフトウェアは「現状有姿」で提供され、商品性、特定目的への適合性、および非侵害の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証もありません。いかなる場合も、作者または著作権所有者は、契約、不法行為、またはその他の行為にかかわらず、ソフトウェアまたはソフトウェアの使用またはその他の取引に起因する、または関連する、いかなる請求、損害、またはその他の責任についても責任を負わないものとします。ソフトウェア。</value>
   </data>
+  <data name="license-content-description-2-p1a" xml:space="preserve">
+    <value>によって開発されました</value>
+  </data>
+  <data name="license-content-description-2-p1b" xml:space="preserve">
+    <value>との下でライセンス</value>
+  </data>
+  <data name="license-content-description-3-p1" xml:space="preserve">
+    <value>上記の資産はMIT / ISCライセンスの下にあります。</value>
+  </data>
+  <data name="license-content-description-3-p10" xml:space="preserve">
+    <value>オープンソース用のライセンスGPLv3または商用使用のIsotope商用ライセンス。</value>
+  </data>
+  <data name="license-content-description-3-p2" xml:space="preserve">
+    <value>これにより、このソフトウェアおよび関連するドキュメントファイル（「ソフトウェア」）のコピーを取得するすべての人に、使用、コピー、変更、マージの権利を含むがこれに限定されない制限なしにソフトウェアを取り扱う許可が無料で付与されます。 、本ソフトウェアのコピーを公開、配布、サブライセンス、および/または販売すること、および本ソフトウェアが提供される人に、以下の条件を条件として、そうすることを許可すること。</value>
+  </data>
+  <data name="license-content-description-3-p3" xml:space="preserve">
+    <value>上記の著作権表示およびこの許可通知は、本ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。</value>
+  </data>
+  <data name="license-content-description-3-p4" xml:space="preserve">
+    <value>本ソフトウェアは「現状有姿」で提供され、商品性、特定目的への適合性、および非侵害の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証もありません。いかなる場合も、作者または著作権所有者は、契約、不法行為、またはその他の行為にかかわらず、ソフトウェアまたはソフトウェアの使用またはその他の取引に起因する、または関連する、いかなる請求、損害、またはその他の責任についても責任を負わないものとします。ソフトウェア。</value>
+  </data>
+  <data name="license-content-description-3-p5" xml:space="preserve">
+    <value>BSD-3-Clauseライセンスの下でリリースされました。</value>
+  </data>
+  <data name="license-content-description-3-p6" xml:space="preserve">
+    <value>Copyright 2018 Amber Creative Lab Ltd、CodyHouse.co</value>
+  </data>
+  <data name="license-content-description-3-p7" xml:space="preserve">
+    <value>次の条件が満たされている場合、変更の有無にかかわらず、ソース形式およびバイナリ形式での再配布および使用が許可されます。</value>
+  </data>
+  <data name="license-content-description-3-p8" xml:space="preserve">
+    <value>ソースコードの再配布では、上記の著作権表示、この条件のリスト、および次の免責事項を保持する必要があります。バイナリ形式での再配布では、上記の著作権表示、この条件のリスト、および以下の免責事項を、配布に付属するドキュメントやその他の資料に複製する必要があります。書面による事前の特別な許可なしに、著作権所有者の名前またはその貢献者の名前を、このソフトウェアから派生した製品を推奨または宣伝するために使用することはできません。</value>
+  </data>
+  <data name="license-content-description-3-p9" xml:space="preserve">
+    <value>このソフトウェアは、著作権所有者および寄稿者によって「現状有姿」で提供され、商品性および特定目的への適合性の黙示の保証を含むがこれに限定されない、明示または黙示の保証は否認されます。いかなる場合も、著作権所有者または寄稿者は、直接的、間接的、偶発的、特別、例示的、または結果的な損害（代替の商品またはサービスの調達、使用、データ、または利益の損失を含むがこれらに限定されない）に対して責任を負わないものとします。またはビジネスの中断）ただし、契約、無過失責任、または不法行為（過失またはその他を含む）にかかわらず、このソフトウェアの使用から何らかの形で生じた責任の理論に基づいて、このソフトウェアの使用から生じたもの。</value>
+  </data>
   <data name="license-content-subtitle-1" xml:space="preserve">
     <value>メインウェブサイト</value>
+  </data>
+  <data name="license-content-subtitle-2" xml:space="preserve">
+    <value>キツパーソナルポートフォリオテンプレート</value>
+  </data>
+  <data name="license-content-subtitle-3" xml:space="preserve">
+    <value>補助資産</value>
   </data>
   <data name="license-section-description" xml:space="preserve">
     <value>ウェブサイトアセットのライセンス方法</value>
