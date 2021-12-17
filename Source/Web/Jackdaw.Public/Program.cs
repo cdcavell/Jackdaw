@@ -2,6 +2,7 @@ using Jackdaw.ClassLibrary.Mvc.Localization;
 using Jackdaw.ClassLibrary.Mvc.Services.AppSettings;
 using Jackdaw.Public.Filters;
 using Jackdaw.Public.Models.AppSettings;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Serilog;
@@ -22,9 +23,10 @@ try
 
     Log.Information("Adding services to the container");
 
+    AppSettings appSettings = new(builder.Configuration);
     builder.Services.AddAppSettingsService(options => 
     { 
-        options.AppSettings = new AppSettings(builder.Configuration); 
+        options.AppSettings = appSettings; 
     });
 
     builder.Services.AddHttpContextAccessor();
@@ -38,13 +40,42 @@ try
     // Enable localization
     builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 
+    // Enable HSTS and HTTPS Redirect
+    if (appSettings.IsProduction)
+    {
+        builder.Services.AddHsts(options =>
+        {
+            options.Preload = true;
+            options.IncludeSubDomains = true;
+            options.MaxAge = TimeSpan.FromDays(730);
+        });
+
+        builder.Services.AddHttpsRedirection(options =>
+        {
+            options.RedirectStatusCode = StatusCodes.Status308PermanentRedirect;
+            options.HttpsPort = 443;
+        });
+    }
+
     var app = builder.Build();
     Log.Information("Configuring the HTTP request pipeline");
 
     app.UseSerilogRequestLogging();
 
-    app.UseHttpsRedirection();
-    app.UseStaticFiles();
+    app.UseForwardedHeaders(new ForwardedHeadersOptions
+    {
+        ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+    });
+
+    app.UseExceptionHandler("/Home/Error/500");
+    app.UseStatusCodePagesWithRedirects("~/Home/Error/{0}");
+
+    // Add HSTS and HTTPS Redirect to pipeline
+    if (appSettings.IsProduction)
+    {
+        app.UseHsts();
+        app.UseHttpsRedirection();
+    }
 
     // Localization support
     var supportedCultures = new[]
@@ -64,9 +95,9 @@ try
     });
 
     app.UseRouting();
-
     app.UseAuthorization();
 
+    app.UseStaticFiles();
     app.MapControllerRoute(
         name: "default",
         pattern: "{controller=Home}/{action=Index}/{id?}"
