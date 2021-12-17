@@ -144,6 +144,33 @@
   <data name="Age" xml:space="preserve">
     <value>عمر</value>
   </data>
+  <data name="Culture" xml:space="preserve">
+    <value>حضاره</value>
+  </data>
+  <data name="culture-content-description-l1" xml:space="preserve">
+    <value>إنجليزي</value>
+  </data>
+  <data name="culture-content-description-l2" xml:space="preserve">
+    <value>هولندي</value>
+  </data>
+  <data name="culture-content-description-l3" xml:space="preserve">
+    <value>فرنسي</value>
+  </data>
+  <data name="culture-content-description-l4" xml:space="preserve">
+    <value>الأسبانية</value>
+  </data>
+  <data name="culture-content-description-l5" xml:space="preserve">
+    <value>اليابانية</value>
+  </data>
+  <data name="culture-content-description-l6" xml:space="preserve">
+    <value>عربى</value>
+  </data>
+  <data name="culture-section-description" xml:space="preserve">
+    <value>ما الثقافة التي ترغب في استخدامها؟</value>
+  </data>
+  <data name="culture-section-title" xml:space="preserve">
+    <value>اختيار الثقافة</value>
+  </data>
   <data name="description" xml:space="preserve">
     <value>تطوير مستمر لتطبيق .NET 6.0 MVC</value>
   </data>

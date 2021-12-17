@@ -144,6 +144,33 @@
   <data name="Age" xml:space="preserve">
     <value>Envejecer</value>
   </data>
+  <data name="Culture" xml:space="preserve">
+    <value>Cultura</value>
+  </data>
+  <data name="culture-content-description-l1" xml:space="preserve">
+    <value>Inglesa</value>
+  </data>
+  <data name="culture-content-description-l2" xml:space="preserve">
+    <value>Holandesa</value>
+  </data>
+  <data name="culture-content-description-l3" xml:space="preserve">
+    <value>Francesa</value>
+  </data>
+  <data name="culture-content-description-l4" xml:space="preserve">
+    <value>Española</value>
+  </data>
+  <data name="culture-content-description-l5" xml:space="preserve">
+    <value>Japonesa</value>
+  </data>
+  <data name="culture-content-description-l6" xml:space="preserve">
+    <value>Arábica</value>
+  </data>
+  <data name="culture-section-description" xml:space="preserve">
+    <value>¿Qué cultura desea utilizar?</value>
+  </data>
+  <data name="culture-section-title" xml:space="preserve">
+    <value>Selección de cultura</value>
+  </data>
   <data name="description" xml:space="preserve">
     <value>Un desarrollo continuo de una aplicación .NET 6.0 MVC.</value>
   </data>

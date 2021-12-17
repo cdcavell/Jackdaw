@@ -144,6 +144,33 @@
   <data name="Age" xml:space="preserve">
     <value>年</value>
   </data>
+  <data name="Culture" xml:space="preserve">
+    <value>文化</value>
+  </data>
+  <data name="culture-content-description-l1" xml:space="preserve">
+    <value>英語</value>
+  </data>
+  <data name="culture-content-description-l2" xml:space="preserve">
+    <value>オランダの</value>
+  </data>
+  <data name="culture-content-description-l3" xml:space="preserve">
+    <value>フランス語</value>
+  </data>
+  <data name="culture-content-description-l4" xml:space="preserve">
+    <value>スペイン語</value>
+  </data>
+  <data name="culture-content-description-l5" xml:space="preserve">
+    <value>日本</value>
+  </data>
+  <data name="culture-content-description-l6" xml:space="preserve">
+    <value>アラビア語</value>
+  </data>
+  <data name="culture-section-description" xml:space="preserve">
+    <value>どの文化を使いたいですか？</value>
+  </data>
+  <data name="culture-section-title" xml:space="preserve">
+    <value>文化の選択</value>
+  </data>
   <data name="description" xml:space="preserve">
     <value>.NET 6.0MVCアプリケーションの進行中の開発。</value>
   </data>
