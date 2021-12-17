@@ -144,9 +144,6 @@
   <data name="Age" xml:space="preserve">
     <value>年</value>
   </data>
-  <data name="Contact" xml:space="preserve">
-    <value>コンタクト</value>
-  </data>
   <data name="description" xml:space="preserve">
     <value>.NET 6.0MVCアプリケーションの進行中の開発。</value>
   </data>
@@ -155,6 +152,33 @@
   </data>
   <data name="From" xml:space="preserve">
     <value>から</value>
+  </data>
+  <data name="License" xml:space="preserve">
+    <value>ライセンス</value>
+  </data>
+  <data name="license-content-description-1-p1" xml:space="preserve">
+    <value>MITライセンス</value>
+  </data>
+  <data name="license-content-description-1-p2" xml:space="preserve">
+    <value>Copyright（c）2021 Christopher D. Cavell</value>
+  </data>
+  <data name="license-content-description-1-p3" xml:space="preserve">
+    <value>これにより、このソフトウェアおよび関連するドキュメントファイル（「ソフトウェア」）のコピーを取得するすべての人に、使用、コピー、変更、マージの権利を含むがこれに限定されない制限なしにソフトウェアを取り扱う許可が無料で付与されます。 、本ソフトウェアのコピーを公開、配布、サブライセンス、および/または販売すること、および本ソフトウェアが提供される人に、以下の条件を条件として、そうすることを許可すること。</value>
+  </data>
+  <data name="license-content-description-1-p4" xml:space="preserve">
+    <value>上記の著作権表示およびこの許可通知は、本ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。</value>
+  </data>
+  <data name="license-content-description-1-p5" xml:space="preserve">
+    <value>本ソフトウェアは「現状有姿」で提供され、商品性、特定目的への適合性、および非侵害の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証もありません。いかなる場合も、作者または著作権所有者は、契約、不法行為、またはその他の行為にかかわらず、ソフトウェアまたはソフトウェアの使用またはその他の取引に起因する、または関連する、いかなる請求、損害、またはその他の責任についても責任を負わないものとします。ソフトウェア。</value>
+  </data>
+  <data name="license-content-subtitle-1" xml:space="preserve">
+    <value>メインウェブサイト</value>
+  </data>
+  <data name="license-section-description" xml:space="preserve">
+    <value>ウェブサイトアセットのライセンス方法</value>
+  </data>
+  <data name="license-section-title" xml:space="preserve">
+    <value>アセットライセンス</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>名前</value>

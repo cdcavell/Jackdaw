@@ -144,9 +144,6 @@
   <data name="Age" xml:space="preserve">
     <value>عمر</value>
   </data>
-  <data name="Contact" xml:space="preserve">
-    <value>اتصل</value>
-  </data>
   <data name="description" xml:space="preserve">
     <value>تطوير مستمر لتطبيق .NET 6.0 MVC</value>
   </data>
@@ -155,6 +152,33 @@
   </data>
   <data name="From" xml:space="preserve">
     <value>من</value>
+  </data>
+  <data name="License" xml:space="preserve">
+    <value>رخصة</value>
+  </data>
+  <data name="license-content-description-1-p1" xml:space="preserve">
+    <value>للتكنولوجياترخيص معهد ماساتشوستس</value>
+  </data>
+  <data name="license-content-description-1-p2" xml:space="preserve">
+    <value>حقوق النشر (c) 2021 Christopher D. Cavell</value>
+  </data>
+  <data name="license-content-description-1-p3" xml:space="preserve">
+    <value>يُمنح الإذن بموجب هذا ، مجانًا ، لأي شخص يحصل على نسخة من هذا البرنامج وملفات التوثيق المرتبطة به ("البرنامج") ، للتعامل في البرنامج دون قيود ، بما في ذلك على سبيل المثال لا الحصر حقوق الاستخدام والنسخ والتعديل والدمج ونشر و / أو توزيع و / أو ترخيص من الباطن و / أو بيع نسخ من البرنامج ، والسماح للأشخاص الذين تم توفير البرنامج لهم بالقيام بذلك ، وفقًا للشروط التالية:</value>
+  </data>
+  <data name="license-content-description-1-p4" xml:space="preserve">
+    <value>يجب تضمين إشعار حقوق النشر أعلاه وإشعار الإذن هذا في جميع النسخ أو الأجزاء الأساسية من البرنامج.</value>
+  </data>
+  <data name="license-content-description-1-p5" xml:space="preserve">
+    <value>يتم توفير البرنامج "كما هو" ، دون أي ضمان من أي نوع ، صريحًا أو ضمنيًا ، بما في ذلك على سبيل المثال لا الحصر ضمانات القابلية للتسويق والملاءمة لغرض معين وعدم الانتهاك. لا يتحمل المؤلفون أو حاملو حقوق الطبع والنشر بأي حال من الأحوال المسؤولية عن أي مطالبة أو أضرار أو أي مسؤولية أخرى ، سواء كان ذلك في إطار عقد أو ضرر أو غير ذلك ، ينشأ عن أو خارج أو فيما يتعلق بالبرنامج أو الاستخدام أو المعاملات الأخرى في البرمجيات.</value>
+  </data>
+  <data name="license-content-subtitle-1" xml:space="preserve">
+    <value>الموقع الرئيسي</value>
+  </data>
+  <data name="license-section-description" xml:space="preserve">
+    <value>كيف يتم ترخيص أصول الموقع</value>
+  </data>
+  <data name="license-section-title" xml:space="preserve">
+    <value>ترخيص الأصول</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>اسم</value>

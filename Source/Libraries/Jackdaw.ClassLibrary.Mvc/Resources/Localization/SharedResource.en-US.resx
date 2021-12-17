@@ -144,9 +144,6 @@
   <data name="Age" xml:space="preserve">
     <value>Age</value>
   </data>
-  <data name="Contact" xml:space="preserve">
-    <value>Contact</value>
-  </data>
   <data name="description" xml:space="preserve">
     <value>An ongoing development of a .NET 6.0 MVC application.</value>
   </data>
@@ -155,6 +152,33 @@
   </data>
   <data name="From" xml:space="preserve">
     <value>From</value>
+  </data>
+  <data name="License" xml:space="preserve">
+    <value>License</value>
+  </data>
+  <data name="license-content-description-1-p1" xml:space="preserve">
+    <value>MIT License</value>
+  </data>
+  <data name="license-content-description-1-p2" xml:space="preserve">
+    <value>Copyright (c) 2021 Christopher D. Cavell</value>
+  </data>
+  <data name="license-content-description-1-p3" xml:space="preserve">
+    <value>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</value>
+  </data>
+  <data name="license-content-description-1-p4" xml:space="preserve">
+    <value>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</value>
+  </data>
+  <data name="license-content-description-1-p5" xml:space="preserve">
+    <value>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</value>
+  </data>
+  <data name="license-content-subtitle-1" xml:space="preserve">
+    <value>Main Website</value>
+  </data>
+  <data name="license-section-description" xml:space="preserve">
+    <value>How website assets are licensed</value>
+  </data>
+  <data name="license-section-title" xml:space="preserve">
+    <value>Asset Licensing</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Name</value>

@@ -144,9 +144,6 @@
   <data name="Age" xml:space="preserve">
     <value>Leeftijd</value>
   </data>
-  <data name="Contact" xml:space="preserve">
-    <value>Contact</value>
-  </data>
   <data name="description" xml:space="preserve">
     <value>Een doorlopende ontwikkeling van een .NET 6.0 MVC-toepassing.</value>
   </data>
@@ -155,6 +152,33 @@
   </data>
   <data name="From" xml:space="preserve">
     <value>Van</value>
+  </data>
+  <data name="License" xml:space="preserve">
+    <value>Vergunning</value>
+  </data>
+  <data name="license-content-description-1-p1" xml:space="preserve">
+    <value>MIT-licentie</value>
+  </data>
+  <data name="license-content-description-1-p2" xml:space="preserve">
+    <value>Copyright (c) 2021 Christopher D. Cavell</value>
+  </data>
+  <data name="license-content-description-1-p3" xml:space="preserve">
+    <value>Hierbij wordt kosteloos toestemming verleend aan elke persoon die een kopie van deze software en bijbehorende documentatiebestanden (de "Software") verkrijgt, om zonder beperking in de Software te handelen, inclusief maar niet beperkt tot de rechten om te gebruiken, kopiëren, wijzigen, samenvoegen , publiceren, distribueren, in sublicentie geven en/of verkopen van kopieën van de Software, en om personen aan wie de Software wordt geleverd toe te staan ​​dit te doen, onder de volgende voorwaarden:</value>
+  </data>
+  <data name="license-content-description-1-p4" xml:space="preserve">
+    <value>De bovenstaande copyrightkennisgeving en deze toestemmingskennisgeving zullen worden opgenomen in alle kopieën of substantiële delen van de Software.</value>
+  </data>
+  <data name="license-content-description-1-p5" xml:space="preserve">
+    <value>DE SOFTWARE WORDT GELEVERD "AS IS", ZONDER ENIGE GARANTIE, EXPLICIET OF IMPLICIET, INCLUSIEF MAAR NIET BEPERKT TOT DE GARANTIES VAN VERKOOPBAARHEID, GESCHIKTHEID VOOR EEN BEPAALD DOEL EN NIET-INBREUK. IN GEEN GEVAL ZULLEN DE AUTEURS OF AUTEURSRECHTHOUDERS AANSPRAKELIJK ZIJN VOOR ENIGE CLAIM, SCHADE OF ANDERE AANSPRAKELIJKHEID, HETZIJ IN EEN OVEREENKOMST, ONRECHTMATIGHEID OF ANDERSZINS, VOORTVLOEIEND UIT, UIT OF IN VERBAND MET DE SOFTWARE OF HET GEBRUIK IN OF DE ANDERE HANDELINGEN SOFTWARE.</value>
+  </data>
+  <data name="license-content-subtitle-1" xml:space="preserve">
+    <value>Hoofdwebsite</value>
+  </data>
+  <data name="license-section-description" xml:space="preserve">
+    <value>Hoe website-items worden gelicentieerd</value>
+  </data>
+  <data name="license-section-title" xml:space="preserve">
+    <value>Activalicenties</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Naam</value>
