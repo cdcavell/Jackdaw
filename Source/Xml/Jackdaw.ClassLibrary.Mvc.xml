@@ -4,6 +4,137 @@
         <name>Jackdaw.ClassLibrary.Mvc</name>
     </assembly>
     <members>
+        <member name="T:Jackdaw.ClassLibrary.Mvc.Controllers.WebBaseController`1">
+            <class>WebBaseController</class>
+            <summary>
+            Base controller class for web application
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.1 | 12/16/2021 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="F:Jackdaw.ClassLibrary.Mvc.Controllers.WebBaseController`1._logger">
+            <value>ILogger</value>
+        </member>
+        <member name="F:Jackdaw.ClassLibrary.Mvc.Controllers.WebBaseController`1._webHostEnvironment">
+            <value>IWebHostEnvironment</value>
+        </member>
+        <member name="F:Jackdaw.ClassLibrary.Mvc.Controllers.WebBaseController`1._httpContextAccessor">
+            <value>IWebHostEnvironment</value>
+        </member>
+        <member name="F:Jackdaw.ClassLibrary.Mvc.Controllers.WebBaseController`1._localizer">
+            <value>IStringLocalizer</value>
+        </member>
+        <member name="F:Jackdaw.ClassLibrary.Mvc.Controllers.WebBaseController`1._sharedLocalizer">
+            <value>IStringLocalizer&lt;SharedResource&gt;</value>
+        </member>
+        <member name="F:Jackdaw.ClassLibrary.Mvc.Controllers.WebBaseController`1._cultureName">
+            <value>string</value>
+        </member>
+        <member name="F:Jackdaw.ClassLibrary.Mvc.Controllers.WebBaseController`1._invalidModelState">
+            <value>string</value>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Controllers.WebBaseController`1.#ctor(Microsoft.Extensions.Logging.ILogger{`0},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,Microsoft.Extensions.Localization.IStringLocalizer{`0},Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.ClassLibrary.Mvc.Localization.SharedResource})">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="localizer">IStringLocalizer&lt;T&gt;</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <method>WebBaseController(ILogger&lt;T&gt; logger, IWebHostEnvironment webHostEnvironment, IHttpContextAccessor httpContextAccessor)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Controllers.WebBaseController`1.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Called before the action method is invoked
+            </summary>
+            <param name="context">ActionExecutingContext</param>
+            <exception>ArgumentNullException</exception>
+            <exception>NullReferenceException</exception>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Controllers.WebBaseController`1.InvalidModelState">
+            <summary>
+            Return BadRequestObjectResult containing ModelState error messages
+            </summary>
+            <returns>BadRequestObjectResult</returns>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Controllers.WebBaseController`1.ValidateModel``1(``0)">
+            <summary>
+            Global model validation method (View found in HomeSite.ClassLibrary.Razor)
+            </summary>
+            <param name="model">Model</param>
+            <returns>KeyValuePair&lt;int, string&gt;</returns>
+            <method>ValidateModel&lt;M&gt;(M model)</method>
+            <exception>ArgumentNullException</exception>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Controllers.WebBaseController`1.ExceptionMessage(System.Exception)">
+            <summary>
+            Exception Message
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Controllers.WebBaseController`1.SetCulture(Jackdaw.ClassLibrary.Mvc.Models.Home.CultureModel)">
+            <summary>
+            Set current culture language
+            </summary>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="T:Jackdaw.ClassLibrary.Mvc.Localization.CultureHelper">
+            <class>CultureHelper</class>
+            <summary>
+            Culture Helper class by Nadeem Afana
+            https://afana.me/archive/2011/01/14/aspnet-mvc-internationalization.aspx/
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.1 | 12/14/2021 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Localization.CultureHelper.IsRighToLeft">
+            <summary>
+            Returns true if the language is a right-to-left language. Otherwise, false.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Jackdaw.ClassLibrary.Mvc.Localization.CultureHelper.GetImplementedCulture(System.String)" -->
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Localization.CultureHelper.GetDefaultCulture">
+            <summary>
+            Returns default culture name which is the first name decalared (e.g. en-US)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Jackdaw.ClassLibrary.Mvc.Localization.SharedResource">
+            <class>SharedResource</class>
+            <summary>
+            Shared Resource for Localization Resources
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.1 | 12/15/2021 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="T:Jackdaw.ClassLibrary.Mvc.Models.Home.CultureModel">
+            <class>CultureModel</class>
+            <summary>
+            Culture model class
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.1 | 12/16/2021 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Mvc.Models.Home.CultureModel.Culture">
+            <value>string</value>
+        </member>
         <member name="T:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.AppSettingsService">
             <summary>
             AppSettings Web Service
@@ -39,6 +170,12 @@
             Get LastModifiedDate value
             </summary>
             <returns>string</returns>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.AuthorAge">
+            <summary>
+            Get Author's age
+            </summary>
+            <returns>int</returns>
         </member>
         <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.AppSettingsService.EnvironmentName">
             <summary>
@@ -133,6 +270,12 @@
             Get LastModifiedDate value
             </summary>
             <returns>string</returns>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService.AuthorAge">
+            <summary>
+            Get Author's age
+            </summary>
+            <returns>int</returns>
         </member>
         <member name="M:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService.EnvironmentName">
             <summary>

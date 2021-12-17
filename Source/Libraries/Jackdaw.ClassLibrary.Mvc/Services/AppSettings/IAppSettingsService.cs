@@ -30,6 +30,12 @@
         public string LastModifiedDate();
 
         /// <summary>
+        /// Get Author's age
+        /// </summary>
+        /// <returns>int</returns>
+        public int AuthorAge();
+
+        /// <summary>
         /// Get EnvironmentName value
         /// </summary>
         /// <returns>string</returns>
