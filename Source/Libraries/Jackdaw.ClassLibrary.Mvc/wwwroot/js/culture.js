@@ -26,7 +26,7 @@ $(document).ready(function () {
                 console.debug(data);
                 $('.preloader').fadeIn('fast', function () {
                     $('.preloader-icon').fadeIn(400);
-                    window.location = new URL(window.location);
+                    window.location = new URL(window.location.replace(window.location.pathname));
                 });
             })
             .catch((error) => {
