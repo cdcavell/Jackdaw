@@ -2,6 +2,7 @@
 using Jackdaw.Public.Models.AppSettings;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using System.Net;
 using System.Security.Cryptography;
 
 namespace Jackdaw.Public.Filters
@@ -16,7 +17,7 @@ namespace Jackdaw.Public.Filters
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.1 | 12/12/2021 | Initial Development |~ 
+    /// | Christopher D. Cavell | 0.0.0.1 | 12/14/2021 | Initial Development |~ 
     /// </revision>
     public class SecurityHeadersAttribute : ActionFilterAttribute
     {
@@ -67,11 +68,12 @@ namespace Jackdaw.Public.Filters
                 csp += "object-src 'none'; ";
                 csp += "connect-src 'self';";
                 csp += "frame-ancestors 'self' https://*.cdcavell.name; ";
-                csp += "frame-src 'self' https://*.cdcavell.name; ";
+                csp += "frame-src 'self' https://*.cdcavell.name https://www.youtube.com; ";
+                csp += "font-src 'self' https://fonts.gstatic.com data:; ";
                 csp += "sandbox allow-modals allow-forms allow-same-origin allow-scripts allow-popups; ";
                 csp += "base-uri 'self'; ";
-                csp += "style-src 'self' 'nonce-" + _StyleNonce + "'; ";
-                csp += "script-src 'strict-dynamic' 'nonce-" + _ScriptNonce + "'; ";
+                csp += "style-src 'self' https://fonts.googleapis.com 'nonce-" + _StyleNonce + "'; ";
+                csp += "script-src 'strict-dynamic' 'unsafe-eval' 'nonce-" + _ScriptNonce + "'; ";
                 // also consider adding upgrade-insecure-requests once you have HTTPS in place for production
                 csp += "upgrade-insecure-requests; ";
 
@@ -132,7 +134,7 @@ namespace Jackdaw.Public.Filters
                 {
                     context.HttpContext.Response.Headers.Add(
                         "Last-Modified",
-                        _AppSettings.LastModifiedDateTime.ToString("ddd, dd MM yyyy HH:mm:ss 'GMT'")
+                        WebUtility.UrlEncode(_AppSettings.LastModifiedDateTime.ToString("ddd, dd MM yyyy HH:mm:ss 'GMT'"))
                     );
                 }
 

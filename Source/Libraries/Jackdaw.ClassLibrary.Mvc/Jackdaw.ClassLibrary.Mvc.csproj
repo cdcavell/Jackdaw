@@ -26,6 +26,14 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Resources\Localization\SharedResource.ar.Designer.cs">
+      <DependentUpon>SharedResource.ar.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+
 
 
 </Project>

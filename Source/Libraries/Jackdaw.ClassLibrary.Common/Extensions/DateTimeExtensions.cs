@@ -7,7 +7,7 @@
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.1 | 12/11/2021 | Initial Development |~ 
+    /// | Christopher D. Cavell | 0.0.0.1 | 12/16/2021 | Initial Development |~ 
     /// </revision>
     public static class DateTimeExtensions
     {
@@ -20,6 +20,19 @@
         public static string Timestamp(this DateTime value)
         {
             return value.ToString("yyyyMMddHHmmssffff");
+        }
+
+        /// <summary>
+        /// Method to return age of current DateTime value in years
+        /// </summary>
+        /// <param name="value">this DateTime</param>
+        /// <returns>string</returns>
+        /// <method>Timestamp(this DateTime value)</method>
+        public static int Age(this DateTime value)
+        {
+            int age = 0;
+            age = DateTime.Now.AddYears(-value.Year).Year;
+            return age;
         }
     }
 }
