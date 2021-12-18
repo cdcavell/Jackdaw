@@ -147,24 +147,6 @@
   <data name="Culture" xml:space="preserve">
     <value>Culture</value>
   </data>
-  <data name="culture-content-description-l1" xml:space="preserve">
-    <value>English</value>
-  </data>
-  <data name="culture-content-description-l2" xml:space="preserve">
-    <value>Dutch</value>
-  </data>
-  <data name="culture-content-description-l3" xml:space="preserve">
-    <value>French</value>
-  </data>
-  <data name="culture-content-description-l4" xml:space="preserve">
-    <value>Spanish</value>
-  </data>
-  <data name="culture-content-description-l5" xml:space="preserve">
-    <value>Japanese</value>
-  </data>
-  <data name="culture-content-description-l6" xml:space="preserve">
-    <value>Arabic</value>
-  </data>
   <data name="culture-section-description" xml:space="preserve">
     <value>What culture do you wish to use?</value>
   </data>
