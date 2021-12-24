@@ -13,7 +13,7 @@
             __Revisions:__~~
             | Contributor | Build | Revison Date | Description |~
             |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.1 | 12/16/2021 | Initial Development |~ 
+            | Christopher D. Cavell | 0.0.0.1 | 12/19/2021 | Initial Development |~ 
             </revision>
         </member>
         <member name="F:Jackdaw.ClassLibrary.Mvc.Controllers.WebBaseController`1._logger">
@@ -83,6 +83,13 @@
             </summary>
             <returns>IActionResult</returns>
         </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Controllers.WebBaseController`1.Error(System.Int32)">
+            <summary>
+            Global error handling
+            </summary>
+            <param name="id">int</param>
+            <returns>IActionResult</returns>
+        </member>
         <member name="T:Jackdaw.ClassLibrary.Mvc.Localization.CultureHelper">
             <class>CultureHelper</class>
             <summary>
@@ -134,6 +141,38 @@
         </member>
         <member name="P:Jackdaw.ClassLibrary.Mvc.Models.Home.CultureModel.Culture">
             <value>string</value>
+        </member>
+        <member name="T:Jackdaw.ClassLibrary.Mvc.Models.Home.ErrorViewModel">
+            <summary>
+            Error view model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.1 | 12/19/2021 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Mvc.Models.Home.ErrorViewModel.StatusCode">
+            <value>int</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Mvc.Models.Home.ErrorViewModel.StatusMessage">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Mvc.Models.Home.ErrorViewModel.Exception">
+            <value>Exception</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Mvc.Models.Home.ErrorViewModel.RequestId">
+            <value>string</value>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Models.Home.ErrorViewModel.#ctor(System.Int32,System.String,Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.ClassLibrary.Mvc.Localization.SharedResource})">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="statusCode">int</param>
+            <param name="culture">string</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <method>ErrorViewModel(int statusCode, string culture, IStringLocalizer&lt;SharedResource&gt; )</method>
         </member>
         <member name="T:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.AppSettingsService">
             <summary>
@@ -342,6 +381,35 @@
         </member>
         <member name="P:Jackdaw.ClassLibrary.Mvc.Services.AppSettings.Models.AppSettings.LastModifiedDateTime">
             <value>DateTime</value>
+        </member>
+        <member name="T:Jackdaw.ClassLibrary.Mvc.Utilities.StatusCodeDefinition">
+            <summary>
+            Class for returning defintion of given Html status code
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.1 | 12/20/2021 | Initial build |~ 
+            </revision>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Utilities.StatusCodeDefinition.GetCodeDefinition(System.Int32,System.String,Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.ClassLibrary.Mvc.Localization.SharedResource})">
+            <returns>
+            KeyValuePair\&lt;int, string\&gt;
+            </returns>
+            <param name="code">int</param>
+            <param name="culture">string</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <method>GetCodeDefinition(int code, string culture, IStringLocalizer&lt;SharedResource&gt; sharedLocalizer)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Utilities.StatusCodeDefinition.ToString(System.Int32,System.String,Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.ClassLibrary.Mvc.Localization.SharedResource})">
+            <returns>
+            string
+            </returns>
+            <param name="code">int</param>
+            <param name="culture">string</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <method>ToString(int code, string culture, IStringLocalizer&lt;SharedResource&gt; sharedLocalizer)</method>
         </member>
     </members>
 </doc>

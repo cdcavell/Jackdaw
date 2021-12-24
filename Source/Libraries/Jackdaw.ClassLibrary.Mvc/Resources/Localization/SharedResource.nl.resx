@@ -234,6 +234,12 @@
   <data name="Name" xml:space="preserve">
     <value>Naam</value>
   </data>
+  <data name="StatusCode" xml:space="preserve">
+    <value>Status code</value>
+  </data>
+  <data name="StatusCode-Title" xml:space="preserve">
+    <value>Systeemfout</value>
+  </data>
   <data name="title" xml:space="preserve">
     <value>Persoonlijke website voor Christopher D. Cavell</value>
   </data>

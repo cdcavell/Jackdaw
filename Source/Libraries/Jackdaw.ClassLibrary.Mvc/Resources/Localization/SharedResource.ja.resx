@@ -234,6 +234,12 @@
   <data name="Name" xml:space="preserve">
     <value>名前</value>
   </data>
+  <data name="StatusCode" xml:space="preserve">
+    <value>ステータスコード</value>
+  </data>
+  <data name="StatusCode-Title" xml:space="preserve">
+    <value>システムエラー</value>
+  </data>
   <data name="title" xml:space="preserve">
     <value>Christopher D.Cavellの個人ウェブサイト</value>
   </data>

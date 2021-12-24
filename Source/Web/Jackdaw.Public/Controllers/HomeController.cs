@@ -57,6 +57,7 @@ namespace Jackdaw.Public.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            throw new Exception("Test Exception");
             return View();
         }
     }
