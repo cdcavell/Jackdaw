@@ -237,6 +237,18 @@
   <data name="StatusCode" xml:space="preserve">
     <value>Code d'état</value>
   </data>
+  <data name="StatusCode-100" xml:space="preserve">
+    <value>Continuez</value>
+  </data>
+  <data name="StatusCode-101" xml:space="preserve">
+    <value>Protocoles de commutation</value>
+  </data>
+  <data name="StatusCode-200" xml:space="preserve">
+    <value>d'accord</value>
+  </data>
+  <data name="StatusCode-201" xml:space="preserve">
+    <value>Établie</value>
+  </data>
   <data name="StatusCode-Title" xml:space="preserve">
     <value>Erreur système</value>
   </data>
