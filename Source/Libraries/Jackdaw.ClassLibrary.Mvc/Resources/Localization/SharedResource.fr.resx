@@ -270,6 +270,24 @@
   <data name="StatusCode-301" xml:space="preserve">
     <value>Déplacé de façon permanente - La ressource demandée s'est vu attribuer un nouvel URI permanent et toute référence future à cette ressource DEVRAIT utiliser l'un des URI renvoyés.</value>
   </data>
+  <data name="StatusCode-302" xml:space="preserve">
+    <value>Trouvé - La ressource demandée réside temporairement sous un URI différent. Étant donné que la redirection peut être modifiée à l'occasion, le client DEVRAIT continuer à utiliser l'URI de demande pour les demandes futures.</value>
+  </data>
+  <data name="StatusCode-303" xml:space="preserve">
+    <value>Voir Autre - La réponse à la demande peut être trouvée sous un URI différent et DEVRAIT être récupérée en utilisant une méthode GET sur cette ressource.</value>
+  </data>
+  <data name="StatusCode-304" xml:space="preserve">
+    <value>Non modifié - Si le client a effectué une demande GET conditionnelle et que l'accès est autorisé, mais que le document n'a pas été modifié, le serveur DEVRAIT répondre avec ce code d'état. La réponse 304 NE DOIT PAS contenir de corps de message, et se termine donc toujours par la première ligne vide après les champs d'en-tête.</value>
+  </data>
+  <data name="StatusCode-305" xml:space="preserve">
+    <value>Utiliser le proxy - La ressource demandée DOIT être accessible via le proxy donné par le champ Emplacement. Le champ Emplacement donne l'URI du proxy. Le destinataire est censé répéter cette demande unique via le proxy.</value>
+  </data>
+  <data name="StatusCode-306" xml:space="preserve">
+    <value>Inutilisé - Le code d'état 306 était utilisé dans une version précédente de la spécification, n'est plus utilisé et le code est réservé.</value>
+  </data>
+  <data name="StatusCode-307" xml:space="preserve">
+    <value>Redirection temporaire - La ressource demandée réside temporairement sous un URI différent. Étant donné que la redirection PEUT être modifiée à l'occasion, le client DEVRAIT continuer à utiliser l'URI de demande pour les demandes futures.</value>
+  </data>
   <data name="StatusCode-Title" xml:space="preserve">
     <value>Erreur système</value>
   </data>

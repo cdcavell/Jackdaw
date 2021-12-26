@@ -270,6 +270,24 @@
   <data name="StatusCode-301" xml:space="preserve">
     <value>Permanent verplaatst: aan de aangevraagde resource is een nieuwe permanente URI toegewezen en toekomstige verwijzingen naar deze resource MOETEN een van de geretourneerde URI's gebruiken.</value>
   </data>
+  <data name="StatusCode-302" xml:space="preserve">
+    <value>Gevonden: de aangevraagde resource bevindt zich tijdelijk onder een andere URI. Aangezien de omleiding af en toe kan worden gewijzigd, MOET de client de Request-URI blijven gebruiken voor toekomstige verzoeken.</value>
+  </data>
+  <data name="StatusCode-303" xml:space="preserve">
+    <value>Zie Overige - Het antwoord op het verzoek kan worden gevonden onder een andere URI en MOET worden opgehaald met behulp van een GET-methode op die bron.</value>
+  </data>
+  <data name="StatusCode-304" xml:space="preserve">
+    <value>Niet gewijzigd - Als de client een voorwaardelijk GET-verzoek heeft uitgevoerd en toegang is toegestaan, maar het document niet is gewijzigd, MOET de server reageren met deze statuscode. Het 304-antwoord MOET GEEN berichttekst bevatten en wordt dus altijd beëindigd door de eerste lege regel na de koptekstvelden.</value>
+  </data>
+  <data name="StatusCode-305" xml:space="preserve">
+    <value>Proxy gebruiken - De gevraagde bron MOET toegankelijk zijn via de proxy die in het veld Locatie wordt gegeven. Het veld Locatie geeft de URI van de proxy weer. De ontvanger wordt geacht dit ene verzoek via de proxy te herhalen.</value>
+  </data>
+  <data name="StatusCode-306" xml:space="preserve">
+    <value>Ongebruikt - De 306-statuscode werd gebruikt in een eerdere versie van de specificatie, wordt niet meer gebruikt en de code is gereserveerd.</value>
+  </data>
+  <data name="StatusCode-307" xml:space="preserve">
+    <value>Tijdelijke omleiding: de aangevraagde resource bevindt zich tijdelijk onder een andere URI. Aangezien de omleiding KAN worden gewijzigd, MOET de klant de Request-URI blijven gebruiken voor toekomstige verzoeken.</value>
+  </data>
   <data name="StatusCode-Title" xml:space="preserve">
     <value>Systeemfout</value>
   </data>

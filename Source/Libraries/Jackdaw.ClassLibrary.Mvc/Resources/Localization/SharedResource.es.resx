@@ -270,6 +270,24 @@
   <data name="StatusCode-301" xml:space="preserve">
     <value>Movido permanentemente: al recurso solicitado se le ha asignado un nuevo URI permanente y cualquier referencia futura a este recurso DEBE usar uno de los URI devueltos.</value>
   </data>
+  <data name="StatusCode-302" xml:space="preserve">
+    <value>Encontrado: el recurso solicitado reside temporalmente en un URI diferente. Dado que la redirección puede modificarse en ocasiones, el cliente DEBE continuar utilizando Request-URI para solicitudes futuras.</value>
+  </data>
+  <data name="StatusCode-303" xml:space="preserve">
+    <value>Ver otro: la respuesta a la solicitud se puede encontrar en un URI diferente y DEBERÍA recuperarse mediante un método GET en ese recurso.</value>
+  </data>
+  <data name="StatusCode-304" xml:space="preserve">
+    <value>No modificado: si el cliente ha realizado una solicitud GET condicional y se permite el acceso, pero el documento no se ha modificado, el servidor DEBE responder con este código de estado. La respuesta 304 NO DEBE contener un cuerpo de mensaje y, por lo tanto, siempre termina con la primera línea vacía después de los campos de encabezado.</value>
+  </data>
+  <data name="StatusCode-305" xml:space="preserve">
+    <value>Usar proxy: se DEBE acceder al recurso solicitado a través del proxy proporcionado por el campo Ubicación. El campo Ubicación proporciona el URI del proxy. Se espera que el destinatario repita esta única solicitud a través del proxy.</value>
+  </data>
+  <data name="StatusCode-306" xml:space="preserve">
+    <value>Sin usar: el código de estado 306 se usó en una versión anterior de la especificación, ya no se usa y el código está reservado.</value>
+  </data>
+  <data name="StatusCode-307" xml:space="preserve">
+    <value>Redirección temporal: el recurso solicitado reside temporalmente en un URI diferente. Dado que la redirección PUEDE modificarse en ocasiones, el cliente DEBE continuar utilizando Request-URI para solicitudes futuras.</value>
+  </data>
   <data name="StatusCode-Title" xml:space="preserve">
     <value>Error del sistema</value>
   </data>

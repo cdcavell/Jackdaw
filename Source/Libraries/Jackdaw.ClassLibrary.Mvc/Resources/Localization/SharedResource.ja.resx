@@ -270,6 +270,24 @@
   <data name="StatusCode-301" xml:space="preserve">
     <value>永続的に移動-要求されたリソースには新しい永続的なURIが割り当てられており、このリソースへの今後の参照では、返されたURIの1つを使用する必要があります。</value>
   </data>
+  <data name="StatusCode-302" xml:space="preserve">
+    <value>見つかりました-要求されたリソースは一時的に別のURIの下にあります。リダイレクトは時々変更される可能性があるため、クライアントは今後のリクエストに引き続きRequest-URIを使用する必要があります。</value>
+  </data>
+  <data name="StatusCode-303" xml:space="preserve">
+    <value>その他を参照-リクエストへの応答は別のURIで見つけることができ、そのリソースでGETメソッドを使用して取得する必要があります。</value>
+  </data>
+  <data name="StatusCode-304" xml:space="preserve">
+    <value>変更されていない-クライアントが条件付きGET要求を実行し、アクセスが許可されているが、ドキュメントが変更されていない場合、サーバーはこのステータスコードで応答する必要があります。 304応答にはメッセージ本文を含めることはできません。したがって、ヘッダーフィールドの後の最初の空の行で常に終了します。</value>
+  </data>
+  <data name="StatusCode-305" xml:space="preserve">
+    <value>プロキシを使用-要求されたリソースは、[場所]フィールドで指定されたプロキシを介してアクセスする必要があります。 Locationフィールドは、プロキシのURIを示します。受信者は、プロキシを介してこの単一の要求を繰り返すことが期待されます。</value>
+  </data>
+  <data name="StatusCode-306" xml:space="preserve">
+    <value>未使用-306ステータスコードは、以前のバージョンの仕様で使用されていましたが、現在は使用されておらず、コードは予約されています。</value>
+  </data>
+  <data name="StatusCode-307" xml:space="preserve">
+    <value>一時的なリダイレクト-要求されたリソースは、別のURIの下に一時的に存在します。リダイレクトは時々変更される可能性があるため、クライアントは今後のリクエストに引き続きRequest-URIを使用する必要があります。</value>
+  </data>
   <data name="StatusCode-Title" xml:space="preserve">
     <value>システムエラー</value>
   </data>
