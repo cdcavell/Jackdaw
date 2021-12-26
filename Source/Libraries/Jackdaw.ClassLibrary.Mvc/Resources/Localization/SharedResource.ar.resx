@@ -288,6 +288,81 @@
   <data name="StatusCode-307" xml:space="preserve">
     <value>إعادة توجيه مؤقتة - يوجد المورد المطلوب مؤقتًا ضمن URI مختلف. نظرًا لأنه قد يتم تغيير إعادة التوجيه في بعض الأحيان ، يجب على العميل الاستمرار في استخدام Request-URI للطلبات المستقبلية.</value>
   </data>
+  <data name="StatusCode-400" xml:space="preserve">
+    <value>طلب غير صالح - تعذر على الخادم فهم الطلب بسبب صياغة غير صحيحة. يجب ألا يكرر العميل طلبه بدون تعديلات.</value>
+  </data>
+  <data name="StatusCode-401" xml:space="preserve">
+    <value>غير مصرح به - يتطلب الطلب مصادقة المستخدم.</value>
+  </data>
+  <data name="StatusCode-402" xml:space="preserve">
+    <value>الدفع مطلوب</value>
+  </data>
+  <data name="StatusCode-403" xml:space="preserve">
+    <value>ممنوع - فهم الخادم الطلب ، لكنه رفض تنفيذه. لن يساعد التفويض ولا يجب تكرار الطلب.</value>
+  </data>
+  <data name="StatusCode-404" xml:space="preserve">
+    <value>غير موجود - لم يعثر الخادم على أي شيء يطابق طلب URI. لا يوجد مؤشر على ما إذا كانت الحالة مؤقتة أم دائمة.</value>
+  </data>
+  <data name="StatusCode-405" xml:space="preserve">
+    <value>الطريقة غير مسموح بها - الطريقة المحددة في سطر الطلب غير مسموح بها للمورد المحدد بواسطة معرف URI للطلب.</value>
+  </data>
+  <data name="StatusCode-406" xml:space="preserve">
+    <value>غير مقبول - المورد المحدد بواسطة الطلب قادر فقط على إنشاء كيانات استجابة لها خصائص محتوى غير مقبولة وفقًا لعناوين القبول المرسلة في الطلب.</value>
+  </data>
+  <data name="StatusCode-407" xml:space="preserve">
+    <value>مطلوب مصادقة الوكيل - هذا الرمز مشابه لـ 401 (غير مصرح به) ، لكنه يشير إلى أنه يجب على العميل أولاً مصادقة نفسه مع الوكيل.</value>
+  </data>
+  <data name="StatusCode-408" xml:space="preserve">
+    <value>مهلة الطلب - لم يقدم العميل طلبًا خلال الوقت الذي كان الخادم فيه جاهزًا للانتظار.</value>
+  </data>
+  <data name="StatusCode-409" xml:space="preserve">
+    <value>تعارض - تعذر إكمال الطلب نظرًا لوجود تعارض مع الحالة الحالية للمورد.</value>
+  </data>
+  <data name="StatusCode-410" xml:space="preserve">
+    <value>ذهب - لم يعد المورد المطلوب متاحًا على الخادم ولم يعد عنوان إعادة التوجيه معروفًا. من المتوقع أن تعتبر هذه الحالة دائمة.</value>
+  </data>
+  <data name="StatusCode-411" xml:space="preserve">
+    <value>الطول المطلوب - يرفض الخادم قبول الطلب بدون محتوى محدد - الطول.</value>
+  </data>
+  <data name="StatusCode-412" xml:space="preserve">
+    <value>فشل الشرط المسبق - الشرط المسبق المقدم في واحد أو أكثر من حقول عنوان الطلب التي تم تقييمها على خطأ عند اختبارها على الخادم.</value>
+  </data>
+  <data name="StatusCode-413" xml:space="preserve">
+    <value>كيان الطلب كبير جدًا - يرفض الخادم معالجة الطلب لأن كيان الطلب أكبر مما يرغب الخادم في معالجته أو يمكنه معالجته.</value>
+  </data>
+  <data name="StatusCode-414" xml:space="preserve">
+    <value>Request-URI طويل جدًا - يرفض الخادم خدمة الطلب لأن Request-URI أطول مما يرغب الخادم في تفسيره.</value>
+  </data>
+  <data name="StatusCode-415" xml:space="preserve">
+    <value>نوع وسائط غير مدعوم - يرفض الخادم خدمة الطلب لأن تنسيق كيان الطلب غير مدعوم من قبل المورد المطلوب للطريقة المطلوبة.</value>
+  </data>
+  <data name="StatusCode-416" xml:space="preserve">
+    <value>النطاق المطلوب غير كافٍ</value>
+  </data>
+  <data name="StatusCode-417" xml:space="preserve">
+    <value>فشل التوقع - لا يمكن تلبية التوقع الوارد في حقل عنوان طلب توقع (انظر القسم 14.20) بواسطة هذا الخادم ، أو إذا كان الخادم وكيلاً ، فإن الخادم لديه دليل لا لبس فيه على أنه لا يمكن تلبية الطلب من قبل التالي خادم متجر.</value>
+  </data>
+  <data name="StatusCode-500" xml:space="preserve">
+    <value>خطأ داخلي في الخادم - واجه الخادم حالة غير متوقعة منعته من تلبية الطلب.</value>
+  </data>
+  <data name="StatusCode-501" xml:space="preserve">
+    <value>لم يتم التنفيذ - لا يدعم الخادم الوظيفة المطلوبة لتنفيذ الطلب.</value>
+  </data>
+  <data name="StatusCode-502" xml:space="preserve">
+    <value>بوابة غير صالحة - تلقى الخادم ، أثناء عمله كبوابة أو وكيل ، استجابة غير صالحة من الخادم الرئيسي الذي وصل إليه في محاولة لتلبية الطلب.</value>
+  </data>
+  <data name="StatusCode-503" xml:space="preserve">
+    <value>الخدمة غير متوفرة - يتعذر على الخادم حاليًا معالجة الطلب بسبب التحميل الزائد المؤقت أو صيانة الخادم.</value>
+  </data>
+  <data name="StatusCode-504" xml:space="preserve">
+    <value>مهلة البوابة - لم يتلق الخادم ، أثناء عمله كبوابة أو وكيل ، استجابة في الوقت المناسب من الخادم الرئيسي المحدد بواسطة URI (مثل HTTP و FTP و LDAP) أو بعض الخادم الإضافي (مثل DNS) الذي يحتاجه للوصول في محاولة استكمال الطلب.</value>
+  </data>
+  <data name="StatusCode-505" xml:space="preserve">
+    <value>إصدار HTTP غير مدعوم - لا يدعم الخادم أو يرفض دعم إصدار بروتوكول HTTP الذي تم استخدامه في رسالة الطلب.</value>
+  </data>
+  <data name="StatusCode-600" xml:space="preserve">
+    <value>رمز حالة غير معروف</value>
+  </data>
   <data name="StatusCode-Title" xml:space="preserve">
     <value>خطأ في النظام</value>
   </data>

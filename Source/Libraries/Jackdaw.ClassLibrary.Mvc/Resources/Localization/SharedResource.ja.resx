@@ -288,6 +288,81 @@
   <data name="StatusCode-307" xml:space="preserve">
     <value>一時的なリダイレクト-要求されたリソースは、別のURIの下に一時的に存在します。リダイレクトは時々変更される可能性があるため、クライアントは今後のリクエストに引き続きRequest-URIを使用する必要があります。</value>
   </data>
+  <data name="StatusCode-400" xml:space="preserve">
+    <value>不正なリクエスト-構文が正しくないため、サーバーはリクエストを理解できませんでした。クライアントは、変更せずに要求を繰り返すべきではありません（SHOULDNOT）。</value>
+  </data>
+  <data name="StatusCode-401" xml:space="preserve">
+    <value>Unauthorized-リクエストにはユーザー認証が必要です。</value>
+  </data>
+  <data name="StatusCode-402" xml:space="preserve">
+    <value>支払いが必要</value>
+  </data>
+  <data name="StatusCode-403" xml:space="preserve">
+    <value>禁止-サーバーは要求を理解しましたが、要求を満たすことを拒否しています。承認は役に立たず、リクエストは繰り返されるべきではありません。</value>
+  </data>
+  <data name="StatusCode-404" xml:space="preserve">
+    <value>見つかりません-サーバーはRequest-URIに一致するものを見つけられませんでした。状態が一時的であるか永続的であるかは示されません。</value>
+  </data>
+  <data name="StatusCode-405" xml:space="preserve">
+    <value>メソッドは許可されていません-Request-Lineで指定されたメソッドは、Request-URIで識別されたリソースには許可されていません。</value>
+  </data>
+  <data name="StatusCode-406" xml:space="preserve">
+    <value>受け入れられない-リクエストによって識別されたリソースは、リクエストで送信された受け入れヘッダーに従って受け入れられないコンテンツ特性を持つ応答エンティティのみを生成できます。</value>
+  </data>
+  <data name="StatusCode-407" xml:space="preserve">
+    <value>プロキシ認証が必要-このコードは401（Unauthorized）に似ていますが、クライアントが最初にプロキシで自身を認証する必要があることを示しています。</value>
+  </data>
+  <data name="StatusCode-408" xml:space="preserve">
+    <value>要求のタイムアウト-サーバーが待機する準備ができている時間内に、クライアントが要求を生成しませんでした。</value>
+  </data>
+  <data name="StatusCode-409" xml:space="preserve">
+    <value>競合-リソースの現在の状態と競合しているため、リクエストを完了できませんでした。</value>
+  </data>
+  <data name="StatusCode-410" xml:space="preserve">
+    <value>なくなった-要求されたリソースはサーバーで使用できなくなり、転送アドレスは不明です。この状態は永続的であると見なされると予想されます。</value>
+  </data>
+  <data name="StatusCode-411" xml:space="preserve">
+    <value>必要な長さ-サーバーは、Content-Lengthが定義されていないリクエストの受け入れを拒否します。</value>
+  </data>
+  <data name="StatusCode-412" xml:space="preserve">
+    <value>前提条件が失敗しました-1つ以上のリクエストヘッダーフィールドで指定された前提条件は、サーバーでテストされたときにfalseと評価されました。</value>
+  </data>
+  <data name="StatusCode-413" xml:space="preserve">
+    <value>リクエストエンティティが大きすぎます-リクエストエンティティがサーバーが処理しようとしている、または処理できるサイズよりも大きいため、サーバーはリクエストの処理を拒否しています。</value>
+  </data>
+  <data name="StatusCode-414" xml:space="preserve">
+    <value>Request-URIが長すぎます-Request-URIがサーバーが解釈しようとしている長さよりも長いため、サーバーはリクエストの処理を拒否しています。</value>
+  </data>
+  <data name="StatusCode-415" xml:space="preserve">
+    <value>サポートされていないメディアタイプ-リクエストのエンティティが、リクエストされたメソッドのリクエストされたリソースでサポートされていない形式であるため、サーバーはリクエストの処理を拒否しています。</value>
+  </data>
+  <data name="StatusCode-416" xml:space="preserve">
+    <value>要求された範囲が満たされていません</value>
+  </data>
+  <data name="StatusCode-417" xml:space="preserve">
+    <value>期待値が失敗しました-Expectrequest-headerフィールド（セクション14.20を参照）で指定された期待値は、このサーバーでは満たすことができませんでした。または、サーバーがプロキシである場合、サーバーは、次のサーバーで要求を満たすことができなかったという明確な証拠を持っています。 -ホップサーバー。</value>
+  </data>
+  <data name="StatusCode-500" xml:space="preserve">
+    <value>内部サーバーエラー-サーバーで予期しない状態が発生したため、サーバーは要求を実行できませんでした。</value>
+  </data>
+  <data name="StatusCode-501" xml:space="preserve">
+    <value>実装されていません-サーバーは、要求を満たすために必要な機能をサポートしていません。</value>
+  </data>
+  <data name="StatusCode-502" xml:space="preserve">
+    <value>不正なゲートウェイ-サーバーはゲートウェイまたはプロキシとして機能しているときに、要求を実行しようとしてアクセスしたアップストリームサーバーから無効な応答を受信しました。</value>
+  </data>
+  <data name="StatusCode-503" xml:space="preserve">
+    <value>サービスを利用できません-サーバーの一時的な過負荷またはメンテナンスのため、サーバーは現在リクエストを処理できません。</value>
+  </data>
+  <data name="StatusCode-504" xml:space="preserve">
+    <value>ゲートウェイタイムアウト-サーバーはゲートウェイまたはプロキシとして機能しているときに、URI（HTTP、FTP、LDAPなど）またはアクセスする必要のある他の補助サーバー（DNSなど）で指定されたアップストリームサーバーからタイムリーな応答を受信しませんでしたリクエストを完了しようとしています。</value>
+  </data>
+  <data name="StatusCode-505" xml:space="preserve">
+    <value>HTTPバージョンがサポートされていません-サーバーは、要求メッセージで使用されたHTTPプロトコルバージョンをサポートしていないか、サポートを拒否しています。</value>
+  </data>
+  <data name="StatusCode-600" xml:space="preserve">
+    <value>不明なステータスコード</value>
+  </data>
   <data name="StatusCode-Title" xml:space="preserve">
     <value>システムエラー</value>
   </data>

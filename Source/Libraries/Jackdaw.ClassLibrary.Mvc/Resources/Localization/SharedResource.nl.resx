@@ -288,6 +288,81 @@
   <data name="StatusCode-307" xml:space="preserve">
     <value>Tijdelijke omleiding: de aangevraagde resource bevindt zich tijdelijk onder een andere URI. Aangezien de omleiding KAN worden gewijzigd, MOET de klant de Request-URI blijven gebruiken voor toekomstige verzoeken.</value>
   </data>
+  <data name="StatusCode-400" xml:space="preserve">
+    <value>Ongeldig verzoek - Het verzoek kon niet worden begrepen door de server vanwege een onjuiste syntaxis. De klant MOET het verzoek NIET herhalen zonder wijzigingen.</value>
+  </data>
+  <data name="StatusCode-401" xml:space="preserve">
+    <value>Ongeautoriseerd: voor het verzoek is gebruikersauthenticatie vereist.</value>
+  </data>
+  <data name="StatusCode-402" xml:space="preserve">
+    <value>Betaling Vereist</value>
+  </data>
+  <data name="StatusCode-403" xml:space="preserve">
+    <value>Verboden - De server heeft het verzoek begrepen, maar weigert eraan te voldoen. Autorisatie zal niet helpen en het verzoek MAG NIET worden herhaald.</value>
+  </data>
+  <data name="StatusCode-404" xml:space="preserve">
+    <value>Niet gevonden - De server heeft niets gevonden dat overeenkomt met de Request-URI. Er wordt niet aangegeven of de aandoening tijdelijk of permanent is.</value>
+  </data>
+  <data name="StatusCode-405" xml:space="preserve">
+    <value>Methode niet toegestaan ​​- De methode die is opgegeven in de Request-Line is niet toegestaan ​​voor de resource die wordt geïdentificeerd door de Request-URI.</value>
+  </data>
+  <data name="StatusCode-406" xml:space="preserve">
+    <value>Niet acceptabel - De door het verzoek geïdentificeerde bron is alleen in staat om antwoord-entiteiten te genereren die inhoudskenmerken hebben die niet acceptabel zijn volgens de accept-headers die in het verzoek zijn verzonden.</value>
+  </data>
+  <data name="StatusCode-407" xml:space="preserve">
+    <value>Proxy-authenticatie vereist - Deze code is vergelijkbaar met 401 (niet-geautoriseerd), maar geeft aan dat de client zichzelf eerst moet authenticeren met de proxy.</value>
+  </data>
+  <data name="StatusCode-408" xml:space="preserve">
+    <value>Verzoek time-out - De client heeft geen verzoek ingediend binnen de tijd dat de server klaar was om te wachten.</value>
+  </data>
+  <data name="StatusCode-409" xml:space="preserve">
+    <value>Conflict - Het verzoek kan niet worden voltooid vanwege een conflict met de huidige status van de bron.</value>
+  </data>
+  <data name="StatusCode-410" xml:space="preserve">
+    <value>Verdwenen - De gevraagde bron is niet langer beschikbaar op de server en er is geen doorstuuradres bekend. Deze aandoening zal naar verwachting als permanent worden beschouwd.</value>
+  </data>
+  <data name="StatusCode-411" xml:space="preserve">
+    <value>Lengte vereist - De server weigert het verzoek te accepteren zonder een gedefinieerde inhoudslengte.</value>
+  </data>
+  <data name="StatusCode-412" xml:space="preserve">
+    <value>Voorwaarde mislukt - De voorwaarde die is opgegeven in een of meer van de velden in de verzoekheader, werd geëvalueerd als onwaar toen deze op de server werd getest.</value>
+  </data>
+  <data name="StatusCode-413" xml:space="preserve">
+    <value>Request Entity Too Large - De server weigert een verzoek te verwerken omdat de verzoekentiteit groter is dan de server wil of kan verwerken.</value>
+  </data>
+  <data name="StatusCode-414" xml:space="preserve">
+    <value>Request-URI Too Long - De server weigert het verzoek te verwerken omdat de Request-URI langer is dan de server wil interpreteren.</value>
+  </data>
+  <data name="StatusCode-415" xml:space="preserve">
+    <value>Niet-ondersteund mediatype - De server weigert het verzoek te verwerken omdat de entiteit van het verzoek een indeling heeft die niet wordt ondersteund door de aangevraagde bron voor de gevraagde methode.</value>
+  </data>
+  <data name="StatusCode-416" xml:space="preserve">
+    <value>Aangevraagd bereik niet bevredigbaar</value>
+  </data>
+  <data name="StatusCode-417" xml:space="preserve">
+    <value>Verwachting mislukt - De verwachting die is opgegeven in het veld Expect request-header (zie paragraaf 14.20) kon niet worden vervuld door deze server, of, als de server een proxy is, heeft de server ondubbelzinnig bewijs dat aan het verzoek niet kon worden voldaan door de volgende -hop-server.</value>
+  </data>
+  <data name="StatusCode-500" xml:space="preserve">
+    <value>Interne serverfout - De server heeft een onverwachte omstandigheid aangetroffen waardoor deze niet aan het verzoek kon voldoen.</value>
+  </data>
+  <data name="StatusCode-501" xml:space="preserve">
+    <value>Niet geïmplementeerd - De server ondersteunt niet de functionaliteit die nodig is om aan het verzoek te voldoen.</value>
+  </data>
+  <data name="StatusCode-502" xml:space="preserve">
+    <value>Slechte gateway - De server, die als gateway of proxy fungeerde, ontving een ongeldig antwoord van de upstream-server waartoe hij toegang had om aan het verzoek te voldoen.</value>
+  </data>
+  <data name="StatusCode-503" xml:space="preserve">
+    <value>Service niet beschikbaar - De server kan het verzoek momenteel niet verwerken vanwege tijdelijke overbelasting of onderhoud van de server.</value>
+  </data>
+  <data name="StatusCode-504" xml:space="preserve">
+    <value>Gateway-time-out - De server, die fungeerde als gateway of proxy, ontving geen tijdige reactie van de upstream-server gespecificeerd door de URI (bijv. HTTP, FTP, LDAP) of een andere hulpserver (bijv. DNS) die nodig was om toegang te krijgen in proberen om het verzoek te voltooien.</value>
+  </data>
+  <data name="StatusCode-505" xml:space="preserve">
+    <value>HTTP-versie niet ondersteund - De server ondersteunt de HTTP-protocolversie die in het verzoekbericht is gebruikt niet of weigert deze te ondersteunen.</value>
+  </data>
+  <data name="StatusCode-600" xml:space="preserve">
+    <value>Onbekende statuscode</value>
+  </data>
   <data name="StatusCode-Title" xml:space="preserve">
     <value>Systeemfout</value>
   </data>

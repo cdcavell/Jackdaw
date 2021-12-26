@@ -288,6 +288,81 @@
   <data name="StatusCode-307" xml:space="preserve">
     <value>Redirección temporal: el recurso solicitado reside temporalmente en un URI diferente. Dado que la redirección PUEDE modificarse en ocasiones, el cliente DEBE continuar utilizando Request-URI para solicitudes futuras.</value>
   </data>
+  <data name="StatusCode-400" xml:space="preserve">
+    <value>Solicitud incorrecta: el servidor no pudo entender la solicitud debido a una sintaxis incorrecta. El cliente NO DEBE repetir la solicitud sin modificaciones.</value>
+  </data>
+  <data name="StatusCode-401" xml:space="preserve">
+    <value>No autorizado: la solicitud requiere autenticación de usuario.</value>
+  </data>
+  <data name="StatusCode-402" xml:space="preserve">
+    <value>pago requerido</value>
+  </data>
+  <data name="StatusCode-403" xml:space="preserve">
+    <value>Prohibido: el servidor entendió la solicitud, pero se niega a cumplirla. La autorización no ayudará y la solicitud NO DEBE repetirse.</value>
+  </data>
+  <data name="StatusCode-404" xml:space="preserve">
+    <value>No encontrado: el servidor no ha encontrado nada que coincida con el URI de solicitud. No se da ninguna indicación de si la condición es temporal o permanente.</value>
+  </data>
+  <data name="StatusCode-405" xml:space="preserve">
+    <value>Método no permitido: el método especificado en Request-Line no está permitido para el recurso identificado por Request-URI.</value>
+  </data>
+  <data name="StatusCode-406" xml:space="preserve">
+    <value>No aceptable: el recurso identificado por la solicitud solo es capaz de generar entidades de respuesta que tienen características de contenido no aceptables de acuerdo con los encabezados de aceptación enviados en la solicitud.</value>
+  </data>
+  <data name="StatusCode-407" xml:space="preserve">
+    <value>Se requiere autenticación de proxy: este código es similar al 401 (no autorizado), pero indica que el cliente debe primero autenticarse con el proxy.</value>
+  </data>
+  <data name="StatusCode-408" xml:space="preserve">
+    <value>Solicitud de tiempo de espera: el cliente no generó una solicitud dentro del tiempo en que el servidor estaba preparado para esperar.</value>
+  </data>
+  <data name="StatusCode-409" xml:space="preserve">
+    <value>Conflicto: la solicitud no se pudo completar debido a un conflicto con el estado actual del recurso.</value>
+  </data>
+  <data name="StatusCode-410" xml:space="preserve">
+    <value>Desaparecido: el recurso solicitado ya no está disponible en el servidor y no se conoce ninguna dirección de reenvío. Se espera que esta condición se considere permanente.</value>
+  </data>
+  <data name="StatusCode-411" xml:space="preserve">
+    <value>Longitud requerida: el servidor se niega a aceptar la solicitud sin una longitud de contenido definida.</value>
+  </data>
+  <data name="StatusCode-412" xml:space="preserve">
+    <value>Precondición fallida: la condición previa dada en uno o más de los campos de encabezado de solicitud evaluados como falsa cuando se probó en el servidor.</value>
+  </data>
+  <data name="StatusCode-413" xml:space="preserve">
+    <value>Entidad de solicitud demasiado grande: el servidor se niega a procesar una solicitud porque la entidad de solicitud es más grande de lo que el servidor desea o puede procesar.</value>
+  </data>
+  <data name="StatusCode-414" xml:space="preserve">
+    <value>Request-URI demasiado largo: el servidor se niega a atender la solicitud porque el Request-URI es más largo de lo que el servidor está dispuesto a interpretar.</value>
+  </data>
+  <data name="StatusCode-415" xml:space="preserve">
+    <value>Tipo de medio no admitido: el servidor se niega a atender la solicitud porque la entidad de la solicitud está en un formato no admitido por el recurso solicitado para el método solicitado.</value>
+  </data>
+  <data name="StatusCode-416" xml:space="preserve">
+    <value>Rango solicitado no satisfactorio</value>
+  </data>
+  <data name="StatusCode-417" xml:space="preserve">
+    <value>Expectativa fallida: este servidor no pudo cumplir la expectativa dada en un campo de encabezado de solicitud Expect (consulte la sección 14.20) o, si el servidor es un proxy, el servidor tiene evidencia inequívoca de que la solicitud no pudo ser satisfecha por el siguiente -servidor de tienda.</value>
+  </data>
+  <data name="StatusCode-500" xml:space="preserve">
+    <value>Error interno del servidor: el servidor encontró una condición inesperada que le impidió cumplir con la solicitud.</value>
+  </data>
+  <data name="StatusCode-501" xml:space="preserve">
+    <value>No implementado: el servidor no admite la funcionalidad requerida para cumplir con la solicitud.</value>
+  </data>
+  <data name="StatusCode-502" xml:space="preserve">
+    <value>Puerta de enlace incorrecta: el servidor, mientras actuaba como puerta de enlace o proxy, recibió una respuesta no válida del servidor ascendente al que accedió al intentar cumplir con la solicitud.</value>
+  </data>
+  <data name="StatusCode-503" xml:space="preserve">
+    <value>Servicio no disponible: el servidor actualmente no puede manejar la solicitud debido a una sobrecarga temporal o al mantenimiento del servidor.</value>
+  </data>
+  <data name="StatusCode-504" xml:space="preserve">
+    <value>Tiempo de espera de puerta de enlace: el servidor, mientras actuaba como puerta de enlace o proxy, no recibió una respuesta oportuna del servidor ascendente especificado por el URI (por ejemplo, HTTP, FTP, LDAP) o algún otro servidor auxiliar (por ejemplo, DNS) al que necesitaba acceder en intentando completar la solicitud.</value>
+  </data>
+  <data name="StatusCode-505" xml:space="preserve">
+    <value>Versión HTTP no admitida: el servidor no admite, o se niega a admitir, la versión del protocolo HTTP que se utilizó en el mensaje de solicitud.</value>
+  </data>
+  <data name="StatusCode-600" xml:space="preserve">
+    <value>Código de estado desconocido</value>
+  </data>
   <data name="StatusCode-Title" xml:space="preserve">
     <value>Error del sistema</value>
   </data>
