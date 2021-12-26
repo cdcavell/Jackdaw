@@ -264,6 +264,12 @@
   <data name="StatusCode-206" xml:space="preserve">
     <value>Gedeeltelijke inhoud</value>
   </data>
+  <data name="StatusCode-300" xml:space="preserve">
+    <value>Meerkeuzes - De gevraagde bron komt overeen met een van een reeks representaties, elk met zijn eigen specifieke locatie, en agentgestuurde onderhandelingsinformatie (sectie 12) wordt verstrekt zodat de gebruiker (of user-agent) een voorkeursrepresentatie kan selecteren en zijn verzoek omleiden naar die locatie.</value>
+  </data>
+  <data name="StatusCode-301" xml:space="preserve">
+    <value>Permanent verplaatst: aan de aangevraagde resource is een nieuwe permanente URI toegewezen en toekomstige verwijzingen naar deze resource MOETEN een van de geretourneerde URI's gebruiken.</value>
+  </data>
   <data name="StatusCode-Title" xml:space="preserve">
     <value>Systeemfout</value>
   </data>

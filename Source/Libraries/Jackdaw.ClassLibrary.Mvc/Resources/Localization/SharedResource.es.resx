@@ -264,6 +264,12 @@
   <data name="StatusCode-206" xml:space="preserve">
     <value>Contenido parcial</value>
   </data>
+  <data name="StatusCode-300" xml:space="preserve">
+    <value>Opciones múltiples: el recurso solicitado corresponde a cualquiera de un conjunto de representaciones, cada una con su propia ubicación específica, y se proporciona información de negociación impulsada por el agente (sección 12) para que el usuario (o agente de usuario) pueda seleccionar una representación preferida y redirigir su solicitud a esa ubicación.</value>
+  </data>
+  <data name="StatusCode-301" xml:space="preserve">
+    <value>Movido permanentemente: al recurso solicitado se le ha asignado un nuevo URI permanente y cualquier referencia futura a este recurso DEBE usar uno de los URI devueltos.</value>
+  </data>
   <data name="StatusCode-Title" xml:space="preserve">
     <value>Error del sistema</value>
   </data>

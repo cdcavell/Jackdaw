@@ -264,6 +264,12 @@
   <data name="StatusCode-206" xml:space="preserve">
     <value>المحتوى الجزئي</value>
   </data>
+  <data name="StatusCode-300" xml:space="preserve">
+    <value>خيارات متعددة - يتوافق المورد المطلوب مع أي مجموعة من التمثيلات ، ولكل منها موقعها المحدد ، ويتم توفير معلومات التفاوض التي يقودها الوكيل (القسم 12) بحيث يمكن للمستخدم (أو وكيل المستخدم) تحديد التمثيل المفضل وإعادة توجيه طلبه إلى هذا الموقع.</value>
+  </data>
+  <data name="StatusCode-301" xml:space="preserve">
+    <value>تم النقل بشكل دائم - تم تعيين المورد المطلوب URI دائم جديد وأي مراجع مستقبلية لهذا المورد يجب أن تستخدم أحد URIs التي تم إرجاعها.</value>
+  </data>
   <data name="StatusCode-Title" xml:space="preserve">
     <value>خطأ في النظام</value>
   </data>

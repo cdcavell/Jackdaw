@@ -264,6 +264,12 @@
   <data name="StatusCode-206" xml:space="preserve">
     <value>部分的なコンテンツ</value>
   </data>
+  <data name="StatusCode-300" xml:space="preserve">
+    <value>複数の選択肢-要求されたリソースは、それぞれが独自の特定の場所を持つ一連の表現のいずれかに対応し、ユーザー（またはユーザーエージェント）が優先表現を選択できるように、エージェント主導のネゴシエーション情報（セクション12）が提供されますリクエストをその場所にリダイレクトします。</value>
+  </data>
+  <data name="StatusCode-301" xml:space="preserve">
+    <value>永続的に移動-要求されたリソースには新しい永続的なURIが割り当てられており、このリソースへの今後の参照では、返されたURIの1つを使用する必要があります。</value>
+  </data>
   <data name="StatusCode-Title" xml:space="preserve">
     <value>システムエラー</value>
   </data>

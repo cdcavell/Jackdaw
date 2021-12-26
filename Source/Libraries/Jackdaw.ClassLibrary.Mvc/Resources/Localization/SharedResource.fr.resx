@@ -264,6 +264,12 @@
   <data name="StatusCode-206" xml:space="preserve">
     <value>Contenu partiel</value>
   </data>
+  <data name="StatusCode-300" xml:space="preserve">
+    <value>Choix multiples - La ressource demandée correspond à l'une quelconque d'un ensemble de représentations, chacune avec son propre emplacement spécifique, et des informations de négociation pilotées par l'agent (section 12) sont fournies afin que l'utilisateur (ou l'agent utilisateur) puisse sélectionner une représentation préférée et rediriger sa demande vers cet emplacement.</value>
+  </data>
+  <data name="StatusCode-301" xml:space="preserve">
+    <value>Déplacé de façon permanente - La ressource demandée s'est vu attribuer un nouvel URI permanent et toute référence future à cette ressource DEVRAIT utiliser l'un des URI renvoyés.</value>
+  </data>
   <data name="StatusCode-Title" xml:space="preserve">
     <value>Erreur système</value>
   </data>
