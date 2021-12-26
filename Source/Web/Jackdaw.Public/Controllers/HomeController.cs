@@ -14,7 +14,7 @@ namespace Jackdaw.Public.Controllers
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.1 | 12/15/2021 | Initial Development |~ 
+    /// | Christopher D. Cavell | 0.0.0.1 | 12/26/2021 | Initial Development |~ 
     /// </revision>
     public class HomeController : ApplicationBaseController<HomeController>
     {
@@ -57,7 +57,6 @@ namespace Jackdaw.Public.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            throw new Exception("Test Exception");
             return View();
         }
     }

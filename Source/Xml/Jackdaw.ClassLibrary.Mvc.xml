@@ -390,7 +390,7 @@
             __Revisions:__~~
             | Contributor | Build | Revison Date | Description |~
             |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.1 | 12/20/2021 | Initial build |~ 
+            | Christopher D. Cavell | 0.0.0.1 | 12/26/2021 | Initial build |~ 
             </revision>
         </member>
         <member name="M:Jackdaw.ClassLibrary.Mvc.Utilities.StatusCodeDefinition.GetCodeDefinition(System.Int32,System.String,Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.ClassLibrary.Mvc.Localization.SharedResource})">
