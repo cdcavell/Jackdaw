@@ -249,6 +249,21 @@
   <data name="StatusCode-201" xml:space="preserve">
     <value>作成した</value>
   </data>
+  <data name="StatusCode-202" xml:space="preserve">
+    <value>受け入れられました</value>
+  </data>
+  <data name="StatusCode-203" xml:space="preserve">
+    <value>信頼できない情報</value>
+  </data>
+  <data name="StatusCode-204" xml:space="preserve">
+    <value>コンテンツなし</value>
+  </data>
+  <data name="StatusCode-205" xml:space="preserve">
+    <value>コンテンツをリセット</value>
+  </data>
+  <data name="StatusCode-206" xml:space="preserve">
+    <value>部分的なコンテンツ</value>
+  </data>
   <data name="StatusCode-Title" xml:space="preserve">
     <value>システムエラー</value>
   </data>

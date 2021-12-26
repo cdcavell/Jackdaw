@@ -249,6 +249,21 @@
   <data name="StatusCode-201" xml:space="preserve">
     <value>Établie</value>
   </data>
+  <data name="StatusCode-202" xml:space="preserve">
+    <value>Accepté</value>
+  </data>
+  <data name="StatusCode-203" xml:space="preserve">
+    <value>Informations ne faisant pas autorité</value>
+  </data>
+  <data name="StatusCode-204" xml:space="preserve">
+    <value>Pas de contenu</value>
+  </data>
+  <data name="StatusCode-205" xml:space="preserve">
+    <value>Réinitialiser le contenu</value>
+  </data>
+  <data name="StatusCode-206" xml:space="preserve">
+    <value>Contenu partiel</value>
+  </data>
   <data name="StatusCode-Title" xml:space="preserve">
     <value>Erreur système</value>
   </data>

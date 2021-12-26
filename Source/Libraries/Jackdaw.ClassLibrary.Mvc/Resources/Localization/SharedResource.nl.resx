@@ -249,6 +249,21 @@
   <data name="StatusCode-201" xml:space="preserve">
     <value>Gemaakt</value>
   </data>
+  <data name="StatusCode-202" xml:space="preserve">
+    <value>Geaccepteerd</value>
+  </data>
+  <data name="StatusCode-203" xml:space="preserve">
+    <value>Niet-geautoriseerde informatie</value>
+  </data>
+  <data name="StatusCode-204" xml:space="preserve">
+    <value>Geen inhoud</value>
+  </data>
+  <data name="StatusCode-205" xml:space="preserve">
+    <value>Inhoud resetten</value>
+  </data>
+  <data name="StatusCode-206" xml:space="preserve">
+    <value>Gedeeltelijke inhoud</value>
+  </data>
   <data name="StatusCode-Title" xml:space="preserve">
     <value>Systeemfout</value>
   </data>
