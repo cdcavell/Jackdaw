@@ -9,7 +9,7 @@
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.1 | 12/14/2021 | Initial Development |~ 
+    /// | Christopher D. Cavell | 0.0.0.1 | 02/26/2021 | Initial Development |~ 
     /// </revision>
     public static class CultureHelper
     {
@@ -36,7 +36,7 @@
         /// <summary>
         /// Returns a valid culture name based on "name" parameter. If "name" is not valid, it returns the default culture "en-US"
         /// </summary>
-        /// <param name="name" />Culture's name (e.g. en-US)</param>
+        /// <param name="name">Culture's name (e.g. en-US)</param>
         public static string GetImplementedCulture(string name)
         {
             // make sure it's not null
@@ -66,14 +66,26 @@
         {
             return _cultures[0]; // return Default culture
         }
+        /// <summary>
+        /// Returns current culture name
+        /// </summary>
+        /// <returns></returns>
         public static string GetCurrentCulture()
         {
             return Thread.CurrentThread.CurrentCulture.Name;
         }
+        /// <summary>
+        /// Returns current neutral culture name
+        /// </summary>
+        /// <returns></returns>
         public static string GetCurrentNeutralCulture()
         {
             return GetNeutralCulture(Thread.CurrentThread.CurrentCulture.Name);
         }
+        /// <summary>
+        /// Returns neutral culture name for given culture
+        /// </summary>
+        /// <returns></returns>
         public static string GetNeutralCulture(string name)
         {
             if (!name.Contains("-")) return name;
