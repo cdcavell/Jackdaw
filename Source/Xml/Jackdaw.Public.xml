@@ -48,7 +48,7 @@
             __Revisions:__~~
             | Contributor | Build | Revison Date | Description |~
             |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.1 | 12/15/2021 | Initial Development |~ 
+            | Christopher D. Cavell | 0.0.0.1 | 12/26/2021 | Initial Development |~ 
             </revision>
         </member>
         <member name="M:Jackdaw.Public.Controllers.HomeController.#ctor(Microsoft.Extensions.Logging.ILogger{Jackdaw.Public.Controllers.HomeController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.Public.Controllers.HomeController},Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.ClassLibrary.Mvc.Localization.SharedResource})">
