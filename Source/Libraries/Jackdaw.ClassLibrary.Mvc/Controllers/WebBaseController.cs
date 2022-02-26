@@ -15,6 +15,7 @@ using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
 using System.Globalization;
+using System.Net;
 using System.Web;
 
 namespace Jackdaw.ClassLibrary.Mvc.Controllers
@@ -27,7 +28,7 @@ namespace Jackdaw.ClassLibrary.Mvc.Controllers
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.1 | 12/16/2021 | Initial Development |~ 
+    /// | Christopher D. Cavell | 0.0.0.1 | 12/19/2021 | Initial Development |~ 
     /// </revision>
     [Controller]
     [Authorize]
@@ -187,7 +188,7 @@ namespace Jackdaw.ClassLibrary.Mvc.Controllers
         /// <returns>IActionResult</returns>
         [AllowAnonymous]
         [HttpPost]
-        public IActionResult SetCulture(CultureModel model)
+        public virtual IActionResult SetCulture(CultureModel model)
         {
             if (ModelState.IsValid)
             {
@@ -215,6 +216,67 @@ namespace Jackdaw.ClassLibrary.Mvc.Controllers
             }
 
             return InvalidModelState();
+        }
+
+        /// <summary>
+        /// Global error handling
+        /// </summary>
+        /// <param name="id">int</param>
+        /// <returns>IActionResult</returns>
+        [AllowAnonymous]
+        [HttpGet, HttpPost]
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public virtual IActionResult Error(int id)
+        {
+            if (id == 0)
+                if (Request.Method.ToLower() == "post")
+                    _ = int.TryParse((RouteData?.Values["id"]?.ToString()) ?? "0", out id);
+
+            IRequestCultureFeature? requestCultureFeature = HttpContext.Features.Get<IRequestCultureFeature>();
+            if (requestCultureFeature == null)
+                throw new NullReferenceException();
+
+            var vm = new ErrorViewModel(id, ViewBag.CultureName, _sharedLocalizer);
+
+            string requestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
+            vm.RequestId = requestId;
+
+            var exceptionFeature = HttpContext.Features.Get<IExceptionHandlerPathFeature>();
+            if (exceptionFeature != null)
+            {
+                if (exceptionFeature.Error.GetType().IsAssignableFrom(typeof(HttpRequestException)))
+                {
+                    try
+                    {
+                        HttpStatusCode? httpStatusCode = ((HttpRequestException)exceptionFeature.Error).StatusCode;
+                        if (httpStatusCode != null)
+                        {
+                            vm.StatusCode = (int)httpStatusCode;
+                            vm.StatusMessage = exceptionFeature.Error.Message;
+                            _logger.LogInformation($"{exceptionFeature.Error.Message} RequestId = {requestId}");
+                        }
+                        else
+                        {
+                            vm.Exception = exceptionFeature.Error;
+                            _logger.LogError(exceptionFeature.Error, $"Exception RequestId = {requestId}");
+                        }
+                    }
+                    catch (Exception exception)
+                    {
+                        vm.Exception = exceptionFeature.Error;
+                        _logger.LogError(exceptionFeature.Error, $"Exception RequestId = {requestId}");
+                        _logger.LogError(exception, $"Exception RequestId = {requestId}");
+                    }
+                }
+                else
+                {
+                    vm.Exception = exceptionFeature.Error;
+                    _logger.LogError(exceptionFeature.Error, $"Exception RequestId = {requestId}");
+                }
+            }
+
+            return View("Error", vm);
+
         }
     }
 }

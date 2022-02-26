@@ -147,24 +147,6 @@
   <data name="Culture" xml:space="preserve">
     <value>Cultura</value>
   </data>
-  <data name="culture-content-description-l1" xml:space="preserve">
-    <value>Inglesa</value>
-  </data>
-  <data name="culture-content-description-l2" xml:space="preserve">
-    <value>Holandesa</value>
-  </data>
-  <data name="culture-content-description-l3" xml:space="preserve">
-    <value>Francesa</value>
-  </data>
-  <data name="culture-content-description-l4" xml:space="preserve">
-    <value>Española</value>
-  </data>
-  <data name="culture-content-description-l5" xml:space="preserve">
-    <value>Japonesa</value>
-  </data>
-  <data name="culture-content-description-l6" xml:space="preserve">
-    <value>Arábica</value>
-  </data>
   <data name="culture-section-description" xml:space="preserve">
     <value>¿Qué cultura desea utilizar?</value>
   </data>
@@ -251,6 +233,138 @@
   </data>
   <data name="Name" xml:space="preserve">
     <value>Nombre</value>
+  </data>
+  <data name="StatusCode" xml:space="preserve">
+    <value>Código de estado</value>
+  </data>
+  <data name="StatusCode-100" xml:space="preserve">
+    <value>Continuar</value>
+  </data>
+  <data name="StatusCode-101" xml:space="preserve">
+    <value>Protocolos de conmutación</value>
+  </data>
+  <data name="StatusCode-200" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="StatusCode-201" xml:space="preserve">
+    <value>Creada</value>
+  </data>
+  <data name="StatusCode-202" xml:space="preserve">
+    <value>Aceptada</value>
+  </data>
+  <data name="StatusCode-203" xml:space="preserve">
+    <value>Información no autorizada</value>
+  </data>
+  <data name="StatusCode-204" xml:space="preserve">
+    <value>Sin contenido</value>
+  </data>
+  <data name="StatusCode-205" xml:space="preserve">
+    <value>Restablecer contenido</value>
+  </data>
+  <data name="StatusCode-206" xml:space="preserve">
+    <value>Contenido parcial</value>
+  </data>
+  <data name="StatusCode-300" xml:space="preserve">
+    <value>Opciones múltiples: el recurso solicitado corresponde a cualquiera de un conjunto de representaciones, cada una con su propia ubicación específica, y se proporciona información de negociación impulsada por el agente (sección 12) para que el usuario (o agente de usuario) pueda seleccionar una representación preferida y redirigir su solicitud a esa ubicación.</value>
+  </data>
+  <data name="StatusCode-301" xml:space="preserve">
+    <value>Movido permanentemente: al recurso solicitado se le ha asignado un nuevo URI permanente y cualquier referencia futura a este recurso DEBE usar uno de los URI devueltos.</value>
+  </data>
+  <data name="StatusCode-302" xml:space="preserve">
+    <value>Encontrado: el recurso solicitado reside temporalmente en un URI diferente. Dado que la redirección puede modificarse en ocasiones, el cliente DEBE continuar utilizando Request-URI para solicitudes futuras.</value>
+  </data>
+  <data name="StatusCode-303" xml:space="preserve">
+    <value>Ver otro: la respuesta a la solicitud se puede encontrar en un URI diferente y DEBERÍA recuperarse mediante un método GET en ese recurso.</value>
+  </data>
+  <data name="StatusCode-304" xml:space="preserve">
+    <value>No modificado: si el cliente ha realizado una solicitud GET condicional y se permite el acceso, pero el documento no se ha modificado, el servidor DEBE responder con este código de estado. La respuesta 304 NO DEBE contener un cuerpo de mensaje y, por lo tanto, siempre termina con la primera línea vacía después de los campos de encabezado.</value>
+  </data>
+  <data name="StatusCode-305" xml:space="preserve">
+    <value>Usar proxy: se DEBE acceder al recurso solicitado a través del proxy proporcionado por el campo Ubicación. El campo Ubicación proporciona el URI del proxy. Se espera que el destinatario repita esta única solicitud a través del proxy.</value>
+  </data>
+  <data name="StatusCode-306" xml:space="preserve">
+    <value>Sin usar: el código de estado 306 se usó en una versión anterior de la especificación, ya no se usa y el código está reservado.</value>
+  </data>
+  <data name="StatusCode-307" xml:space="preserve">
+    <value>Redirección temporal: el recurso solicitado reside temporalmente en un URI diferente. Dado que la redirección PUEDE modificarse en ocasiones, el cliente DEBE continuar utilizando Request-URI para solicitudes futuras.</value>
+  </data>
+  <data name="StatusCode-400" xml:space="preserve">
+    <value>Solicitud incorrecta: el servidor no pudo entender la solicitud debido a una sintaxis incorrecta. El cliente NO DEBE repetir la solicitud sin modificaciones.</value>
+  </data>
+  <data name="StatusCode-401" xml:space="preserve">
+    <value>No autorizado: la solicitud requiere autenticación de usuario.</value>
+  </data>
+  <data name="StatusCode-402" xml:space="preserve">
+    <value>pago requerido</value>
+  </data>
+  <data name="StatusCode-403" xml:space="preserve">
+    <value>Prohibido: el servidor entendió la solicitud, pero se niega a cumplirla. La autorización no ayudará y la solicitud NO DEBE repetirse.</value>
+  </data>
+  <data name="StatusCode-404" xml:space="preserve">
+    <value>No encontrado: el servidor no ha encontrado nada que coincida con el URI de solicitud. No se da ninguna indicación de si la condición es temporal o permanente.</value>
+  </data>
+  <data name="StatusCode-405" xml:space="preserve">
+    <value>Método no permitido: el método especificado en Request-Line no está permitido para el recurso identificado por Request-URI.</value>
+  </data>
+  <data name="StatusCode-406" xml:space="preserve">
+    <value>No aceptable: el recurso identificado por la solicitud solo es capaz de generar entidades de respuesta que tienen características de contenido no aceptables de acuerdo con los encabezados de aceptación enviados en la solicitud.</value>
+  </data>
+  <data name="StatusCode-407" xml:space="preserve">
+    <value>Se requiere autenticación de proxy: este código es similar al 401 (no autorizado), pero indica que el cliente debe primero autenticarse con el proxy.</value>
+  </data>
+  <data name="StatusCode-408" xml:space="preserve">
+    <value>Solicitud de tiempo de espera: el cliente no generó una solicitud dentro del tiempo en que el servidor estaba preparado para esperar.</value>
+  </data>
+  <data name="StatusCode-409" xml:space="preserve">
+    <value>Conflicto: la solicitud no se pudo completar debido a un conflicto con el estado actual del recurso.</value>
+  </data>
+  <data name="StatusCode-410" xml:space="preserve">
+    <value>Desaparecido: el recurso solicitado ya no está disponible en el servidor y no se conoce ninguna dirección de reenvío. Se espera que esta condición se considere permanente.</value>
+  </data>
+  <data name="StatusCode-411" xml:space="preserve">
+    <value>Longitud requerida: el servidor se niega a aceptar la solicitud sin una longitud de contenido definida.</value>
+  </data>
+  <data name="StatusCode-412" xml:space="preserve">
+    <value>Precondición fallida: la condición previa dada en uno o más de los campos de encabezado de solicitud evaluados como falsa cuando se probó en el servidor.</value>
+  </data>
+  <data name="StatusCode-413" xml:space="preserve">
+    <value>Entidad de solicitud demasiado grande: el servidor se niega a procesar una solicitud porque la entidad de solicitud es más grande de lo que el servidor desea o puede procesar.</value>
+  </data>
+  <data name="StatusCode-414" xml:space="preserve">
+    <value>Request-URI demasiado largo: el servidor se niega a atender la solicitud porque el Request-URI es más largo de lo que el servidor está dispuesto a interpretar.</value>
+  </data>
+  <data name="StatusCode-415" xml:space="preserve">
+    <value>Tipo de medio no admitido: el servidor se niega a atender la solicitud porque la entidad de la solicitud está en un formato no admitido por el recurso solicitado para el método solicitado.</value>
+  </data>
+  <data name="StatusCode-416" xml:space="preserve">
+    <value>Rango solicitado no satisfactorio</value>
+  </data>
+  <data name="StatusCode-417" xml:space="preserve">
+    <value>Expectativa fallida: este servidor no pudo cumplir la expectativa dada en un campo de encabezado de solicitud Expect (consulte la sección 14.20) o, si el servidor es un proxy, el servidor tiene evidencia inequívoca de que la solicitud no pudo ser satisfecha por el siguiente -servidor de tienda.</value>
+  </data>
+  <data name="StatusCode-500" xml:space="preserve">
+    <value>Error interno del servidor: el servidor encontró una condición inesperada que le impidió cumplir con la solicitud.</value>
+  </data>
+  <data name="StatusCode-501" xml:space="preserve">
+    <value>No implementado: el servidor no admite la funcionalidad requerida para cumplir con la solicitud.</value>
+  </data>
+  <data name="StatusCode-502" xml:space="preserve">
+    <value>Puerta de enlace incorrecta: el servidor, mientras actuaba como puerta de enlace o proxy, recibió una respuesta no válida del servidor ascendente al que accedió al intentar cumplir con la solicitud.</value>
+  </data>
+  <data name="StatusCode-503" xml:space="preserve">
+    <value>Servicio no disponible: el servidor actualmente no puede manejar la solicitud debido a una sobrecarga temporal o al mantenimiento del servidor.</value>
+  </data>
+  <data name="StatusCode-504" xml:space="preserve">
+    <value>Tiempo de espera de puerta de enlace: el servidor, mientras actuaba como puerta de enlace o proxy, no recibió una respuesta oportuna del servidor ascendente especificado por el URI (por ejemplo, HTTP, FTP, LDAP) o algún otro servidor auxiliar (por ejemplo, DNS) al que necesitaba acceder en intentando completar la solicitud.</value>
+  </data>
+  <data name="StatusCode-505" xml:space="preserve">
+    <value>Versión HTTP no admitida: el servidor no admite, o se niega a admitir, la versión del protocolo HTTP que se utilizó en el mensaje de solicitud.</value>
+  </data>
+  <data name="StatusCode-600" xml:space="preserve">
+    <value>Código de estado desconocido</value>
+  </data>
+  <data name="StatusCode-Title" xml:space="preserve">
+    <value>Error del sistema</value>
   </data>
   <data name="title" xml:space="preserve">
     <value>Sitio web personal de Christopher D. Cavell</value>
