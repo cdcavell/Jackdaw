@@ -216,6 +216,21 @@
   <data name="license-content-description-3-p9" xml:space="preserve">
     <value>ESTE SOFTWARE ES PROPORCIONADO POR LOS TITULARES DE LOS DERECHOS DE AUTOR Y COLABORADORES "TAL CUAL" Y CUALQUIER GARANTÍA EXPRESA O IMPLÍCITA, INCLUYENDO, PERO NO LIMITADO A, LAS GARANTÍAS IMPLÍCITAS DE COMERCIABILIDAD E IDONEIDAD PARA UN PROPÓSITO PARTICULAR ESTÁN RENUNCIADAS. EN NINGÚN CASO EL TITULAR DE LOS DERECHOS DE AUTOR O COLABORADORES SERÁN RESPONSABLES DE NINGÚN DAÑO DIRECTO, INDIRECTO, INCIDENTAL, ESPECIAL, EJEMPLAR O CONSECUENCIAL (INCLUYENDO, PERO NO LIMITADO A, ADQUISICIÓN DE BIENES O SERVICIOS SUSTITUTOS; PÉRDIDA DE USO, DATOS O BENEFICIOS; O INTERRUPCIÓN COMERCIAL) SIN EMBARGO Y SOBRE CUALQUIER TEORÍA DE RESPONSABILIDAD, YA SEA POR CONTRATO, RESPONSABILIDAD ESTRICTA O AGRAVIO (INCLUYENDO NEGLIGENCIA O DE OTRA MANERA) QUE SURJA DE CUALQUIER FORMA DEL USO DE ESTE SOFTWARE, AUNQUE SE INDIQUE LA POSIBILIDAD DE DICHO DAÑO.</value>
   </data>
+  <data name="license-content-description-4-p1a" xml:space="preserve">
+    <value>Duende IdentityServer</value>
+  </data>
+  <data name="license-content-description-4-p1b" xml:space="preserve">
+    <value>es desarrollado por</value>
+  </data>
+  <data name="license-content-description-4-p1c" xml:space="preserve">
+    <value>Duende Software</value>
+  </data>
+  <data name="license-content-description-4-p1d" xml:space="preserve">
+    <value>y con licencia bajo su</value>
+  </data>
+  <data name="license-content-description-4-p1e" xml:space="preserve">
+    <value>Licencia estándar</value>
+  </data>
   <data name="license-content-subtitle-1" xml:space="preserve">
     <value>Sitio web principal</value>
   </data>
@@ -224,6 +239,9 @@
   </data>
   <data name="license-content-subtitle-3" xml:space="preserve">
     <value>Activos de apoyo</value>
+  </data>
+  <data name="license-content-subtitle-4" xml:space="preserve">
+    <value>Duende IdentityServer</value>
   </data>
   <data name="license-section-description" xml:space="preserve">
     <value>Cómo se licencian los activos del sitio web</value>

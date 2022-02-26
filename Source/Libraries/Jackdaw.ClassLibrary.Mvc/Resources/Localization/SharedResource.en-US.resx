@@ -216,6 +216,21 @@
   <data name="license-content-description-3-p9" xml:space="preserve">
     <value>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</value>
   </data>
+  <data name="license-content-description-4-p1a" xml:space="preserve">
+    <value>Duende IdentityServer</value>
+  </data>
+  <data name="license-content-description-4-p1b" xml:space="preserve">
+    <value>is developed by</value>
+  </data>
+  <data name="license-content-description-4-p1c" xml:space="preserve">
+    <value>Duende Software</value>
+  </data>
+  <data name="license-content-description-4-p1d" xml:space="preserve">
+    <value>and licensed under their</value>
+  </data>
+  <data name="license-content-description-4-p1e" xml:space="preserve">
+    <value>Standard License</value>
+  </data>
   <data name="license-content-subtitle-1" xml:space="preserve">
     <value>Main Website</value>
   </data>
@@ -224,6 +239,9 @@
   </data>
   <data name="license-content-subtitle-3" xml:space="preserve">
     <value>Supporting Assets</value>
+  </data>
+  <data name="license-content-subtitle-4" xml:space="preserve">
+    <value>Duende IdentityServer</value>
   </data>
   <data name="license-section-description" xml:space="preserve">
     <value>How website assets are licensed</value>

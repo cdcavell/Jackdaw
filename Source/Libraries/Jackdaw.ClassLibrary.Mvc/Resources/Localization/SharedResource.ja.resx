@@ -216,6 +216,21 @@
   <data name="license-content-description-3-p9" xml:space="preserve">
     <value>このソフトウェアは、著作権所有者および寄稿者によって「現状有姿」で提供され、商品性および特定目的への適合性の黙示の保証を含むがこれに限定されない、明示または黙示の保証は否認されます。いかなる場合も、著作権所有者または寄稿者は、直接的、間接的、偶発的、特別、例示的、または結果的な損害（代替の商品またはサービスの調達、使用、データ、または利益の損失を含むがこれらに限定されない）に対して責任を負わないものとします。またはビジネスの中断）ただし、契約、無過失責任、または不法行為（過失またはその他を含む）にかかわらず、このソフトウェアの使用から何らかの形で生じた責任の理論に基づいて、このソフトウェアの使用から生じたもの。</value>
   </data>
+  <data name="license-content-description-4-p1a" xml:space="preserve">
+    <value>Duende IdentityServer</value>
+  </data>
+  <data name="license-content-description-4-p1b" xml:space="preserve">
+    <value>によって開発されました</value>
+  </data>
+  <data name="license-content-description-4-p1c" xml:space="preserve">
+    <value>Duende ソフトウェア</value>
+  </data>
+  <data name="license-content-description-4-p1d" xml:space="preserve">
+    <value>そして彼らの下で認可された</value>
+  </data>
+  <data name="license-content-description-4-p1e" xml:space="preserve">
+    <value>標準ライセンス</value>
+  </data>
   <data name="license-content-subtitle-1" xml:space="preserve">
     <value>メインウェブサイト</value>
   </data>
@@ -224,6 +239,9 @@
   </data>
   <data name="license-content-subtitle-3" xml:space="preserve">
     <value>補助資産</value>
+  </data>
+  <data name="license-content-subtitle-4" xml:space="preserve">
+    <value>Duende IdentityServer</value>
   </data>
   <data name="license-section-description" xml:space="preserve">
     <value>ウェブサイトアセットのライセンス方法</value>

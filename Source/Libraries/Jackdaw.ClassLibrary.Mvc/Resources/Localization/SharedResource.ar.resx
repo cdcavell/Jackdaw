@@ -216,6 +216,21 @@
   <data name="license-content-description-3-p9" xml:space="preserve">
     <value>يتم توفير هذا البرنامج من قبل حاملي حقوق الطبع والنشر والمساهمين "كما هي" وأي ضمانات صريحة أو ضمنية ، بما في ذلك ، على سبيل المثال لا الحصر ، الضمانات الضمنية لقابلية التسويق والملاءمة لغرض معين. لا يتحمل مالك حقوق الطبع والنشر أو المساهمون بأي حال من الأحوال المسؤولية عن أي أضرار مباشرة أو غير مباشرة أو عرضية أو خاصة أو نموذجية أو تبعية (بما في ذلك ، على سبيل المثال لا الحصر ، شراء سلع أو خدمات بديلة أو بيانات أو خسائر أو استخدامات) أو انقطاع الأعمال) مهما كان سبب ذلك ووفقًا لأية نظرية للمسؤولية ، سواء في العقد أو المسؤولية الصارمة أو الضرر (بما في ذلك الإهمال أو غير ذلك) التي تنشأ بأي طريقة من طرق استخدام هذا البرنامج ، حتى في حالة حدوث ضرر.</value>
   </data>
+  <data name="license-content-description-4-p1a" xml:space="preserve">
+    <value>Duende IdentityServer</value>
+  </data>
+  <data name="license-content-description-4-p1b" xml:space="preserve">
+    <value>تم تطويره بواسطة</value>
+  </data>
+  <data name="license-content-description-4-p1c" xml:space="preserve">
+    <value>Duende برنامج</value>
+  </data>
+  <data name="license-content-description-4-p1d" xml:space="preserve">
+    <value>ومرخصة بموجب</value>
+  </data>
+  <data name="license-content-description-4-p1e" xml:space="preserve">
+    <value>رخصة عادية</value>
+  </data>
   <data name="license-content-subtitle-1" xml:space="preserve">
     <value>الموقع الرئيسي</value>
   </data>
@@ -224,6 +239,9 @@
   </data>
   <data name="license-content-subtitle-3" xml:space="preserve">
     <value>الأصول الداعمة</value>
+  </data>
+  <data name="license-content-subtitle-4" xml:space="preserve">
+    <value>Duende IdentityServer</value>
   </data>
   <data name="license-section-description" xml:space="preserve">
     <value>كيف يتم ترخيص أصول الموقع</value>

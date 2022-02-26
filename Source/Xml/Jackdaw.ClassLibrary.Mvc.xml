@@ -100,7 +100,7 @@
             __Revisions:__~~
             | Contributor | Build | Revison Date | Description |~
             |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.1 | 12/14/2021 | Initial Development |~ 
+            | Christopher D. Cavell | 0.0.0.1 | 02/26/2021 | Initial Development |~ 
             </revision>
         </member>
         <member name="M:Jackdaw.ClassLibrary.Mvc.Localization.CultureHelper.IsRighToLeft">
@@ -108,10 +108,33 @@
             Returns true if the language is a right-to-left language. Otherwise, false.
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Jackdaw.ClassLibrary.Mvc.Localization.CultureHelper.GetImplementedCulture(System.String)" -->
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Localization.CultureHelper.GetImplementedCulture(System.String)">
+            <summary>
+            Returns a valid culture name based on "name" parameter. If "name" is not valid, it returns the default culture "en-US"
+            </summary>
+            <param name="name">Culture's name (e.g. en-US)</param>
+        </member>
         <member name="M:Jackdaw.ClassLibrary.Mvc.Localization.CultureHelper.GetDefaultCulture">
             <summary>
             Returns default culture name which is the first name decalared (e.g. en-US)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Localization.CultureHelper.GetCurrentCulture">
+            <summary>
+            Returns current culture name
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Localization.CultureHelper.GetCurrentNeutralCulture">
+            <summary>
+            Returns current neutral culture name
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Localization.CultureHelper.GetNeutralCulture(System.String)">
+            <summary>
+            Returns neutral culture name for given culture
             </summary>
             <returns></returns>
         </member>

@@ -10,6 +10,7 @@
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
     /// | Christopher D. Cavell | 0.0.0.1 | 02/26/2021 | Initial Development |~ 
+    /// | Christopher D. Cavell | 0.0.0.2 | 02/26/2021 | Duende IdentityServer Integration |~ 
     /// </revision>
     public static class CultureHelper
     {
@@ -22,7 +23,8 @@
             "fr",     // French NEUTRAL culture
             "es",     // Spanish NEUTRAL culture
             "ja",     // Japanese NEUTRAL culture
-            "ar"      // Arabic NEUTRAL culture
+            "ar",     // Arabic NEUTRAL culture
+            "uk"      // Ukraina NEUTRAL culture
         };
 
         /// <summary>
