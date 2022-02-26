@@ -85,7 +85,8 @@ try
         new CultureInfo("fr"),
         new CultureInfo("es"),
         new CultureInfo("ja"),
-        new CultureInfo("ar")
+        new CultureInfo("ar"),
+        new CultureInfo("uk")
     };
     app.UseRequestLocalization(new RequestLocalizationOptions
     {
