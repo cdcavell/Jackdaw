@@ -38,3 +38,4 @@ $ git flow init -d
 | Build | Date | Description |
 |-------|------|-------------|
 | 0.0.0.1 | 12/26/2021 | __Initial Development__ |
+| 0.0.0.2 | 02/26/2021 | __Duende IdentityServer Integration__ |
