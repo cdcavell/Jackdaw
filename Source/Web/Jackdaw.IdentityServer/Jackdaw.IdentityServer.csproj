@@ -4,26 +4,27 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Version>0.0.0.2</Version>
-	<GenerateDocumentationFile>True</GenerateDocumentationFile>
-	<DocumentationFile>../../../Source/Xml/$(AssemblyName).xml</DocumentationFile>
-	<Authors>Christopher D. Cavell</Authors>
-	<Copyright>2022 - Christopher D. Cavell</Copyright>
-	<PackageLicenseFile>../../../LICENSE</PackageLicenseFile>
-	<IsTransformWebConfigDisabled>true</IsTransformWebConfigDisabled>
+	  <Version>0.0.0.2</Version>
+	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
+	  <DocumentationFile>../../../Source/Xml/$(AssemblyName).xml</DocumentationFile>
+	  <Authors>Christopher D. Cavell</Authors>
+	  <Copyright>2022 - Christopher D. Cavell</Copyright>
+	  <PackageLicenseFile>../../../LICENSE</PackageLicenseFile>
+	  <IsTransformWebConfigDisabled>true</IsTransformWebConfigDisabled>
   </PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
 		<NoWarn>MSB3073;MSB4181</NoWarn>
 	</PropertyGroup>
-	
-  <ItemGroup>
+
+	<ItemGroup>
     <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\Libraries\Jackdaw.ClassLibrary.Mvc\Jackdaw.ClassLibrary.Mvc.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\Libraries\Jackdaw.ClassLibrary.Mvc\Jackdaw.ClassLibrary.Mvc.csproj" />
+	</ItemGroup>
+
 
 	<ItemGroup>
 		<_findDllFile Include="../../../Source/Xml/XmlToMarkdown.dll" />

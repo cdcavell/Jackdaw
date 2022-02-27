@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Jackdaw.IdentityServer</name>
+    </assembly>
+    <members>
+        <member name="T:Jackdaw.IdentityServer.Controllers.ApplicationBaseController`1">
+            <class>ApplicationBaseController</class>
+            <summary>
+            Base controller class for application
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 02/27/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <member name="F:Jackdaw.IdentityServer.Controllers.ApplicationBaseController`1._appSettings">
+            <value>AppSettings</value>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Controllers.ApplicationBaseController`1.#ctor(Microsoft.Extensions.Logging.ILogger{`0},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{`0},Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.ClassLibrary.Mvc.Localization.SharedResource})">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <param name="localizer">IStringLocalizer&lt;T&gt;</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <method>
+            ApplicationBaseController(
+                ILogger&lt;T&gt; logger, 
+                IWebHostEnvironment webHostEnvironment, 
+                IHttpContextAccessor httpContextAccessor,
+                IAppSettingsService appSettingsService,
+                IStringLocalizer&lt;T&gt; localizer,
+                IStringLocalizer&lt;SharedResource&gt; sharedLocalizer
+            )
+            </method>
+        </member>
+        <member name="T:Jackdaw.IdentityServer.Controllers.HomeController">
+            <summary>
+            Home controller class
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 02/27/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Controllers.HomeController.#ctor(Microsoft.Extensions.Logging.ILogger{Jackdaw.IdentityServer.Controllers.HomeController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.IdentityServer.Controllers.HomeController},Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.ClassLibrary.Mvc.Localization.SharedResource})">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <param name="localizer">IStringLocalizer&lt;T&gt;</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <method>
+            public HomeController(
+                ILogger&lt;HomeController&gt; logger,
+                IWebHostEnvironment webHostEnvironment,
+                IHttpContextAccessor httpContextAccessor,
+                IAppSettingsService appSettingsService,
+                IStringLocalizer&lt;HomeController&gt; localizer,
+                IStringLocalizer&lt;SharedResource&gt; sharedLocalizer
+            ) : base(logger, webHostEnvironment, httpContextAccessor, appSettingsService)
+            </method>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Controllers.HomeController.Index">
+            <summary>
+            Index method
+            </summary>
+            <returns>IActionResult</returns>
+            <method>Index()</method>
+        </member>
+        <member name="T:Jackdaw.IdentityServer.Filters.SecurityHeadersAttribute">
+            <summary>
+            Security Headers Attribute Filter from Brock Allen &amp; Dominick Baier.
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Brock Allen &amp; Dominick Baier. All rights reserved.
+            Licensed under the Apache License, Version 2.0. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 02/27/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Filters.SecurityHeadersAttribute.#ctor(Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService)">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <method>SecurityHeadersAttribute(AppSettings appSettings)</method>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Filters.SecurityHeadersAttribute.OnResultExecuting(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext)">
+            <summary>
+            Executes before result execution
+            &lt;br /&gt;&lt;br /&gt;
+            CSP Evaluator: https://csp-evaluator.appspot.com/
+            </summary>
+            <param name="context">ResultExecutingContext</param>
+            <method>OnResultExecuting(ResultExecutingContext context)</method>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Filters.SecurityHeadersAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            Executes after action method execution to set script nonce
+            </summary>
+            <param name="context">ActionExecutedContext</param>
+            <method>OnActionExecuted(ActionExecutedContext context)</method>
+        </member>
+        <member name="T:Jackdaw.IdentityServer.Models.AppSettings.AppSettings">
+            <summary>
+            Application settings information.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 02/27/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Models.AppSettings.AppSettings.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="configuration">IConfiguration</param>
+            <method>AppSettings(IConfiguration configuration)</method>
+        </member>
+    </members>
+</doc>
