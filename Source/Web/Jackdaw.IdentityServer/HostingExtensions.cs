@@ -70,6 +70,12 @@ namespace Jackdaw.IdentityServer
                 });
             }
 
+            builder.Services.AddIdentityServer()
+                .AddInMemoryIdentityResources(Config.IdentityResources)
+                .AddInMemoryApiScopes(Config.ApiScopes)
+                .AddInMemoryClients(Config.Clients)
+                .AddTestUsers(TestUsers.Users);
+
             return builder.Build();
         }
 
@@ -118,6 +124,7 @@ namespace Jackdaw.IdentityServer
             });
 
             app.UseRouting();
+            app.UseIdentityServer();
             app.UseAuthorization();
 
             app.UseStaticFiles();
