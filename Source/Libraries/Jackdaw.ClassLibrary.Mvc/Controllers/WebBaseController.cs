@@ -29,9 +29,11 @@ namespace Jackdaw.ClassLibrary.Mvc.Controllers
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
     /// | Christopher D. Cavell | 0.0.0.1 | 12/19/2021 | Initial Development |~ 
+    /// | Christopher D. Cavell | 0.0.0.2 | 03/01/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
     [Controller]
     [Authorize]
+    [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
     public abstract partial class WebBaseController<T> : Controller where T : WebBaseController<T>
     {
         /// <value>ILogger</value>
