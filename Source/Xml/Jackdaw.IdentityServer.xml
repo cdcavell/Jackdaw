@@ -163,5 +163,66 @@
             <param name="configuration">IConfiguration</param>
             <method>AppSettings(IConfiguration configuration)</method>
         </member>
+        <member name="T:Jackdaw.IdentityServer.Options.AccountOptions">
+            <summary>
+            Account Options
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 02/28/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <member name="F:Jackdaw.IdentityServer.Options.AccountOptions.AllowLocalLogin">
+            <value>bool</value>
+        </member>
+        <member name="F:Jackdaw.IdentityServer.Options.AccountOptions.AllowRememberLogin">
+            <value>bool</value>
+        </member>
+        <member name="F:Jackdaw.IdentityServer.Options.AccountOptions.RememberMeLoginDuration">
+            <value>TimeSpan</value>
+        </member>
+        <member name="F:Jackdaw.IdentityServer.Options.AccountOptions.ShowLogoutPrompt">
+            <value>bool</value>
+        </member>
+        <member name="F:Jackdaw.IdentityServer.Options.AccountOptions.AutomaticRedirectAfterSignOut">
+            <value>bool</value>
+        </member>
+        <member name="F:Jackdaw.IdentityServer.Options.AccountOptions.InvalidCredentialsErrorMessage">
+            <value>string</value>
+        </member>
+        <member name="T:Jackdaw.IdentityServer.Options.ConsentOptions">
+            <summary>
+            Consent Options
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 02/28/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <member name="F:Jackdaw.IdentityServer.Options.ConsentOptions.EnableOfflineAccess">
+            <value>bool</value>
+        </member>
+        <member name="F:Jackdaw.IdentityServer.Options.ConsentOptions.OfflineAccessDisplayName">
+            <value>string</value>
+        </member>
+        <member name="F:Jackdaw.IdentityServer.Options.ConsentOptions.OfflineAccessDescription">
+            <value>string</value>
+        </member>
+        <member name="F:Jackdaw.IdentityServer.Options.ConsentOptions.MustChooseOneErrorMessage">
+            <value>string</value>
+        </member>
+        <member name="F:Jackdaw.IdentityServer.Options.ConsentOptions.InvalidSelectionErrorMessage">
+            <value>string</value>
+        </member>
     </members>
 </doc>

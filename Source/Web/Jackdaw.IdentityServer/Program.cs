@@ -1,8 +1,16 @@
 using Jackdaw.IdentityServer;
 using Serilog;
 
+var config = new ConfigurationBuilder()
+    .AddJsonFile($"appsettings.json", optional: false)
+    .AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}.json", optional: true)
+    .AddEnvironmentVariables()
+    .AddUserSecrets(typeof(Program).Assembly, optional: true)
+    .AddCommandLine(args)
+    .Build();
+
 Log.Logger = new LoggerConfiguration()
-    .WriteTo.Console()
+    .ReadFrom.Configuration(config)
     .CreateBootstrapLogger();
 
 Log.Information("Starting Host");

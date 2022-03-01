@@ -35,7 +35,27 @@ $ git flow init -d
 
 <hr />
 
+__Windows Event Log Instructions__
+<br />
+_Use PowerShell to issue following commands to create/configure event log (only needed once)_
+
+```
+$ New-EventLog -LogName Jackdaw -Source Jackdaw
+
+$ Limit-EventLog -OverflowAction OverWriteAsNeeded -MaximumSize 20480KB -LogName Jackdaw
+```
+
+_Use PowerShell to issue following commands to create event log sources (only needed once)_
+
+```
+$ New-EventLog -LogName Jackdaw -Source Jackdaw.Public
+
+$ New-EventLog -LogName Jackdaw -Source Jackdaw.IdentityServer
+```
+
+<hr />
+
 | Build | Date | Description |
 |-------|------|-------------|
 | 0.0.0.1 | 12/26/2021 | __Initial Development__ |
-| 0.0.0.2 | 02/28/2022 | __Duende IdentityServer Integration__ |
+| 0.0.0.2 | 03/01/2022 | __Duende IdentityServer Integration__ |
