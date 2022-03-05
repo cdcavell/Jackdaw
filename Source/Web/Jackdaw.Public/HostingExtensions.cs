@@ -43,6 +43,7 @@ namespace Jackdaw.Public
             });
 
             builder.Services.AddHttpContextAccessor();
+
             builder.Services.AddControllersWithViews()
                 .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
                 .AddDataAnnotationsLocalization();

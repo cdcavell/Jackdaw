@@ -40,6 +40,28 @@
             )
             </method>
         </member>
+        <member name="T:Jackdaw.IdentityServer.Controllers.DiagnosticsController">
+            <summary>
+            Diagnostics Controller
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 03/05/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Jackdaw.IdentityServer.Controllers.DiagnosticsController.#ctor(Microsoft.Extensions.Logging.ILogger{Jackdaw.IdentityServer.Controllers.DiagnosticsController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.IdentityServer.Controllers.DiagnosticsController},Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.ClassLibrary.Mvc.Localization.SharedResource})" -->
+        <member name="M:Jackdaw.IdentityServer.Controllers.DiagnosticsController.Index">
+            <summary>
+            Index method
+            </summary>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>Index()</method>
+        </member>
         <member name="T:Jackdaw.IdentityServer.Controllers.HomeController">
             <summary>
             Home controller class
@@ -179,6 +201,32 @@
         </member>
         <member name="P:Jackdaw.IdentityServer.Models.AppSettings.ConnectionStrings.DatabaseConnection">
             <value>string</value>
+        </member>
+        <member name="T:Jackdaw.IdentityServer.Models.Diagnostics.DiagnosticsViewModel">
+            <summary>
+            Diagnostics View Model
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 03/04/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Models.Diagnostics.DiagnosticsViewModel.#ctor(Microsoft.AspNetCore.Authentication.AuthenticateResult)">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="result">AuthenticateResult</param>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.Diagnostics.DiagnosticsViewModel.AuthenticateResult">
+            <value>AuthenticateResult</value>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.Diagnostics.DiagnosticsViewModel.Clients">
+            <value>Clients</value>
         </member>
         <member name="T:Jackdaw.IdentityServer.Options.AccountOptions">
             <summary>

@@ -79,6 +79,45 @@
             <returns>IActionResult</returns>
             <method>Index()</method>
         </member>
+        <member name="T:Jackdaw.Public.Controllers.TestController">
+            <summary>
+            Home controller class
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.1 | 12/26/2021 | Initial Development |~ 
+            </revision>
+        </member>
+        <member name="M:Jackdaw.Public.Controllers.TestController.#ctor(Microsoft.Extensions.Logging.ILogger{Jackdaw.Public.Controllers.TestController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.Public.Controllers.TestController},Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.ClassLibrary.Mvc.Localization.SharedResource})">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <param name="localizer">IStringLocalizer&lt;T&gt;</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <method>
+            public HomeController(
+                ILogger&lt;HomeController&gt; logger,
+                IWebHostEnvironment webHostEnvironment,
+                IHttpContextAccessor httpContextAccessor,
+                IAppSettingsService appSettingsService,
+                IStringLocalizer&lt;HomeController&gt; localizer,
+                IStringLocalizer&lt;SharedResource&gt; sharedLocalizer
+            ) : base(logger, webHostEnvironment, httpContextAccessor, appSettingsService)
+            </method>
+        </member>
+        <member name="M:Jackdaw.Public.Controllers.TestController.Index">
+            <summary>
+            Index method
+            </summary>
+            <returns>IActionResult</returns>
+            <method>Index()</method>
+        </member>
         <member name="T:Jackdaw.Public.Filters.SecurityHeadersAttribute">
             <summary>
             Security Headers Attribute Filter from Brock Allen &amp; Dominick Baier.

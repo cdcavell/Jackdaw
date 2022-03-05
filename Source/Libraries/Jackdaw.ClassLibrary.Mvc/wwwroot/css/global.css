@@ -49,3 +49,7 @@
         display: none;
     }
 }
+
+.alert-danger {
+    opacity: 0.8;
+}
