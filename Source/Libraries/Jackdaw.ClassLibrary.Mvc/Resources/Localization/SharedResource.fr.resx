@@ -319,7 +319,7 @@
     <value>Interdit - Le serveur a compris la demande, mais refuse de la satisfaire. L'autorisation n'aidera pas et la demande NE DEVRAIT PAS être répétée.</value>
   </data>
   <data name="StatusCode-404" xml:space="preserve">
-    <value>Not Found - Le serveur n'a rien trouvé correspondant à l'URI de demande. Aucune indication n'est donnée quant à savoir si la condition est temporaire ou permanente.</value>
+    <value>Pas trouvé - Le serveur n'a rien trouvé correspondant à l'URI de demande. Aucune indication n'est donnée quant à savoir si la condition est temporaire ou permanente.</value>
   </data>
   <data name="StatusCode-405" xml:space="preserve">
     <value>Méthode non autorisée - La méthode spécifiée dans la ligne de demande n'est pas autorisée pour la ressource identifiée par l'URI de demande.</value>

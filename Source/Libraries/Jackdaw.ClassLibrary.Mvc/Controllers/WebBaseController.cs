@@ -29,7 +29,7 @@ namespace Jackdaw.ClassLibrary.Mvc.Controllers
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
     /// | Christopher D. Cavell | 0.0.0.1 | 12/19/2021 | Initial Development |~ 
-    /// | Christopher D. Cavell | 0.0.0.2 | 03/01/2022 | Duende IdentityServer Integration |~ 
+    /// | Christopher D. Cavell | 0.0.0.2 | 03/04/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
     [Controller]
     [Authorize]
@@ -202,7 +202,7 @@ namespace Jackdaw.ClassLibrary.Mvc.Controllers
                         CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(model.Culture)),
                         new CookieOptions
                         {
-                            SameSite = SameSiteMode.Strict,
+                            SameSite = SameSiteMode.Lax,
                             IsEssential = true,
                             Secure = true,
                             HttpOnly = true

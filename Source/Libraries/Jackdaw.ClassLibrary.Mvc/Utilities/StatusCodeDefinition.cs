@@ -11,6 +11,7 @@ namespace Jackdaw.ClassLibrary.Mvc.Utilities
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
     /// | Christopher D. Cavell | 0.0.0.1 | 12/26/2021 | Initial build |~ 
+    /// | Christopher D. Cavell | 0.0.0.2 | 03/04/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
     public static class StatusCodeDefinition
     {
@@ -22,6 +23,7 @@ namespace Jackdaw.ClassLibrary.Mvc.Utilities
         {
             if (!_StatusCodeList.Any() || _culture != culture)
             {
+                _culture = culture;
                 _StatusCodeList.Clear();
 
                 _StatusCodeList.Add(new KeyValuePair<int, string>(100, sharedLocalizer["StatusCode-100"]));
