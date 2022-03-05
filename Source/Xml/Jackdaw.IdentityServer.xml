@@ -153,7 +153,7 @@
             __Revisions:__~~
             | Contributor | Build | Revison Date | Description |~
             |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.2 | 03/01/2022 | Duende IdentityServer Integration |~ 
+            | Christopher D. Cavell | 0.0.0.2 | 03/05/2022 | Duende IdentityServer Integration |~ 
             </revision>
         </member>
         <member name="M:Jackdaw.IdentityServer.Models.AppSettings.AppSettings.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
@@ -165,6 +165,23 @@
         </member>
         <member name="P:Jackdaw.IdentityServer.Models.AppSettings.AppSettings.ConnectionStrings">
             <value>ConnectionStrings</value>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.AppSettings.AppSettings.Authentication">
+            <value>Authentication</value>
+        </member>
+        <member name="T:Jackdaw.IdentityServer.Models.AppSettings.Authentication">
+            <summary>
+            Authentication model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 03/05/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.AppSettings.Authentication.Google">
+            <value>Googel</value>
         </member>
         <member name="T:Jackdaw.IdentityServer.Models.AppSettings.ConnectionStrings">
             <summary>
@@ -178,6 +195,23 @@
             </revision>
         </member>
         <member name="P:Jackdaw.IdentityServer.Models.AppSettings.ConnectionStrings.DatabaseConnection">
+            <value>string</value>
+        </member>
+        <member name="T:Jackdaw.IdentityServer.Models.AppSettings.Google">
+            <summary>
+            Google Authentication model
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 03/05/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.AppSettings.Google.ClientId">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.AppSettings.Google.ClientSecret">
             <value>string</value>
         </member>
         <member name="T:Jackdaw.IdentityServer.Models.Diagnostics.DiagnosticsViewModel">

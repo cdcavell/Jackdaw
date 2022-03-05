@@ -7,7 +7,7 @@
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.2 | 03/01/2022 | Duende IdentityServer Integration |~ 
+    /// | Christopher D. Cavell | 0.0.0.2 | 03/05/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
     public class AppSettings : ClassLibrary.Mvc.Services.AppSettings.Models.AppSettings
     {
@@ -20,5 +20,7 @@
 
         /// <value>ConnectionStrings</value>
         public ConnectionStrings ConnectionStrings { get; set; } = new();
+        /// <value>Authentication</value>
+        public Authentication Authentication { get; set; } = new();
     }
 }

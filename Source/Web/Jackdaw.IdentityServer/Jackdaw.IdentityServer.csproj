@@ -11,6 +11,7 @@
 	  <Copyright>2022 - Christopher D. Cavell</Copyright>
 	  <PackageLicenseFile>../../../LICENSE</PackageLicenseFile>
 	  <IsTransformWebConfigDisabled>true</IsTransformWebConfigDisabled>
+	  <UserSecretsId>9fc695ef-1f7f-4f08-af8d-80017766b084</UserSecretsId>
   </PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -19,6 +20,7 @@
 
 	<ItemGroup>
     <PackageReference Include="Duende.IdentityServer" Version="6.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="6.0.2" />
     <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
     <PackageReference Include="Serilog.Enrichers.CorrelationId" Version="3.0.1" />
     <PackageReference Include="Serilog.Sinks.EventLog" Version="3.1.0" />

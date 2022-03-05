@@ -1,10 +1,12 @@
-﻿using Jackdaw.ClassLibrary.Mvc.Localization;
+﻿using Duende.IdentityServer;
+using Jackdaw.ClassLibrary.Mvc.Localization;
 using Jackdaw.ClassLibrary.Mvc.Services.AppSettings;
 using Jackdaw.IdentityServer.Filters;
 using Jackdaw.IdentityServer.Models.AppSettings;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using System.Globalization;
 
@@ -75,6 +77,14 @@ namespace Jackdaw.IdentityServer
                 .AddInMemoryApiScopes(Config.ApiScopes)
                 .AddInMemoryClients(Config.Clients)
                 .AddTestUsers(TestUsers.Users);
+
+            builder.Services.AddAuthentication()
+                .AddGoogle("Google", googleOptions =>
+                {
+                    googleOptions.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
+                    googleOptions.ClientId = _appSettings.Authentication.Google.ClientId;
+                    googleOptions.ClientSecret = _appSettings.Authentication.Google.ClientSecret;
+                });
 
             return builder.Build();
         }
