@@ -56,7 +56,21 @@ namespace Jackdaw.IdentityServer.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            if (HttpContext.Connection != null)
+            {
+                if (HttpContext.Connection.LocalIpAddress != null && HttpContext.Connection.RemoteIpAddress != null)
+                {
+                    var localAddresses = new string[] { "127.0.0.1", "::1", HttpContext.Connection.LocalIpAddress.ToString() };
+                    if (!localAddresses.Contains(HttpContext.Connection.RemoteIpAddress.ToString()))
+                    {
+                        return Redirect(_appSettings.HomeRedirect);
+                    }
+
+                    return View();
+                }
+            }
+
+            return NotFound();
         }
     }
 }

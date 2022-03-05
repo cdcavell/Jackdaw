@@ -1,16 +1,16 @@
-﻿using Jackdaw.ClassLibrary.Mvc.Controllers;
-using Jackdaw.ClassLibrary.Mvc.Localization;
+﻿using Jackdaw.ClassLibrary.Mvc.Localization;
 using Jackdaw.ClassLibrary.Mvc.Services.AppSettings;
-using Jackdaw.IdentityServer.Filters;
-using Jackdaw.IdentityServer.Models.AppSettings;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 
 namespace Jackdaw.IdentityServer.Controllers
 {
-    /// <class>ApplicationBaseController</class>
     /// <summary>
-    /// Base controller class for application
+    /// Account Controller
+    /// &lt;br /&gt;&lt;br /&gt;
+    /// Copyright (c) Duende Software. All rights reserved.
+    /// See https://duendesoftware.com/license/identityserver.pdf for license information. 
     /// </summary>
     /// <revision>
     /// __Revisions:__~~
@@ -18,12 +18,9 @@ namespace Jackdaw.IdentityServer.Controllers
     /// |-------------|-------|--------------|-------------|~
     /// | Christopher D. Cavell | 0.0.0.2 | 03/05/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
-    [ServiceFilter(typeof(SecurityHeadersAttribute))]
-    public abstract partial class ApplicationBaseController<T> : WebBaseController<ApplicationBaseController<T>> where T : ApplicationBaseController<T>
+    [AllowAnonymous]
+    public class AccountController : ApplicationBaseController<AccountController>
     {
-        /// <value>AppSettings</value>
-        protected readonly AppSettings _appSettings;
-
         /// <summary>
         /// Constructor method
         /// </summary>
@@ -34,25 +31,38 @@ namespace Jackdaw.IdentityServer.Controllers
         /// <param name="localizer">IStringLocalizer&lt;T&gt;</param>
         /// <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
         /// <method>
-        /// ApplicationBaseController(
-        ///     ILogger&lt;T&gt; logger, 
-        ///     IWebHostEnvironment webHostEnvironment, 
+        /// public AccountController(
+        ///     ILogger&lt;AccountController&gt; logger,
+        ///     IWebHostEnvironment webHostEnvironment,
         ///     IHttpContextAccessor httpContextAccessor,
         ///     IAppSettingsService appSettingsService,
-        ///     IStringLocalizer&lt;T&gt; localizer,
+        ///     IStringLocalizer&lt;AccountController&gt; localizer,
         ///     IStringLocalizer&lt;SharedResource&gt; sharedLocalizer
-        /// )
+        /// ) : base(logger, webHostEnvironment, httpContextAccessor, appSettingsService)
         /// </method>
-        protected ApplicationBaseController(
-            ILogger<T> logger,
+        public AccountController(
+            ILogger<AccountController> logger,
             IWebHostEnvironment webHostEnvironment,
             IHttpContextAccessor httpContextAccessor,
             IAppSettingsService appSettingsService,
-            IStringLocalizer<T> localizer,
+            IStringLocalizer<AccountController> localizer,
             IStringLocalizer<SharedResource> sharedLocalizer
-        ) : base(logger, webHostEnvironment, httpContextAccessor, localizer, sharedLocalizer)
+        ) : base(logger, webHostEnvironment, httpContextAccessor, appSettingsService, localizer, sharedLocalizer)
         {
-            _appSettings = appSettingsService.ToObject<AppSettings>();
+        }
+
+        /// <summary>
+        /// Entry point into the login workflow
+        /// </summary>
+        /// <returns>Task&lt;IActionResult&gt;</returns>
+        /// <method>Login(string returnUrl)</method>
+        [HttpGet]
+        public async Task<IActionResult> Login(string returnUrl)
+        {
+            if (string.IsNullOrEmpty(returnUrl))
+                return Redirect("~/");
+
+            return Redirect("~/");
         }
     }
 }

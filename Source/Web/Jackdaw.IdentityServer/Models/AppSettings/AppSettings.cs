@@ -17,7 +17,8 @@
         /// <param name="configuration">IConfiguration</param>
         /// <method>AppSettings(IConfiguration configuration)</method>
         public AppSettings(IConfiguration configuration) : base(configuration) { }
-
+        /// <value>string</value>
+        public string HomeRedirect { get; set; } = string.Empty;
         /// <value>ConnectionStrings</value>
         public ConnectionStrings ConnectionStrings { get; set; } = new();
         /// <value>Authentication</value>
