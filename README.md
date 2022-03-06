@@ -35,6 +35,30 @@ $ git flow init -d
 
 <hr />
 
+__Database Migrations Instructions__
+<br />
+_Before you can use the tools on a specific project, you'll need to add the `Microsoft.EntityFrameworkCore.Design` package to it._
+_Install EF Core Tools:_ `dotnet tool install --global dotnet-ef`
+_Upgrade EF Core Tools:_ `dotnet tool update --global dotnet-ef`
+
+_To Initialize:_
+
+```
+$ dotnet ef migrations add InitialCreate --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb
+$ dotnet ef migrations add InitialCreate --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb
+$ dotnet ef migrations add InitialCreate --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb
+```
+
+_To Update:_
+
+```
+$ dotnet ef migrations add UpdateDatabase_YYYY-MM-DD --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb
+$ dotnet ef migrations add UpdateDatabase_YYYY-MM-DD --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb
+$ dotnet ef migrations add UpdateDatabase_YYYY-MM-DD --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb
+```
+
+<hr />
+
 __Windows Event Log Instructions__
 <br />
 _Use PowerShell to issue following commands to create/configure event log (only needed once)_

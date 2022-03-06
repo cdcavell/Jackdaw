@@ -191,24 +191,22 @@ namespace Jackdaw.IdentityServer
         /// <summary>
         /// InitializeDatabase private method
         /// &lt;br /&gt;
-        /// To Initialize: dotnet ef migrations add InitialCreate --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb
+        /// To Initialize: 
+        /// &lt;br /&gt;`dotnet ef migrations add InitialCreate --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb`
+        /// &lt;br /&gt;`dotnet ef migrations add InitialCreate --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb`
+        /// &lt;br /&gt;`dotnet ef migrations add InitialCreate --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb`
         /// &lt;br /&gt;
-        ///                dotnet ef migrations add InitialCreate --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb
         /// &lt;br /&gt;
-        ///                dotnet ef migrations add InitialCreate --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb
-        /// &lt;br /&gt;
-        /// &lt;br /&gt;
-        /// To Update:     dotnet ef migrations add UpdateDatabase_&lt;&lt;YYYY-MM-DD&gt;&gt; -- context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb
-        /// &lt;br /&gt;
-        ///                dotnet ef migrations add UpdateDatabase_&lt;&lt;YYYY-MM-DD&gt;&gt; -- context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb
-        /// &lt;br /&gt;
-        ///                dotnet ef migrations add UpdateDatabase_&lt;&lt;YYYY-MM-DD&gt;&gt; -- context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb
+        /// To Update:     
+        /// &lt;br /&gt;`dotnet ef migrations add UpdateDatabase_YYYY-MM-DD --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb`
+        /// &lt;br /&gt;`dotnet ef migrations add UpdateDatabase_YYYY-MM-DD --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb`
+        /// &lt;br /&gt;`dotnet ef migrations add UpdateDatabase_YYYY-MM-DD --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb`
         /// &lt;br /&gt;&lt;br /&gt;
         /// EF Core tools reference: https://docs.microsoft.com/en-us/ef/core/cli/dotnet
         /// &lt;br /&gt;
-        /// Install EF Core Tools: dotnet tool install --global dotnet-ef
+        /// Install EF Core Tools: `dotnet tool install --global dotnet-ef`
         /// &lt;br /&gt;
-        /// Upgrade EF Core Tools: dotnet tool update --global dotnet-ef
+        /// Upgrade EF Core Tools: `dotnet tool update --global dotnet-ef`
         /// &lt;br /&gt;&lt;br /&gt;
         /// _Before you can use the tools on a specific project, you'll need to add the `Microsoft.EntityFrameworkCore.Design` package to it._
         /// </summary>
