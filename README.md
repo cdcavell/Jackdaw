@@ -53,9 +53,9 @@ $ dotnet ef migrations add InitialCreate --context ApplicationDbContext --output
 _To Update:_
 
 ```
-$ dotnet ef migrations add UpdateDatabase_YYYY-MM-DD --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb
-$ dotnet ef migrations add UpdateDatabase_YYYY-MM-DD --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb
-$ dotnet ef migrations add UpdateDatabase_YYYY-MM-DD --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb
+$ dotnet ef migrations add UpdateDatabase_(current YYYY-MM-DD) --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb
+$ dotnet ef migrations add UpdateDatabase_(current YYYY-MM-DD) --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb
+$ dotnet ef migrations add UpdateDatabase_(current YYYY-MM-DD) --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb
 ```
 
 <hr />

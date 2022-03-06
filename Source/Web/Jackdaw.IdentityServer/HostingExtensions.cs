@@ -198,9 +198,9 @@ namespace Jackdaw.IdentityServer
         /// &lt;br /&gt;
         /// &lt;br /&gt;
         /// To Update:     
-        /// &lt;br /&gt;`dotnet ef migrations add UpdateDatabase_YYYY-MM-DD --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb`
-        /// &lt;br /&gt;`dotnet ef migrations add UpdateDatabase_YYYY-MM-DD --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb`
-        /// &lt;br /&gt;`dotnet ef migrations add UpdateDatabase_YYYY-MM-DD --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb`
+        /// &lt;br /&gt;`dotnet ef migrations add UpdateDatabase_(current YYYY-MM-DD) --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb`
+        /// &lt;br /&gt;`dotnet ef migrations add UpdateDatabase_(current YYYY-MM-DD) --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb`
+        /// &lt;br /&gt;`dotnet ef migrations add UpdateDatabase_(current YYYY-MM-DD) --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb`
         /// &lt;br /&gt;&lt;br /&gt;
         /// EF Core tools reference: https://docs.microsoft.com/en-us/ef/core/cli/dotnet
         /// &lt;br /&gt;
