@@ -43,11 +43,6 @@
 		<_findLibraryFile Include="../../../Source/Xml/Jackdaw.ClassLibrary.Common.dll" />
 	</ItemGroup>
 
-
-	<ItemGroup>
-	  <Folder Include="Data\" />
-	</ItemGroup>
-
 	<Target Name="BuildXmlToMarkdown" AfterTargets="AfterBuild" DependsOnTargets="AfterBuild" Condition="Exists('@(_findDllFile)') AND Exists('@(_findJsonFile)') AND Exists('@(_findLibraryFile)')">
 		<Exec Command="cd ../../../Source/Xml/" />
 		<Exec Command="dotnet XmlToMarkdown.dll Transform.xsl" WorkingDirectory="../../../Source/Xml/" />
