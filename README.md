@@ -35,9 +35,9 @@ $ git flow init -d
 
 <hr />
 
-__Database Migrations Instructions__
+__Database Migrations CLI Instructions__
 <br />
-_Before you can use the tools on a specific project, you'll need to add the `Microsoft.EntityFrameworkCore.Design` package to it._
+_Before you can use the CLI tools on project, you'll need to add the `Microsoft.EntityFrameworkCore.Design` package to it._
 <br />
 <br />_Install EF Core Tools:_ `dotnet tool install --global dotnet-ef`
 <br />_Upgrade EF Core Tools:_ `dotnet tool update --global dotnet-ef`
