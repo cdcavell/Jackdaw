@@ -1,4 +1,6 @@
 ﻿using Duende.IdentityServer;
+using Duende.IdentityServer.EntityFramework.DbContexts;
+using Duende.IdentityServer.EntityFramework.Mappers;
 using Jackdaw.ClassLibrary.Mvc.Localization;
 using Jackdaw.ClassLibrary.Mvc.Services.AppSettings;
 using Jackdaw.IdentityServer.Filters;
@@ -6,9 +8,10 @@ using Jackdaw.IdentityServer.Models.AppSettings;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Razor;
-using Microsoft.IdentityModel.Tokens;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 using System.Globalization;
+using System.Reflection;
 
 namespace Jackdaw.IdentityServer
 {
@@ -21,7 +24,7 @@ namespace Jackdaw.IdentityServer
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.2 | 02/27/2022 | Duende IdentityServer Integration |~ 
+    /// | Christopher D. Cavell | 0.0.0.2 | 03/06/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
     internal static class HostingExtensions
     {
@@ -72,10 +75,22 @@ namespace Jackdaw.IdentityServer
                 });
             }
 
+            var migrationsAssembly = typeof(Program).GetTypeInfo().Assembly.GetName().Name;
+
             builder.Services.AddIdentityServer()
-                .AddInMemoryIdentityResources(Config.IdentityResources)
-                .AddInMemoryApiScopes(Config.ApiScopes)
-                .AddInMemoryClients(Config.Clients)
+                //.AddInMemoryIdentityResources(Config.IdentityResources)
+                //.AddInMemoryApiScopes(Config.ApiScopes)
+                //.AddInMemoryClients(Config.Clients)
+                .AddConfigurationStore(options =>
+                {
+                    options.ConfigureDbContext = b => b.UseSqlite(_appSettings.ConnectionStrings.EntityFrameworkConnection,
+                        sql => sql.MigrationsAssembly(migrationsAssembly));
+                })
+                .AddOperationalStore(options =>
+                {
+                    options.ConfigureDbContext = b => b.UseSqlite(_appSettings.ConnectionStrings.EntityFrameworkConnection,
+                        sql => sql.MigrationsAssembly(migrationsAssembly));
+                })
                 .AddTestUsers(TestUsers.Users);
 
             builder.Services.AddAuthentication()
@@ -133,6 +148,8 @@ namespace Jackdaw.IdentityServer
                 SupportedUICultures = supportedCultures
             });
 
+            InitializeDatabase(app);
+
             app.UseRouting();
             app.UseIdentityServer();
             app.UseAuthorization();
@@ -144,6 +161,67 @@ namespace Jackdaw.IdentityServer
             );
 
             return app;
+        }
+
+        /// <summary>
+        /// InitializeDatabase private method
+        /// &lt;br /&gt;
+        /// To Initialize: dotnet ef migrations add InitialCreate --context PersistedGrantDbContext
+        /// &lt;br /&gt;
+        ///                dotnet ef migrations add InitialCreate --context ConfigurationDbContext
+        /// &lt;br /&gt;
+        /// &lt;br /&gt;
+        /// To Update:     dotnet ef migrations add UpdateDatabase_&lt;&lt;YYYY-MM-DD&gt;&gt; -- context PersistedGrantDbContext
+        /// &lt;br /&gt;
+        ///                dotnet ef migrations add UpdateDatabase_&lt;&lt;YYYY-MM-DD&gt;&gt; -- context ConfigurationDbContext
+        /// &lt;br /&gt;&lt;br /&gt;
+        /// EF Core tools reference: https://docs.microsoft.com/en-us/ef/core/cli/dotnet
+        /// &lt;br /&gt;
+        /// Install EF Core Tools: dotnet tool install --global dotnet-ef
+        /// &lt;br /&gt;
+        /// Upgrade EF Core Tools: dotnet tool update --global dotnet-ef
+        /// &lt;br /&gt;&lt;br /&gt;
+        /// _Before you can use the tools on a specific project, you'll need to add the `Microsoft.EntityFrameworkCore.Design` package to it._
+        /// </summary>
+        /// <param name="app">IApplicationBuilder</param>
+        /// <method>InitializeDatabase(IApplicationBuilder app)</method>
+        private static void InitializeDatabase(IApplicationBuilder app)
+        {
+            var scopeFactory = app.ApplicationServices.GetService<IServiceScopeFactory>();
+            if (scopeFactory != null)
+                using (var serviceScope = scopeFactory.CreateScope())
+                {
+                    serviceScope.ServiceProvider.GetRequiredService<PersistedGrantDbContext>().Database.Migrate();
+
+                    var context = serviceScope.ServiceProvider.GetRequiredService<ConfigurationDbContext>();
+                    context.Database.Migrate();
+                    if (!context.Clients.Any())
+                    {
+                        foreach (var client in Config.Clients)
+                        {
+                            context.Clients.Add(client.ToEntity());
+                        }
+                        context.SaveChanges();
+                    }
+
+                    if (!context.IdentityResources.Any())
+                    {
+                        foreach (var resource in Config.IdentityResources)
+                        {
+                            context.IdentityResources.Add(resource.ToEntity());
+                        }
+                        context.SaveChanges();
+                    }
+
+                    if (!context.ApiScopes.Any())
+                    {
+                        foreach (var resource in Config.ApiScopes)
+                        {
+                            context.ApiScopes.Add(resource.ToEntity());
+                        }
+                        context.SaveChanges();
+                    }
+                }
         }
     }
 }

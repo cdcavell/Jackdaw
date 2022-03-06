@@ -58,4 +58,4 @@ $ New-EventLog -LogName Jackdaw -Source Jackdaw.IdentityServer
 | Build | Date | Description |
 |-------|------|-------------|
 | 0.0.0.1 | 12/26/2021 | __Initial Development__ |
-| 0.0.0.2 | 03/05/2022 | __Duende IdentityServer Integration__ |
+| 0.0.0.2 | 03/06/2022 | __Duende IdentityServer Integration__ |

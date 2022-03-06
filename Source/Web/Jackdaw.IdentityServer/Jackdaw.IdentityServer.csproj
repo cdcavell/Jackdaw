@@ -20,7 +20,13 @@
 
 	<ItemGroup>
     <PackageReference Include="Duende.IdentityServer" Version="6.0.4" />
+    <PackageReference Include="Duende.IdentityServer.EntityFramework" Version="6.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="6.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.2" />
     <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
     <PackageReference Include="Serilog.Enrichers.CorrelationId" Version="3.0.1" />
     <PackageReference Include="Serilog.Sinks.EventLog" Version="3.1.0" />
@@ -35,6 +41,11 @@
 		<_findDllFile Include="../../../Source/Xml/XmlToMarkdown.dll" />
 		<_findJsonFile Include="../../../Source/Xml/XmlToMarkdown.runtimeconfig.json" />
 		<_findLibraryFile Include="../../../Source/Xml/Jackdaw.ClassLibrary.Common.dll" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <Folder Include="Data\" />
 	</ItemGroup>
 
 	<Target Name="BuildXmlToMarkdown" AfterTargets="AfterBuild" DependsOnTargets="AfterBuild" Condition="Exists('@(_findDllFile)') AND Exists('@(_findJsonFile)') AND Exists('@(_findLibraryFile)')">

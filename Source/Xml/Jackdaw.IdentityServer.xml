@@ -4,6 +4,29 @@
         <name>Jackdaw.IdentityServer</name>
     </assembly>
     <members>
+        <member name="T:Jackdaw.IdentityServer.Config">
+            <summary>
+            Migrations Assembly Class
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 03/06/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Config.IdentityResources">
+            <value>IEnumerable&lt;IdentityResource&gt;</value>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Config.ApiScopes">
+            <value>IEnumerable&lt;ApiScope&gt;</value>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Config.ApiResources">
+            <value>IEnumerable&lt;ApiResource&gt;</value>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Config.Clients">
+            <value>IEnumerable&lt;Client&gt;</value>
+        </member>
         <member name="T:Jackdaw.IdentityServer.Controllers.AccountController">
             <summary>
             Account Controller
@@ -15,7 +38,7 @@
             __Revisions:__~~
             | Contributor | Build | Revison Date | Description |~
             |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.2 | 03/05/2022 | Duende IdentityServer Integration |~ 
+            | Christopher D. Cavell | 0.0.0.2 | 03/06/2022 | Duende IdentityServer Integration |~ 
             </revision>
         </member>
         <member name="M:Jackdaw.IdentityServer.Controllers.AccountController.#ctor(Microsoft.Extensions.Logging.ILogger{Jackdaw.IdentityServer.Controllers.AccountController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.IdentityServer.Controllers.AccountController},Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.ClassLibrary.Mvc.Localization.SharedResource})">
@@ -168,7 +191,7 @@
             __Revisions:__~~
             | Contributor | Build | Revison Date | Description |~
             |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.2 | 02/27/2022 | Duende IdentityServer Integration |~ 
+            | Christopher D. Cavell | 0.0.0.2 | 03/06/2022 | Duende IdentityServer Integration |~ 
             </revision>
         </member>
         <member name="M:Jackdaw.IdentityServer.HostingExtensions.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
@@ -186,6 +209,30 @@
             <param name="app">WebApplication</param>
             <returns>WebApplication</returns>
             <method>ConfigurePipeline(this WebApplication app)</method>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.HostingExtensions.InitializeDatabase(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            InitializeDatabase private method
+            &lt;br /&gt;
+            To Initialize: dotnet ef migrations add InitialCreate --context PersistedGrantDbContext
+            &lt;br /&gt;
+                           dotnet ef migrations add InitialCreate --context ConfigurationDbContext
+            &lt;br /&gt;
+            &lt;br /&gt;
+            To Update:     dotnet ef migrations add UpdateDatabase_&lt;&lt;YYYY-MM-DD&gt;&gt; -- context PersistedGrantDbContext
+            &lt;br /&gt;
+                           dotnet ef migrations add UpdateDatabase_&lt;&lt;YYYY-MM-DD&gt;&gt; -- context ConfigurationDbContext
+            &lt;br /&gt;&lt;br /&gt;
+            EF Core tools reference: https://docs.microsoft.com/en-us/ef/core/cli/dotnet
+            &lt;br /&gt;
+            Install EF Core Tools: dotnet tool install --global dotnet-ef
+            &lt;br /&gt;
+            Upgrade EF Core Tools: dotnet tool update --global dotnet-ef
+            &lt;br /&gt;&lt;br /&gt;
+            _Before you can use the tools on a specific project, you'll need to add the `Microsoft.EntityFrameworkCore.Design` package to it._
+            </summary>
+            <param name="app">IApplicationBuilder</param>
+            <method>InitializeDatabase(IApplicationBuilder app)</method>
         </member>
         <member name="T:Jackdaw.IdentityServer.Models.AppSettings.AppSettings">
             <summary>
@@ -236,10 +283,10 @@
             __Revisions:__~~
             | Contributor | Build | Revison Date | Description |~
             |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.2 | 03/01/2022 | Duende IdentityServer Integration |~ 
+            | Christopher D. Cavell | 0.0.0.2 | 03/06/2022 | Duende IdentityServer Integration |~ 
             </revision>
         </member>
-        <member name="P:Jackdaw.IdentityServer.Models.AppSettings.ConnectionStrings.DatabaseConnection">
+        <member name="P:Jackdaw.IdentityServer.Models.AppSettings.ConnectionStrings.EntityFrameworkConnection">
             <value>string</value>
         </member>
         <member name="T:Jackdaw.IdentityServer.Models.AppSettings.Google">

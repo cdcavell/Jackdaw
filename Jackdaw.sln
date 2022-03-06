@@ -9,6 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jackdaw.ClassLibrary.Common
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{CA091804-0CFC-4061-9EF1-7C93E7CC2992}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
@@ -23,7 +24,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jackdaw.ClassLibrary.Mvc", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jackdaw.Public", "Source\Web\Jackdaw.Public\Jackdaw.Public.csproj", "{13DCB759-25DE-4F0F-AF9E-8C0DD78FF5BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jackdaw.IdentityServer", "Source\Web\Jackdaw.IdentityServer\Jackdaw.IdentityServer.csproj", "{DD9598F8-0DE3-4213-8989-B1116EA7B45E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jackdaw.IdentityServer", "Source\Web\Jackdaw.IdentityServer\Jackdaw.IdentityServer.csproj", "{DD9598F8-0DE3-4213-8989-B1116EA7B45E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
