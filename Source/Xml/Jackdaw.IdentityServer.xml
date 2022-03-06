@@ -144,6 +144,38 @@
             <returns>IActionResult</returns>
             <method>Index()</method>
         </member>
+        <member name="T:Jackdaw.IdentityServer.Data.ApplicationDbContext">
+            <summary>
+            Application Database Context
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 03/06/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Data.ApplicationDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Jackdaw.IdentityServer.Data.ApplicationDbContext})">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="options">DbContextOptions&lt;ApplicationDbContext&gt;</param>
+            <method>ApplicationDbContext(DbContextOptions&lt;ApplicationDbContext&gt; options) : base(options)</method>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Data.ApplicationDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            OnModelCreating method
+            &lt;br /&gt;&lt;br /&gt;
+            Customize the ASP.NET Identity model and override the defaults if needed.
+            For example, you can rename the ASP.NET Identity table names and more.
+            Add your customizations after calling base.OnModelCreating(builder);
+            </summary>
+            <param name="builder">ModelBuilder</param>
+            <method>OnModelCreating(ModelBuilder builder)</method>
+        </member>
         <member name="T:Jackdaw.IdentityServer.Filters.SecurityHeadersAttribute">
             <summary>
             Security Headers Attribute Filter from Brock Allen &amp; Dominick Baier.
@@ -214,14 +246,18 @@
             <summary>
             InitializeDatabase private method
             &lt;br /&gt;
-            To Initialize: dotnet ef migrations add InitialCreate --context PersistedGrantDbContext
+            To Initialize: dotnet ef migrations add InitialCreate --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb
             &lt;br /&gt;
-                           dotnet ef migrations add InitialCreate --context ConfigurationDbContext
+                           dotnet ef migrations add InitialCreate --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb
+            &lt;br /&gt;
+                           dotnet ef migrations add InitialCreate --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb
             &lt;br /&gt;
             &lt;br /&gt;
-            To Update:     dotnet ef migrations add UpdateDatabase_&lt;&lt;YYYY-MM-DD&gt;&gt; -- context PersistedGrantDbContext
+            To Update:     dotnet ef migrations add UpdateDatabase_&lt;&lt;YYYY-MM-DD&gt;&gt; -- context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb
             &lt;br /&gt;
-                           dotnet ef migrations add UpdateDatabase_&lt;&lt;YYYY-MM-DD&gt;&gt; -- context ConfigurationDbContext
+                           dotnet ef migrations add UpdateDatabase_&lt;&lt;YYYY-MM-DD&gt;&gt; -- context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb
+            &lt;br /&gt;
+                           dotnet ef migrations add UpdateDatabase_&lt;&lt;YYYY-MM-DD&gt;&gt; -- context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb
             &lt;br /&gt;&lt;br /&gt;
             EF Core tools reference: https://docs.microsoft.com/en-us/ef/core/cli/dotnet
             &lt;br /&gt;
@@ -305,6 +341,20 @@
         </member>
         <member name="P:Jackdaw.IdentityServer.Models.AppSettings.Google.ClientSecret">
             <value>string</value>
+        </member>
+        <member name="T:Jackdaw.IdentityServer.Models.Data.ApplicationUser">
+            <summary>
+            ApplicationUser Entity
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 03/06/2022 | Duende IdentityServer Integration |~ 
+            </revision>
         </member>
         <member name="T:Jackdaw.IdentityServer.Models.Diagnostics.DiagnosticsViewModel">
             <summary>

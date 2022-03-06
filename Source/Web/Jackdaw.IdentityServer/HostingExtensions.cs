@@ -1,17 +1,22 @@
 ﻿using Duende.IdentityServer;
 using Duende.IdentityServer.EntityFramework.DbContexts;
 using Duende.IdentityServer.EntityFramework.Mappers;
+using IdentityModel;
 using Jackdaw.ClassLibrary.Mvc.Localization;
 using Jackdaw.ClassLibrary.Mvc.Services.AppSettings;
+using Jackdaw.IdentityServer.Data;
 using Jackdaw.IdentityServer.Filters;
 using Jackdaw.IdentityServer.Models.AppSettings;
+using Jackdaw.IdentityServer.Models.Data;
 using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using System.Globalization;
 using System.Reflection;
+using System.Security.Claims;
 
 namespace Jackdaw.IdentityServer
 {
@@ -77,21 +82,41 @@ namespace Jackdaw.IdentityServer
 
             var migrationsAssembly = typeof(Program).GetTypeInfo().Assembly.GetName().Name;
 
-            builder.Services.AddIdentityServer()
-                //.AddInMemoryIdentityResources(Config.IdentityResources)
-                //.AddInMemoryApiScopes(Config.ApiScopes)
-                //.AddInMemoryClients(Config.Clients)
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlite(
+                    _appSettings.ConnectionStrings.EntityFrameworkConnection,
+                    sql => sql.MigrationsAssembly(migrationsAssembly)
+                ));
+
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
+
+            builder.Services.AddIdentityServer(options =>
+            {
+                options.Events.RaiseErrorEvents = true;
+                options.Events.RaiseInformationEvents = true;
+                options.Events.RaiseFailureEvents = true;
+                options.Events.RaiseSuccessEvents = true;
+
+                // see https://docs.duendesoftware.com/identityserver/v6/fundamentals/resources/
+                options.EmitStaticAudienceClaim = true;
+            })
                 .AddConfigurationStore(options =>
                 {
-                    options.ConfigureDbContext = b => b.UseSqlite(_appSettings.ConnectionStrings.EntityFrameworkConnection,
-                        sql => sql.MigrationsAssembly(migrationsAssembly));
+                    options.ConfigureDbContext = b => b.UseSqlite(
+                        _appSettings.ConnectionStrings.EntityFrameworkConnection,
+                        sql => sql.MigrationsAssembly(migrationsAssembly)
+                    );
                 })
                 .AddOperationalStore(options =>
                 {
-                    options.ConfigureDbContext = b => b.UseSqlite(_appSettings.ConnectionStrings.EntityFrameworkConnection,
-                        sql => sql.MigrationsAssembly(migrationsAssembly));
+                    options.ConfigureDbContext = b => b.UseSqlite(
+                        _appSettings.ConnectionStrings.EntityFrameworkConnection,
+                        sql => sql.MigrationsAssembly(migrationsAssembly)
+                    );
                 })
-                .AddTestUsers(TestUsers.Users);
+                .AddAspNetIdentity<ApplicationUser>();
 
             builder.Services.AddAuthentication()
                 .AddGoogle("Google", googleOptions =>
@@ -166,14 +191,18 @@ namespace Jackdaw.IdentityServer
         /// <summary>
         /// InitializeDatabase private method
         /// &lt;br /&gt;
-        /// To Initialize: dotnet ef migrations add InitialCreate --context PersistedGrantDbContext
+        /// To Initialize: dotnet ef migrations add InitialCreate --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb
         /// &lt;br /&gt;
-        ///                dotnet ef migrations add InitialCreate --context ConfigurationDbContext
+        ///                dotnet ef migrations add InitialCreate --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb
+        /// &lt;br /&gt;
+        ///                dotnet ef migrations add InitialCreate --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb
         /// &lt;br /&gt;
         /// &lt;br /&gt;
-        /// To Update:     dotnet ef migrations add UpdateDatabase_&lt;&lt;YYYY-MM-DD&gt;&gt; -- context PersistedGrantDbContext
+        /// To Update:     dotnet ef migrations add UpdateDatabase_&lt;&lt;YYYY-MM-DD&gt;&gt; -- context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb
         /// &lt;br /&gt;
-        ///                dotnet ef migrations add UpdateDatabase_&lt;&lt;YYYY-MM-DD&gt;&gt; -- context ConfigurationDbContext
+        ///                dotnet ef migrations add UpdateDatabase_&lt;&lt;YYYY-MM-DD&gt;&gt; -- context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb
+        /// &lt;br /&gt;
+        ///                dotnet ef migrations add UpdateDatabase_&lt;&lt;YYYY-MM-DD&gt;&gt; -- context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb
         /// &lt;br /&gt;&lt;br /&gt;
         /// EF Core tools reference: https://docs.microsoft.com/en-us/ef/core/cli/dotnet
         /// &lt;br /&gt;
@@ -193,33 +222,74 @@ namespace Jackdaw.IdentityServer
                 {
                     serviceScope.ServiceProvider.GetRequiredService<PersistedGrantDbContext>().Database.Migrate();
 
-                    var context = serviceScope.ServiceProvider.GetRequiredService<ConfigurationDbContext>();
-                    context.Database.Migrate();
-                    if (!context.Clients.Any())
+                    // Configuration Context
+                    var configurationContext = serviceScope.ServiceProvider.GetRequiredService<ConfigurationDbContext>();
+                    if (configurationContext != null)
                     {
-                        foreach (var client in Config.Clients)
+                        configurationContext.Database.Migrate();
+                        if (!configurationContext.Clients.Any())
                         {
-                            context.Clients.Add(client.ToEntity());
+                            foreach (var client in Config.Clients)
+                            {
+                                configurationContext.Clients.Add(client.ToEntity());
+                            }
+                            configurationContext.SaveChanges();
+                            Log.Debug("Generated Clients");
                         }
-                        context.SaveChanges();
+
+                        if (!configurationContext.IdentityResources.Any())
+                        {
+                            foreach (var resource in Config.IdentityResources)
+                            {
+                                configurationContext.IdentityResources.Add(resource.ToEntity());
+                            }
+                            configurationContext.SaveChanges();
+                            Log.Debug("Generated IdentityResources");
+                        }
+
+                        if (!configurationContext.ApiScopes.Any())
+                        {
+                            foreach (var resource in Config.ApiScopes)
+                            {
+                                configurationContext.ApiScopes.Add(resource.ToEntity());
+                            }
+                            configurationContext.SaveChanges();
+                            Log.Debug("Generated ApiScopes");
+                        }
                     }
 
-                    if (!context.IdentityResources.Any())
+                    // Application Context
+                    var applicationContext = serviceScope.ServiceProvider.GetService<ApplicationDbContext>();
+                    if (applicationContext != null)
                     {
-                        foreach (var resource in Config.IdentityResources)
-                        {
-                            context.IdentityResources.Add(resource.ToEntity());
-                        }
-                        context.SaveChanges();
-                    }
+                        applicationContext.Database.Migrate();
+                        var userMgr = serviceScope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
 
-                    if (!context.ApiScopes.Any())
-                    {
-                        foreach (var resource in Config.ApiScopes)
+                        var sysAdmin = userMgr.FindByNameAsync("SysAdmin").Result;
+                        if (sysAdmin == null)
                         {
-                            context.ApiScopes.Add(resource.ToEntity());
+                            sysAdmin = new ApplicationUser
+                            {
+                                UserName = "SysAdmin"
+                            };
+                            var result = userMgr.CreateAsync(sysAdmin, "Pass123$").Result;
+                            if (!result.Succeeded)
+                            {
+                                throw new Exception(result.Errors.First().Description);
+                            }
+
+                            result = userMgr.AddClaimsAsync(sysAdmin, new Claim[]{
+                                new Claim(JwtClaimTypes.Name, "System Administrator"),
+                                new Claim(JwtClaimTypes.GivenName, "System"),
+                                new Claim(JwtClaimTypes.FamilyName, "Administrator")
+                            }).Result;
+                            if (!result.Succeeded)
+                            {
+                                throw new Exception(result.Errors.First().Description);
+                            }
+
+                            Log.Debug("Generated System Administrator");
                         }
-                        context.SaveChanges();
                     }
                 }
         }
