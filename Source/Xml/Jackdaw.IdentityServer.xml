@@ -151,6 +151,7 @@
             Copyright (c) Duende Software. All rights reserved.
             See https://duendesoftware.com/license/identityserver.pdf for license information. 
             </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext" />
             <revision>
             __Revisions:__~~
             | Contributor | Build | Revison Date | Description |~
@@ -158,12 +159,24 @@
             | Christopher D. Cavell | 0.0.0.2 | 03/06/2022 | Duende IdentityServer Integration |~ 
             </revision>
         </member>
-        <member name="M:Jackdaw.IdentityServer.Data.ApplicationDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Jackdaw.IdentityServer.Data.ApplicationDbContext})">
+        <member name="M:Jackdaw.IdentityServer.Data.ApplicationDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Jackdaw.IdentityServer.Data.ApplicationDbContext},Microsoft.Extensions.Logging.ILogger{Jackdaw.IdentityServer.Data.ApplicationDbContext},Microsoft.AspNetCore.Http.IHttpContextAccessor)">
             <summary>
             Constructor method
             </summary>
             <param name="options">DbContextOptions&lt;ApplicationDbContext&gt;</param>
-            <method>ApplicationDbContext(DbContextOptions&lt;ApplicationDbContext&gt; options) : base(options)</method>
+            <param name="logger">ILogger&lt;ApplicationDbContext&gt;</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <method>
+            ApplicationDbContext(
+                DbContextOptions&lt;ApplicationDbContext&gt; options
+            ) : base(options)
+            </method>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Data.ApplicationDbContext.AuditHistory">
+            <value>DbSet&lt;AuditHistory&gt;</value>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Data.ApplicationDbContext.SerializedKey">
+            <value>DbSet&lt;SerializedKey&gt;</value>
         </member>
         <member name="M:Jackdaw.IdentityServer.Data.ApplicationDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <summary>
@@ -175,6 +188,108 @@
             </summary>
             <param name="builder">ModelBuilder</param>
             <method>OnModelCreating(ModelBuilder builder)</method>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Data.ApplicationDbContext.HasUnsavedChanges">
+            <summary>
+            Checks for any unsaved INSERT, UPDATE, DELETE history.
+            </summary>
+            <returns>bool</returns>
+            <method>HasUnsavedChanges()</method>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Data.ApplicationDbContext.SaveChanges(System.Boolean)">
+            <summary>
+            Override to record all the data change history in a table named ```Audit```, this table 
+            contains INSERT, UPDATE, DELETE history.
+            </summary>
+            <returns>int</returns>
+            <method>SaveChanges(bool acceptAllChangesOnSuccess = true)</method>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Data.ApplicationDbContext.SaveChangesAsync(System.Threading.CancellationToken)">
+            <summary>
+            Override to record all the data change history in a table named ```Audit```, this table 
+            contains INSERT, UPDATE, DELETE history.
+            </summary>
+            <param name="cancellationToken">CancellationToken</param>
+            <returns>Task&lt;int&gt;</returns>
+            <method>SaveChangesAsync(CancellationToken cancellationToken = default(CancellationToken))</method>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Data.ApplicationDbContext.OnBeforeSaveChanges(System.String,System.String)">
+            <summary>
+            Save audit entities that have all the modifications and return list of entries 
+            where the value of some properties are unknown at this step.
+            &lt;br/&gt;&lt;br/&gt;
+            https://www.meziantou.net/entity-framework-core-history-audit-table.htm
+            </summary>
+            <returns>List&lt;AuditEntry&gt;</returns>
+            <method>OnBeforeSaveChanges(string userId)</method>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Data.ApplicationDbContext.OnAfterSaveChanges(System.Collections.Generic.List{Jackdaw.IdentityServer.Models.Data.AuditEntry})">
+            <summary>
+            Save audit entities where the value of some properties were unknown at previous step.
+            &lt;br/&gt;&lt;br/&gt;
+            https://www.meziantou.net/entity-framework-core-history-audit-table.htm
+            </summary>
+            <method>OnAfterSaveChanges(List&lt;AuditEntry&gt; auditEntries)</method>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Data.ApplicationDbContext.OnAfterSaveChangesAsync(System.Collections.Generic.List{Jackdaw.IdentityServer.Models.Data.AuditEntry})">
+            <summary>
+            Save audit entities where the value of some properties were unknown at previous step.
+            &lt;br/&gt;&lt;br/&gt;
+            https://www.meziantou.net/entity-framework-core-history-audit-table.htm
+            </summary>
+            <method>OnAfterSaveChangesAsync(List&lt;AuditEntry&gt; auditEntries)</method>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Data.ApplicationDbContext.RemoveAuditRecords">
+            <summary>
+            Remove audit records greater than 7 days old
+            </summary>
+            <method>RemoveAuditRecords()</method>
+        </member>
+        <member name="T:Jackdaw.IdentityServer.Data.SigningKeyStore">
+            <summary>
+            Implimentation of ISigningKeyStore
+            &lt;br /&gt;&lt;br /&gt;
+            See https://docs.duendesoftware.com/identityserver/v6/data/operational/keys/ for more information.
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 03/06/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Data.SigningKeyStore.#ctor(Jackdaw.IdentityServer.Data.ApplicationDbContext)">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="dbContext">ApplicationDbContext</param>
+            <method>SigningKeyStore(ApplicationDbContext dbContext)</method>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Data.SigningKeyStore.DeleteKeyAsync(System.String)">
+            <summary>
+            DeleteKeyAsync is used to purge the key from the store.
+            </summary>
+            <param name="id">string</param>
+            <returns>Task</returns>
+            <method>DeleteKeyAsync(string id)</method>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Data.SigningKeyStore.LoadKeysAsync">
+            <summary>
+            LoadKeysAsync is used to load all keys from the store.
+            </summary>
+            <returns>Task&lt;IEnumerable&lt;SerializedKey&gt;&gt;</returns>
+            <method>LoadKeysAsync()</method>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Data.SigningKeyStore.StoreKeyAsync(Duende.IdentityServer.Models.SerializedKey)">
+            <summary>
+            StoreKeyAsync is used to persist the new key.
+            </summary>
+            <param name="key">SerializedKey</param>
+            <returns>Task</returns>
+            <method>StoreKeyAsync(SerializedKey key)</method>
         </member>
         <member name="T:Jackdaw.IdentityServer.Filters.SecurityHeadersAttribute">
             <summary>
@@ -353,6 +468,101 @@
             |-------------|-------|--------------|-------------|~
             | Christopher D. Cavell | 0.0.0.2 | 03/06/2022 | Duende IdentityServer Integration |~ 
             </revision>
+        </member>
+        <member name="T:Jackdaw.IdentityServer.Models.Data.AuditEntry">
+            <summary>
+            CDCavell AuditEntry record
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 03/06/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Models.Data.AuditEntry.#ctor(Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry)">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="entry">EntityEntry</param>
+            <method>AuditEntry(EntityEntry entry)</method>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditEntry.Entry">
+            <value>EntityEntry</value>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditEntry.TableName">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditEntry.State">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditEntry.Application">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditEntry.ModifiedBy">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditEntry.ModifiedOn">
+            <value>DateTime</value>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditEntry.KeyValues">
+            <value>Dictionary&lt;string, object&gt;</value>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditEntry.OriginalValues">
+            <value>Dictionary&lt;string, object&gt;</value>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditEntry.CurrentValues">
+            <value>Dictionary&lt;string, object&gt;</value>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditEntry.TemporaryProperties">
+            <value>List&lt;PropertyEntry&gt;</value>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditEntry.HasTemporaryProperties">
+            <value>bool</value>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Models.Data.AuditEntry.ToAuditHistory">
+            <summary>
+            Audit History record to write
+            </summary>
+            <method>ToAuditHistory()</method>
+        </member>
+        <member name="T:Jackdaw.IdentityServer.Models.Data.AuditHistory">
+            <summary>
+            Authorization Service AuditHistory Entity
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 03/06/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditHistory.Id">
+            <value>long</value>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditHistory.ModifiedBy">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditHistory.ModifiedOn">
+            <value>DateTime?</value>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditHistory.Application">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditHistory.Entity">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditHistory.State">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditHistory.KeyValues">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditHistory.OriginalValues">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditHistory.CurrentValues">
+            <value>string</value>
         </member>
         <member name="T:Jackdaw.IdentityServer.Models.Diagnostics.DiagnosticsViewModel">
             <summary>

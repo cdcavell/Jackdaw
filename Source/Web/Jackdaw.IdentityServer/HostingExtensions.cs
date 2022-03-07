@@ -116,6 +116,7 @@ namespace Jackdaw.IdentityServer
                         sql => sql.MigrationsAssembly(migrationsAssembly)
                     );
                 })
+                .AddSigningKeyStore<SigningKeyStore>()
                 .AddAspNetIdentity<ApplicationUser>();
 
             builder.Services.AddAuthentication()
