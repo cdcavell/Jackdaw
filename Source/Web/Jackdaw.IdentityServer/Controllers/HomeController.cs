@@ -13,7 +13,7 @@ namespace Jackdaw.IdentityServer.Controllers
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.2 | 02/27/2022 | Duende IdentityServer Integration |~ 
+    /// | Christopher D. Cavell | 0.0.0.2 | 03/07/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
     public class HomeController : ApplicationBaseController<HomeController>
     {
@@ -56,21 +56,10 @@ namespace Jackdaw.IdentityServer.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            if (HttpContext.Connection != null)
-            {
-                if (HttpContext.Connection.LocalIpAddress != null && HttpContext.Connection.RemoteIpAddress != null)
-                {
-                    var localAddresses = new string[] { "127.0.0.1", "::1", HttpContext.Connection.LocalIpAddress.ToString() };
-                    if (!localAddresses.Contains(HttpContext.Connection.RemoteIpAddress.ToString()))
-                    {
-                        return Redirect(_appSettings.HomeRedirect);
-                    }
+            if (_appSettings.IsProduction)
+                return Redirect(_appSettings.HomeRedirect);
 
-                    return View();
-                }
-            }
-
-            return NotFound();
+            return View();
         }
     }
 }

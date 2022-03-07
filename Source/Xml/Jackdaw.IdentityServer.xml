@@ -38,10 +38,10 @@
             __Revisions:__~~
             | Contributor | Build | Revison Date | Description |~
             |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.2 | 03/06/2022 | Duende IdentityServer Integration |~ 
+            | Christopher D. Cavell | 0.0.0.2 | 03/07/2022 | Duende IdentityServer Integration |~ 
             </revision>
         </member>
-        <member name="M:Jackdaw.IdentityServer.Controllers.AccountController.#ctor(Microsoft.Extensions.Logging.ILogger{Jackdaw.IdentityServer.Controllers.AccountController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.IdentityServer.Controllers.AccountController},Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.ClassLibrary.Mvc.Localization.SharedResource})">
+        <member name="M:Jackdaw.IdentityServer.Controllers.AccountController.#ctor(Microsoft.Extensions.Logging.ILogger{Jackdaw.IdentityServer.Controllers.AccountController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.IdentityServer.Controllers.AccountController},Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.ClassLibrary.Mvc.Localization.SharedResource},Duende.IdentityServer.Services.IIdentityServerInteractionService,Duende.IdentityServer.Stores.IClientStore,Microsoft.AspNetCore.Authentication.IAuthenticationSchemeProvider,Duende.IdentityServer.Stores.IIdentityProviderStore,Duende.IdentityServer.Services.IEventService,Microsoft.AspNetCore.Identity.UserManager{Jackdaw.IdentityServer.Models.Data.ApplicationUser},Microsoft.AspNetCore.Identity.SignInManager{Jackdaw.IdentityServer.Models.Data.ApplicationUser})">
             <summary>
             Constructor method
             </summary>
@@ -51,6 +51,13 @@
             <param name="appSettingsService">IAppSettingsService</param>
             <param name="localizer">IStringLocalizer&lt;T&gt;</param>
             <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <param name="interaction">IIdentityServerInteractionService</param> 
+            <param name="clientStore">IClientStore</param>
+            <param name="schemeProvider">IAuthenticationSchemeProvider</param>
+            <param name="identityProviderStore">IIdentityProviderStore</param>
+            <param name="events">IEventService</param>
+            <param name="userManager">UserManager&lt;ApplicationUser&gt;</param>
+            <param name="signInManager">SignInManager&lt;ApplicationUser&gt;</param> 
             <method>
             public AccountController(
                 ILogger&lt;AccountController&gt; logger,
@@ -59,6 +66,13 @@
                 IAppSettingsService appSettingsService,
                 IStringLocalizer&lt;AccountController&gt; localizer,
                 IStringLocalizer&lt;SharedResource&gt; sharedLocalizer
+                IIdentityServerInteractionService interaction,
+                IClientStore clientStore,
+                IAuthenticationSchemeProvider schemeProvider,
+                IIdentityProviderStore identityProviderStore,
+                IEventService events,
+                UserManager&lt;ApplicationUser&gt; userManager,
+                SignInManager&lt;ApplicationUser&gt; signInManager
             ) : base(logger, webHostEnvironment, httpContextAccessor, appSettingsService)
             </method>
         </member>
@@ -113,7 +127,7 @@
             __Revisions:__~~
             | Contributor | Build | Revison Date | Description |~
             |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.2 | 02/27/2022 | Duende IdentityServer Integration |~ 
+            | Christopher D. Cavell | 0.0.0.2 | 03/07/2022 | Duende IdentityServer Integration |~ 
             </revision>
         </member>
         <member name="M:Jackdaw.IdentityServer.Controllers.HomeController.#ctor(Microsoft.Extensions.Logging.ILogger{Jackdaw.IdentityServer.Controllers.HomeController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.IdentityServer.Controllers.HomeController},Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.ClassLibrary.Mvc.Localization.SharedResource})">

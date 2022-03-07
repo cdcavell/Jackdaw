@@ -1,6 +1,11 @@
-﻿using Jackdaw.ClassLibrary.Mvc.Localization;
+﻿using Duende.IdentityServer.Services;
+using Duende.IdentityServer.Stores;
+using Jackdaw.ClassLibrary.Mvc.Localization;
 using Jackdaw.ClassLibrary.Mvc.Services.AppSettings;
+using Jackdaw.IdentityServer.Models.Data;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 
@@ -16,11 +21,19 @@ namespace Jackdaw.IdentityServer.Controllers
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.2 | 03/06/2022 | Duende IdentityServer Integration |~ 
+    /// | Christopher D. Cavell | 0.0.0.2 | 03/07/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
     [AllowAnonymous]
     public class AccountController : ApplicationBaseController<AccountController>
     {
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly IIdentityServerInteractionService _interaction;
+        private readonly IClientStore _clientStore;
+        private readonly IEventService _events;
+        private readonly IAuthenticationSchemeProvider _schemeProvider;
+        private readonly IIdentityProviderStore _identityProviderStore;
+
         /// <summary>
         /// Constructor method
         /// </summary>
@@ -30,6 +43,13 @@ namespace Jackdaw.IdentityServer.Controllers
         /// <param name="appSettingsService">IAppSettingsService</param>
         /// <param name="localizer">IStringLocalizer&lt;T&gt;</param>
         /// <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+        /// <param name="interaction">IIdentityServerInteractionService</param> 
+        /// <param name="clientStore">IClientStore</param>
+        /// <param name="schemeProvider">IAuthenticationSchemeProvider</param>
+        /// <param name="identityProviderStore">IIdentityProviderStore</param>
+        /// <param name="events">IEventService</param>
+        /// <param name="userManager">UserManager&lt;ApplicationUser&gt;</param>
+        /// <param name="signInManager">SignInManager&lt;ApplicationUser&gt;</param> 
         /// <method>
         /// public AccountController(
         ///     ILogger&lt;AccountController&gt; logger,
@@ -38,6 +58,13 @@ namespace Jackdaw.IdentityServer.Controllers
         ///     IAppSettingsService appSettingsService,
         ///     IStringLocalizer&lt;AccountController&gt; localizer,
         ///     IStringLocalizer&lt;SharedResource&gt; sharedLocalizer
+        ///     IIdentityServerInteractionService interaction,
+        ///     IClientStore clientStore,
+        ///     IAuthenticationSchemeProvider schemeProvider,
+        ///     IIdentityProviderStore identityProviderStore,
+        ///     IEventService events,
+        ///     UserManager&lt;ApplicationUser&gt; userManager,
+        ///     SignInManager&lt;ApplicationUser&gt; signInManager
         /// ) : base(logger, webHostEnvironment, httpContextAccessor, appSettingsService)
         /// </method>
         public AccountController(
@@ -46,9 +73,23 @@ namespace Jackdaw.IdentityServer.Controllers
             IHttpContextAccessor httpContextAccessor,
             IAppSettingsService appSettingsService,
             IStringLocalizer<AccountController> localizer,
-            IStringLocalizer<SharedResource> sharedLocalizer
+            IStringLocalizer<SharedResource> sharedLocalizer,
+            IIdentityServerInteractionService interaction,
+            IClientStore clientStore,
+            IAuthenticationSchemeProvider schemeProvider,
+            IIdentityProviderStore identityProviderStore,
+            IEventService events,
+            UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager
         ) : base(logger, webHostEnvironment, httpContextAccessor, appSettingsService, localizer, sharedLocalizer)
         {
+            _userManager = userManager;
+            _signInManager = signInManager;
+            _interaction = interaction;
+            _clientStore = clientStore;
+            _schemeProvider = schemeProvider;
+            _identityProviderStore = identityProviderStore;
+            _events = events;
         }
 
         /// <summary>
