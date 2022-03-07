@@ -1,6 +1,7 @@
 ﻿using Duende.IdentityServer;
 using Duende.IdentityServer.EntityFramework.DbContexts;
 using Duende.IdentityServer.EntityFramework.Mappers;
+using Duende.IdentityServer.Stores;
 using IdentityModel;
 using Jackdaw.ClassLibrary.Mvc.Localization;
 using Jackdaw.ClassLibrary.Mvc.Services.AppSettings;
@@ -115,8 +116,11 @@ namespace Jackdaw.IdentityServer
                         _appSettings.ConnectionStrings.EntityFrameworkConnection,
                         sql => sql.MigrationsAssembly(migrationsAssembly)
                     );
+
+                    // this enables automatic token cleanup. this is optional.
+                    options.EnableTokenCleanup = true;
+                    options.TokenCleanupInterval = 3600; // interval in seconds (default is 3600)
                 })
-                .AddSigningKeyStore<SigningKeyStore>()
                 .AddAspNetIdentity<ApplicationUser>();
 
             builder.Services.AddAuthentication()
@@ -193,15 +197,15 @@ namespace Jackdaw.IdentityServer
         /// InitializeDatabase private method
         /// &lt;br /&gt;
         /// To Initialize: 
-        /// &lt;br /&gt;`dotnet ef migrations add InitialCreate --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb`
-        /// &lt;br /&gt;`dotnet ef migrations add InitialCreate --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb`
-        /// &lt;br /&gt;`dotnet ef migrations add InitialCreate --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb`
+        /// &lt;br /&gt;`dotnet ef migrations add InitialCreate_PersistedGrantDb --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb`
+        /// &lt;br /&gt;`dotnet ef migrations add InitialCreate_ConfigurationDb --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb`
+        /// &lt;br /&gt;`dotnet ef migrations add InitialCreate_ApplicationDb --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb`
         /// &lt;br /&gt;
         /// &lt;br /&gt;
         /// To Update:     
-        /// &lt;br /&gt;`dotnet ef migrations add UpdateDatabase_(current YYYY-MM-DD) --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb`
-        /// &lt;br /&gt;`dotnet ef migrations add UpdateDatabase_(current YYYY-MM-DD) --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb`
-        /// &lt;br /&gt;`dotnet ef migrations add UpdateDatabase_(current YYYY-MM-DD) --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb`
+        /// &lt;br /&gt;`dotnet ef migrations add Update_PersistedGrantDb --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb`
+        /// &lt;br /&gt;`dotnet ef migrations add Update_ConfigurationDb --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb`
+        /// &lt;br /&gt;`dotnet ef migrations add Update_ApplicationDb --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb`
         /// &lt;br /&gt;&lt;br /&gt;
         /// EF Core tools reference: https://docs.microsoft.com/en-us/ef/core/cli/dotnet
         /// &lt;br /&gt;

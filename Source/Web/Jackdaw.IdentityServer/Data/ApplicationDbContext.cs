@@ -76,8 +76,6 @@ namespace Jackdaw.IdentityServer.Data
 
         /// <value>DbSet&lt;AuditHistory&gt;</value>
         public DbSet<AuditHistory> AuditHistory => Set<AuditHistory>();
-        /// <value>DbSet&lt;SerializedKey&gt;</value>
-        public DbSet<SerializedKey> SerializedKey => Set<SerializedKey>();
 
         /// <summary>
         /// OnModelCreating method

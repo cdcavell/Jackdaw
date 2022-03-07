@@ -175,9 +175,6 @@
         <member name="P:Jackdaw.IdentityServer.Data.ApplicationDbContext.AuditHistory">
             <value>DbSet&lt;AuditHistory&gt;</value>
         </member>
-        <member name="P:Jackdaw.IdentityServer.Data.ApplicationDbContext.SerializedKey">
-            <value>DbSet&lt;SerializedKey&gt;</value>
-        </member>
         <member name="M:Jackdaw.IdentityServer.Data.ApplicationDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <summary>
             OnModelCreating method
@@ -244,52 +241,6 @@
             Remove audit records greater than 7 days old
             </summary>
             <method>RemoveAuditRecords()</method>
-        </member>
-        <member name="T:Jackdaw.IdentityServer.Data.SigningKeyStore">
-            <summary>
-            Implimentation of ISigningKeyStore
-            &lt;br /&gt;&lt;br /&gt;
-            See https://docs.duendesoftware.com/identityserver/v6/data/operational/keys/ for more information.
-            &lt;br /&gt;&lt;br /&gt;
-            Copyright (c) Duende Software. All rights reserved.
-            See https://duendesoftware.com/license/identityserver.pdf for license information. 
-            </summary>
-            <revision>
-            __Revisions:__~~
-            | Contributor | Build | Revison Date | Description |~
-            |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.2 | 03/06/2022 | Duende IdentityServer Integration |~ 
-            </revision>
-        </member>
-        <member name="M:Jackdaw.IdentityServer.Data.SigningKeyStore.#ctor(Jackdaw.IdentityServer.Data.ApplicationDbContext)">
-            <summary>
-            Constructor method
-            </summary>
-            <param name="dbContext">ApplicationDbContext</param>
-            <method>SigningKeyStore(ApplicationDbContext dbContext)</method>
-        </member>
-        <member name="M:Jackdaw.IdentityServer.Data.SigningKeyStore.DeleteKeyAsync(System.String)">
-            <summary>
-            DeleteKeyAsync is used to purge the key from the store.
-            </summary>
-            <param name="id">string</param>
-            <returns>Task</returns>
-            <method>DeleteKeyAsync(string id)</method>
-        </member>
-        <member name="M:Jackdaw.IdentityServer.Data.SigningKeyStore.LoadKeysAsync">
-            <summary>
-            LoadKeysAsync is used to load all keys from the store.
-            </summary>
-            <returns>Task&lt;IEnumerable&lt;SerializedKey&gt;&gt;</returns>
-            <method>LoadKeysAsync()</method>
-        </member>
-        <member name="M:Jackdaw.IdentityServer.Data.SigningKeyStore.StoreKeyAsync(Duende.IdentityServer.Models.SerializedKey)">
-            <summary>
-            StoreKeyAsync is used to persist the new key.
-            </summary>
-            <param name="key">SerializedKey</param>
-            <returns>Task</returns>
-            <method>StoreKeyAsync(SerializedKey key)</method>
         </member>
         <member name="T:Jackdaw.IdentityServer.Filters.SecurityHeadersAttribute">
             <summary>
@@ -362,15 +313,15 @@
             InitializeDatabase private method
             &lt;br /&gt;
             To Initialize: 
-            &lt;br /&gt;`dotnet ef migrations add InitialCreate --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb`
-            &lt;br /&gt;`dotnet ef migrations add InitialCreate --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb`
-            &lt;br /&gt;`dotnet ef migrations add InitialCreate --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb`
+            &lt;br /&gt;`dotnet ef migrations add InitialCreate_PersistedGrantDb --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb`
+            &lt;br /&gt;`dotnet ef migrations add InitialCreate_ConfigurationDb --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb`
+            &lt;br /&gt;`dotnet ef migrations add InitialCreate_ApplicationDb --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb`
             &lt;br /&gt;
             &lt;br /&gt;
             To Update:     
-            &lt;br /&gt;`dotnet ef migrations add UpdateDatabase_(current YYYY-MM-DD) --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb`
-            &lt;br /&gt;`dotnet ef migrations add UpdateDatabase_(current YYYY-MM-DD) --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb`
-            &lt;br /&gt;`dotnet ef migrations add UpdateDatabase_(current YYYY-MM-DD) --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb`
+            &lt;br /&gt;`dotnet ef migrations add Update_PersistedGrantDb_(current YYYY-MM-DD) --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb`
+            &lt;br /&gt;`dotnet ef migrations add Update_ConfigurationDb_(current YYYY-MM-DD) --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb`
+            &lt;br /&gt;`dotnet ef migrations add Update_ApplicationDb_(current YYYY-MM-DD) --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb`
             &lt;br /&gt;&lt;br /&gt;
             EF Core tools reference: https://docs.microsoft.com/en-us/ef/core/cli/dotnet
             &lt;br /&gt;

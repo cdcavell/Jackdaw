@@ -45,17 +45,17 @@ _Before you can use the CLI tools on project, you'll need to add the `Microsoft.
 _To Initialize:_
 
 ```
-$ dotnet ef migrations add InitialCreate --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb
-$ dotnet ef migrations add InitialCreate --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb
-$ dotnet ef migrations add InitialCreate --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb
+$ dotnet ef migrations add InitialCreate_PersistedGrantDb --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb
+$ dotnet ef migrations add InitialCreate_ConfigurationDb --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb
+$ dotnet ef migrations add InitialCreate_ApplicationDb --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb
 ```
 
 _To Update:_
 
 ```
-$ dotnet ef migrations add UpdateDatabase_(current YYYY-MM-DD) --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb
-$ dotnet ef migrations add UpdateDatabase_(current YYYY-MM-DD) --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb
-$ dotnet ef migrations add UpdateDatabase_(current YYYY-MM-DD) --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb
+$ dotnet ef migrations add Update_PersistedGrantDb --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb
+$ dotnet ef migrations add Update_ConfigurationDb --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb
+$ dotnet ef migrations add Update_ApplicationDb --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb
 ```
 
 <hr />
