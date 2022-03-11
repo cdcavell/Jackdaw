@@ -10,23 +10,31 @@
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.2 | 02/28/2022 | Duende IdentityServer Integration |~ 
+    /// | Christopher D. Cavell | 0.0.0.2 | 03/11/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
     public class AccountOptions
     {
-        /// <value>bool</value>
-        public static bool AllowLocalLogin = false;
-        /// <value>bool</value>
-        public static bool AllowRememberLogin = true;
-        /// <value>TimeSpan</value>
-        public static TimeSpan RememberMeLoginDuration = TimeSpan.FromDays(30);
+        private static bool allowLocalLogin = false;
+        private static bool allowRememberLogin = true;
+        private static TimeSpan rememberMeLoginDuration = TimeSpan.FromDays(30);
+        private static bool showLogoutPrompt = false;
+        private static bool automaticRedirectAfterSignOut = false;
+        private static string invalidCredentialsErrorMessage = "Invalid username or password";
 
         /// <value>bool</value>
-        public static bool ShowLogoutPrompt = false;
+        public static bool AllowLocalLogin { get => allowLocalLogin; set => allowLocalLogin = value; }
         /// <value>bool</value>
-        public static bool AutomaticRedirectAfterSignOut = true;
+        public static bool AllowRememberLogin { get => allowRememberLogin; set => allowRememberLogin = value; }
+        /// <value>TimeSpan</value>
+        public static TimeSpan RememberMeLoginDuration { get => rememberMeLoginDuration; set => rememberMeLoginDuration = value; }
+
+        /// <value>bool</value>
+        public static bool ShowLogoutPrompt { get => showLogoutPrompt; set => showLogoutPrompt = value; }
+        /// <value>bool</value>
+        public static bool AutomaticRedirectAfterSignOut { get => automaticRedirectAfterSignOut; set => automaticRedirectAfterSignOut = value; }
 
         /// <value>string</value>
-        public static string InvalidCredentialsErrorMessage = "Invalid username or password";
+        public static string InvalidCredentialsErrorMessage { get => invalidCredentialsErrorMessage; set => invalidCredentialsErrorMessage = value; }
+
     }
 }

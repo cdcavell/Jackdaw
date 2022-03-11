@@ -41,7 +41,6 @@ namespace Jackdaw.IdentityServer.Controllers
         private readonly IClientStore _clientStore;
         private readonly IEventService _events;
         private readonly IAuthenticationSchemeProvider _schemeProvider;
-        private readonly IIdentityProviderStore _identityProviderStore;
         private readonly IAuthenticationHandlerProvider _authenticationHandlerProvider;
 
         /// <summary>
@@ -56,7 +55,6 @@ namespace Jackdaw.IdentityServer.Controllers
         /// <param name="interaction">IIdentityServerInteractionService</param> 
         /// <param name="clientStore">IClientStore</param>
         /// <param name="schemeProvider">IAuthenticationSchemeProvider</param>
-        /// <param name="identityProviderStore">IIdentityProviderStore</param>
         /// <param name="events">IEventService</param>
         /// <param name="userManager">UserManager&lt;ApplicationUser&gt;</param>
         /// <param name="signInManager">SignInManager&lt;ApplicationUser&gt;</param> 
@@ -72,7 +70,6 @@ namespace Jackdaw.IdentityServer.Controllers
         ///     IIdentityServerInteractionService interaction,
         ///     IClientStore clientStore,
         ///     IAuthenticationSchemeProvider schemeProvider,
-        ///     IIdentityProviderStore identityProviderStore,
         ///     IEventService events,
         ///     UserManager&lt;ApplicationUser&gt; userManager,
         ///     SignInManager&lt;ApplicationUser&gt; signInManager,
@@ -89,7 +86,6 @@ namespace Jackdaw.IdentityServer.Controllers
             IIdentityServerInteractionService interaction,
             IClientStore clientStore,
             IAuthenticationSchemeProvider schemeProvider,
-            IIdentityProviderStore identityProviderStore,
             IEventService events,
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
@@ -101,7 +97,6 @@ namespace Jackdaw.IdentityServer.Controllers
             _interaction = interaction;
             _clientStore = clientStore;
             _schemeProvider = schemeProvider;
-            _identityProviderStore = identityProviderStore;
             _events = events;
             _authenticationHandlerProvider = authenticationHandlerProvider;
         }

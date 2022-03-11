@@ -10,20 +10,28 @@
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.2 | 02/28/2022 | Duende IdentityServer Integration |~ 
+    /// | Christopher D. Cavell | 0.0.0.2 | 03/11/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
     public class ConsentOptions
     {
+        private static bool enableOfflineAccess = true;
+        private static string offlineAccessDisplayName = "Offline Access";
+        private static string offlineAccessDescription = "Access to your applications and resources, even when you are offline";
+        private static readonly string mustChooseOneErrorMessage = "You must pick at least one permission";
+        private static readonly string invalidSelectionErrorMessage = "Invalid selection";
+
         /// <value>bool</value>
-        public static bool EnableOfflineAccess = true;
+        public static bool EnableOfflineAccess { get => enableOfflineAccess; set => enableOfflineAccess = value; }
         /// <value>string</value>
-        public static string OfflineAccessDisplayName = "Offline Access";
+        public static string OfflineAccessDisplayName { get => offlineAccessDisplayName; set => offlineAccessDisplayName = value; }
         /// <value>string</value>
-        public static string OfflineAccessDescription = "Access to your applications and resources, even when you are offline";
+        public static string OfflineAccessDescription { get => offlineAccessDescription; set => offlineAccessDescription = value; }
+
 
         /// <value>string</value>
-        public static readonly string MustChooseOneErrorMessage = "You must pick at least one permission";
+        public static string MustChooseOneErrorMessage { get => mustChooseOneErrorMessage; }
         /// <value>string</value>
-        public static readonly string InvalidSelectionErrorMessage = "Invalid selection";
+        public static string InvalidSelectionErrorMessage { get => invalidSelectionErrorMessage; }
+
     }
 }
