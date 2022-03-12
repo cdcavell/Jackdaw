@@ -12,19 +12,19 @@ namespace Jackdaw.IdentityServer.Models.Account
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.2 | 03/11/2022 | Duende IdentityServer Integration |~ 
+    /// | Christopher D. Cavell | 0.0.0.2 | 03/12/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
     public class LoginInputModel
     {
         /// <value>string</value>
         [Required]
-        public string Username { get; set; } = string.Empty;
+        public string? Username { get; set; }
         /// <value>string</value>
         [Required]
-        public string Password { get; set; } = string.Empty;
+        public string? Password { get; set; }
         /// <value>bool</value>
         public bool RememberLogin { get; set; }
         /// <value>string</value>
-        public string ReturnUrl { get; set; } = string.Empty;
+        public string? ReturnUrl { get; set; }
     }
 }

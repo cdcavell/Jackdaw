@@ -1,7 +1,7 @@
-﻿namespace Jackdaw.IdentityServer.Models.Account
+﻿namespace Jackdaw.IdentityServer.Models.Consent
 {
     /// <summary>
-    /// Logout View Model
+    /// Consent Input Model
     /// &lt;br /&gt;&lt;br /&gt;
     /// Copyright (c) Duende Software. All rights reserved.
     /// See https://duendesoftware.com/license/identityserver.pdf for license information. 
@@ -12,9 +12,17 @@
     /// |-------------|-------|--------------|-------------|~
     /// | Christopher D. Cavell | 0.0.0.2 | 03/12/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
-    public class LogoutViewModel : LogoutInputModel
+    public class ConsentInputModel
     {
+        /// <value>string</value>
+        public string? Button { get; set; }
+        /// <value>IEnumerable&lt;string&gt;</value>
+        public IEnumerable<string>? ScopesConsented { get; set; }
         /// <value>bool</value>
-        public bool ShowLogoutPrompt { get; set; } = true;
+        public bool RememberConsent { get; set; }
+        /// <value>string</value>
+        public string? ReturnUrl { get; set; }
+        /// <value>string</value>
+        public string? Description { get; set; }
     }
 }

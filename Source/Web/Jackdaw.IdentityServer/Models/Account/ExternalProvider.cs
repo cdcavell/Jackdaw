@@ -10,13 +10,13 @@
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.2 | 03/11/2022 | Duende IdentityServer Integration |~ 
+    /// | Christopher D. Cavell | 0.0.0.2 | 03/12/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
     public class ExternalProvider
     {
         /// <value>string</value>
-        public string DisplayName { get; set; } = string.Empty;
+        public string? DisplayName { get; set; }
         /// <value>string</value>
-        public string AuthenticationScheme { get; set; } = string.Empty;
+        public string? AuthenticationScheme { get; set; }
     }
 }

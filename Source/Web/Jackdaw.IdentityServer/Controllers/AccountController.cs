@@ -15,8 +15,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
-using Org.BouncyCastle.Security;
-using System.Reflection;
 
 namespace Jackdaw.IdentityServer.Controllers
 {
@@ -30,7 +28,7 @@ namespace Jackdaw.IdentityServer.Controllers
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.2 | 03/11/2022 | Duende IdentityServer Integration |~ 
+    /// | Christopher D. Cavell | 0.0.0.2 | 03/12/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
     [AllowAnonymous]
     public class AccountController : ApplicationBaseController<AccountController>
@@ -110,7 +108,7 @@ namespace Jackdaw.IdentityServer.Controllers
         public async Task<IActionResult> Login(string returnUrl)
         {
             if (string.IsNullOrEmpty(returnUrl))
-                return Redirect("~/");
+                return Redirect(_appSettings.HomeRedirect);
 
             // build a model so we know what to show on the login page
             var vm = await BuildLoginViewModelAsync(returnUrl);
@@ -141,7 +139,7 @@ namespace Jackdaw.IdentityServer.Controllers
             {
                 "login" => false,
                 "cancel" => true,
-                _ => throw new InvalidParameterException()
+                _ => throw new ArgumentException($"Invalid button value {button}")
             };
 
             // the user clicked the "cancel" button
@@ -159,10 +157,10 @@ namespace Jackdaw.IdentityServer.Controllers
                     {
                         // The client is native, so this change in how to
                         // return the response is for better UX for the end user.
-                        return this.LoadingPage("Redirect", model.ReturnUrl);
+                        return this.LoadingPage("Redirect", model.ReturnUrl ?? _appSettings.HomeRedirect);
                     }
 
-                    return Redirect(model.ReturnUrl);
+                    return Redirect(model.ReturnUrl ?? _appSettings.HomeRedirect);
                 }
                 else
                 {
@@ -185,11 +183,11 @@ namespace Jackdaw.IdentityServer.Controllers
                         {
                             // The client is native, so this change in how to
                             // return the response is for better UX for the end user.
-                            return this.LoadingPage("Redirect", model.ReturnUrl);
+                            return this.LoadingPage("Redirect", model.ReturnUrl ?? _appSettings.HomeRedirect);
                         }
 
                         // we can trust model.ReturnUrl since GetAuthorizationContextAsync returned non-null
-                        return Redirect(model.ReturnUrl);
+                        return Redirect(model.ReturnUrl ?? _appSettings.HomeRedirect);
                     }
 
                     // request for a local page
@@ -247,6 +245,9 @@ namespace Jackdaw.IdentityServer.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout(LogoutInputModel model)
         {
+            if (model.LogoutId == null)
+                throw new Exception($"Null reference {nameof(model.LogoutId)}");
+
             // build a model so the logged out page knows what to display
             var vm = await BuildLoggedOutViewModelAsync(model.LogoutId);
 
@@ -265,10 +266,10 @@ namespace Jackdaw.IdentityServer.Controllers
                 // build a return URL so the upstream provider will redirect back
                 // to us after the user has logged out. this allows us to then
                 // complete our single sign-out processing.
-                string url = Url.Action("Logout", new { logoutId = vm.LogoutId }) ?? _appSettings.HomeRedirect;
+                string? url = Url.Action("Logout", new { logoutId = vm.LogoutId });
 
                 // this triggers a redirect to the external provider for sign-out
-                return SignOut(new AuthenticationProperties { RedirectUri = url }, vm.ExternalAuthenticationScheme);
+                return SignOut(new AuthenticationProperties { RedirectUri = url }, vm.ExternalAuthenticationScheme ?? throw new MemberAccessException(nameof(vm.ExternalAuthenticationScheme)));
             }
 
             return View("LoggedOut", vm);
@@ -291,68 +292,66 @@ namespace Jackdaw.IdentityServer.Controllers
         private async Task<LoginViewModel> BuildLoginViewModelAsync(string returnUrl)
         {
             var context = await _interaction.GetAuthorizationContextAsync(returnUrl);
-            if (context != null)
+            if (context?.IdP != null && await _schemeProvider.GetSchemeAsync(context.IdP) != null)
             {
-                if (context.IdP != null && await _schemeProvider.GetSchemeAsync(context.IdP) != null)
+                var local = context.IdP == IdentityServerConstants.LocalIdentityProvider;
+
+                // this is meant to short circuit the UI and only trigger the one external IdP
+                var vm = new LoginViewModel
                 {
-                    var local = context.IdP == IdentityServerConstants.LocalIdentityProvider;
-
-                    // this is meant to short circuit the UI and only trigger the one external IdP
-                    var vm = new LoginViewModel
-                    {
-                        EnableLocalLogin = local,
-                        ReturnUrl = returnUrl,
-                        Username = context.LoginHint,
-                    };
-
-                    if (!local)
-                    {
-                        vm.ExternalProviders = new[] { new ExternalProvider { AuthenticationScheme = context.IdP } };
-                    }
-
-                    return vm;
-                }
-
-                var schemes = await _schemeProvider.GetAllSchemesAsync();
-
-                var providers = schemes
-                    .Where(x => x.DisplayName != null)
-                    .Select(x => new ExternalProvider
-                    {
-                        DisplayName = x.DisplayName ?? x.Name,
-                        AuthenticationScheme = x.Name
-                    }).ToList();
-
-                var allowLocal = true;
-                if (context.Client.ClientId != null)
-                {
-                    var client = await _clientStore.FindEnabledClientByIdAsync(context.Client.ClientId);
-                    if (client != null)
-                    {
-                        allowLocal = client.EnableLocalLogin;
-
-                        if (client.IdentityProviderRestrictions != null && client.IdentityProviderRestrictions.Any())
-                        {
-                            providers = providers.Where(provider => client.IdentityProviderRestrictions.Contains(provider.AuthenticationScheme)).ToList();
-                        }
-                    }
-                }
-
-                return new LoginViewModel
-                {
-                    AllowRememberLogin = AccountOptions.AllowRememberLogin,
-                    EnableLocalLogin = allowLocal && AccountOptions.AllowLocalLogin,
+                    EnableLocalLogin = local,
                     ReturnUrl = returnUrl,
-                    Username = context.LoginHint,
-                    ExternalProviders = providers.ToArray()
+                    Username = context?.LoginHint,
                 };
+
+                if (!local)
+                {
+                    vm.ExternalProviders = new[] { new ExternalProvider { AuthenticationScheme = context?.IdP } };
+                }
+
+                return vm;
             }
 
-            throw new InvalidOperationException("Invalid null context");
+            var schemes = await _schemeProvider.GetAllSchemesAsync();
+
+            var providers = schemes
+                .Where(x => x.DisplayName != null)
+                .Select(x => new ExternalProvider
+                {
+                    DisplayName = x.DisplayName ?? x.Name,
+                    AuthenticationScheme = x.Name
+                }).ToList();
+
+            var allowLocal = true;
+            if (context?.Client.ClientId != null)
+            {
+                var client = await _clientStore.FindEnabledClientByIdAsync(context.Client.ClientId);
+                if (client != null)
+                {
+                    allowLocal = client.EnableLocalLogin;
+
+                    if (client.IdentityProviderRestrictions != null && client.IdentityProviderRestrictions.Any())
+                    {
+                        providers = providers.Where(provider => client.IdentityProviderRestrictions.Contains(provider.AuthenticationScheme)).ToList();
+                    }
+                }
+            }
+
+            return new LoginViewModel
+            {
+                AllowRememberLogin = AccountOptions.AllowRememberLogin,
+                EnableLocalLogin = allowLocal && AccountOptions.AllowLocalLogin,
+                ReturnUrl = returnUrl,
+                Username = context?.LoginHint,
+                ExternalProviders = providers.ToArray()
+            };
         }
 
         private async Task<LoginViewModel> BuildLoginViewModelAsync(LoginInputModel model)
         {
+            if (model.ReturnUrl == null)
+                throw new Exception($"Null reference {nameof(model.ReturnUrl)}");
+
             var vm = await BuildLoginViewModelAsync(model.ReturnUrl);
             vm.Username = model.Username;
             vm.RememberLogin = model.RememberLogin;
@@ -391,9 +390,9 @@ namespace Jackdaw.IdentityServer.Controllers
             var vm = new LoggedOutViewModel
             {
                 AutomaticRedirectAfterSignOut = AccountOptions.AutomaticRedirectAfterSignOut,
-                PostLogoutRedirectUri = (string.IsNullOrEmpty(logout?.PostLogoutRedirectUri) ? _appSettings.HomeRedirect : logout?.PostLogoutRedirectUri) ?? string.Empty,
-                ClientName = (string.IsNullOrEmpty(logout?.ClientName) ? logout?.ClientId : logout?.ClientName) ?? string.Empty,
-                SignOutIframeUrl = logout?.SignOutIFrameUrl ?? string.Empty,
+                PostLogoutRedirectUri = logout?.PostLogoutRedirectUri ?? _appSettings.HomeRedirect,
+                ClientName = logout?.ClientId ?? logout?.ClientName,
+                SignOutIframeUrl = logout?.SignOutIFrameUrl,
                 LogoutId = logoutId
             };
 
@@ -402,9 +401,9 @@ namespace Jackdaw.IdentityServer.Controllers
                 var idp = User.FindFirst(JwtClaimTypes.IdentityProvider)?.Value;
                 if (idp != null && idp != IdentityServerConstants.LocalIdentityProvider)
                 {
-                    //[Obsolete]
-                    //var providerSupportsSignout = await HttpContext.GetSchemeSupportsSignOutAsync(idp);
-                    var handler = await _authenticationHandlerProvider.GetHandlerAsync(HttpContext, IdentityServerConstants.LocalIdentityProvider);
+                    // [Obsolete]
+                    // var providerSupportsSignout = await HttpContext.GetSchemeSupportsSignOutAsync(idp);
+                    var handler = await _authenticationHandlerProvider.GetHandlerAsync(HttpContext, idp);
                     var providerSupportsSignout = typeof(IAuthenticationSignOutHandler).IsAssignableFrom((Type?)handler);
                     if (providerSupportsSignout)
                     {

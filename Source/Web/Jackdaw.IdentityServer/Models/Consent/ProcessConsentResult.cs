@@ -1,7 +1,9 @@
-﻿namespace Jackdaw.IdentityServer.Models.Account
+﻿using Duende.IdentityServer.Models;
+
+namespace Jackdaw.IdentityServer.Models.Consent
 {
     /// <summary>
-    /// Logged Out View Model
+    /// Process Consent Result Model
     /// &lt;br /&gt;&lt;br /&gt;
     /// Copyright (c) Duende Software. All rights reserved.
     /// See https://duendesoftware.com/license/identityserver.pdf for license information. 
@@ -12,23 +14,23 @@
     /// |-------------|-------|--------------|-------------|~
     /// | Christopher D. Cavell | 0.0.0.2 | 03/12/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
-    public class LoggedOutViewModel
+    public class ProcessConsentResult
     {
+        /// <value>bool</value>
+        public bool IsRedirect => RedirectUri != null;
         /// <value>string</value>
-        public string? PostLogoutRedirectUri { get; set; }
-        /// <value>string</value>
-        public string? ClientName { get; set; }
-        /// <value>string</value>
-        public string? SignOutIframeUrl { get; set; }
+        public string? RedirectUri { get; set; }
+        /// <value>Client</value>
+        public Client? Client { get; set; }
 
         /// <value>bool</value>
-        public bool AutomaticRedirectAfterSignOut { get; set; }
+        public bool ShowView => ViewModel != null;
+        /// <value>ConsentViewModel</value>
+        public ConsentViewModel? ViewModel { get; set; }
 
-        /// <value>string</value>
-        public string? LogoutId { get; set; }
         /// <value>bool</value>
-        public bool TriggerExternalSignout => ExternalAuthenticationScheme != null;
+        public bool HasValidationError => ValidationError != null;
         /// <value>string</value>
-        public string? ExternalAuthenticationScheme { get; set; }
+        public string? ValidationError { get; set; }
     }
 }

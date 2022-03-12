@@ -10,11 +10,11 @@
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.2 | 03/11/2022 | Duende IdentityServer Integration |~ 
+    /// | Christopher D. Cavell | 0.0.0.2 | 03/12/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
     public class RedirectViewModel
     {
         /// <value>string</value>
-        public string RedirectUrl { get; set; } = string.Empty;
+        public string? RedirectUrl { get; set; }
     }
 }
