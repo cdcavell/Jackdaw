@@ -242,7 +242,7 @@ namespace Jackdaw.IdentityServer.Controllers
             return vm;
         }
 
-        private ScopeViewModel CreateScopeViewModel(IdentityResource identity, bool check)
+        private static ScopeViewModel CreateScopeViewModel(IdentityResource identity, bool check)
         {
             return new ScopeViewModel
             {
@@ -273,7 +273,7 @@ namespace Jackdaw.IdentityServer.Controllers
                 Checked = check || apiScope.Required
             };
         }
-        private ScopeViewModel GetOfflineAccessScope(bool check)
+        private static ScopeViewModel GetOfflineAccessScope(bool check)
         {
             return new ScopeViewModel
             {

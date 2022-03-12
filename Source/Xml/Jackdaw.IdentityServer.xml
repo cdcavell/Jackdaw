@@ -208,6 +208,75 @@
             <returns>ScopeViewModel</returns>
             <method>CreateScopeViewModel(ParsedScopeValue parsedScopeValue, ApiScope apiScope, bool check)</method>
         </member>
+        <member name="T:Jackdaw.IdentityServer.Controllers.DeviceController">
+            <summary>
+            Device Controller
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 03/12/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Controllers.DeviceController.#ctor(Microsoft.Extensions.Logging.ILogger{Jackdaw.IdentityServer.Controllers.DeviceController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.IdentityServer.Controllers.DeviceController},Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.ClassLibrary.Mvc.Localization.SharedResource},Duende.IdentityServer.Services.IDeviceFlowInteractionService,Duende.IdentityServer.Services.IEventService,Microsoft.Extensions.Options.IOptions{Duende.IdentityServer.Configuration.IdentityServerOptions})">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <param name="localizer">IStringLocalizer&lt;T&gt;</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <param name="interaction">IIdentityServerInteractionService</param>
+            <param name="eventService">IEventService</param>
+            <param name="options">IOptions&gt;IdentityServerOptions&lt;</param>
+            <method>
+            public DeviceController(
+                ILogger&lt;DeviceController&gt; logger,
+                IWebHostEnvironment webHostEnvironment,
+                IHttpContextAccessor httpContextAccessor,
+                IAppSettingsService appSettingsService,
+                IStringLocalizer&lt;DeviceController&gt; localizer,
+                IStringLocalizer&lt;SharedResource&gt; sharedLocalizer
+                IDeviceFlowInteractionService interaction, 
+                IEventService eventService, 
+                IOptions&lt;IdentityServerOptions&gt; options
+            ) : base(logger, webHostEnvironment, httpContextAccessor, appSettingsService)
+            </method>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Controllers.DeviceController.Index">
+            <summary>
+            Index Method
+            </summary>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>Index()</method>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Controllers.DeviceController.UserCodeCapture(System.String)">
+            <summary>
+            UserCodeCapture Method
+            </summary>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>UserCodeCapture(string userCode)</method>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Controllers.DeviceController.Callback(Jackdaw.IdentityServer.Models.Device.DeviceAuthorizationInputModel)">
+            <summary>
+            Callback Method
+            </summary>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>Callback(DeviceAuthorizationInputModel model)</method>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Controllers.DeviceController.CreateScopeViewModel(Duende.IdentityServer.Validation.ParsedScopeValue,Duende.IdentityServer.Models.ApiScope,System.Boolean)">
+            <summary>
+            CreateScopeViewModel Method
+            </summary>
+            <returns>ScopeViewModel</returns>
+            <method>CreateScopeViewModel(ParsedScopeValue parsedScopeValue, ApiScope apiScope, bool check)</method>
+        </member>
         <member name="T:Jackdaw.IdentityServer.Controllers.HomeController">
             <summary>
             Home controller class
@@ -909,6 +978,43 @@
         </member>
         <member name="P:Jackdaw.IdentityServer.Models.Data.AuditHistory.CurrentValues">
             <value>string</value>
+        </member>
+        <member name="T:Jackdaw.IdentityServer.Models.Device.DeviceAuthorizationInputModel">
+            <summary>
+            Device Authorization Input Model
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 03/12/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.Device.DeviceAuthorizationInputModel.UserCode">
+            <value>string</value>
+        </member>
+        <member name="T:Jackdaw.IdentityServer.Models.Device.DeviceAuthorizationViewModel">
+            <summary>
+            Device Authorization View Model
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 03/12/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.Device.DeviceAuthorizationViewModel.UserCode">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.IdentityServer.Models.Device.DeviceAuthorizationViewModel.ConfirmUserCode">
+            <value>bool</value>
         </member>
         <member name="T:Jackdaw.IdentityServer.Models.Diagnostics.DiagnosticsViewModel">
             <summary>
