@@ -31,6 +31,6 @@ namespace Jackdaw.IdentityServer.Models.Consent
         /// <value>bool</value>
         public bool HasValidationError => ValidationError != null;
         /// <value>string</value>
-        public string? ValidationError { get; set; }
+        public string ValidationError { get; set; } = "Unknown error";
     }
 }

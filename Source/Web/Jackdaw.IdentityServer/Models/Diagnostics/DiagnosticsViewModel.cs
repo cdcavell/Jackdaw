@@ -15,7 +15,7 @@ namespace Jackdaw.IdentityServer.Models.Diagnostics
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.2 | 03/04/2022 | Duende IdentityServer Integration |~ 
+    /// | Christopher D. Cavell | 0.0.0.2 | 03/12/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
     public class DiagnosticsViewModel
     {
@@ -30,16 +30,13 @@ namespace Jackdaw.IdentityServer.Models.Diagnostics
             if (result.Properties != null)
                 if (result.Properties.Items.ContainsKey("client_list"))
                 {
-                    var encoded = result.Properties.Items["client_list"];
-                    var bytes = Base64Url.Decode(encoded);
-                    var value = Encoding.UTF8.GetString(bytes);
+                    string encoded = result.Properties.Items["client_list"] ?? string.Empty;
+                    byte[] bytes = Base64Url.Decode(encoded);
+                    string value = Encoding.UTF8.GetString(bytes);
 
-                    if (value != null)
-                    {
-                        var clients = JsonConvert.DeserializeObject<string[]>(value);
-                        if (clients != null)
-                            Clients = clients.ToList();
-                    }
+                    var clients = JsonConvert.DeserializeObject<string[]>(value);
+                    if (clients != null)
+                        Clients = clients;
                 }
         }
 

@@ -112,7 +112,7 @@ namespace Jackdaw.IdentityServer.Controllers
 
             if (result.HasValidationError)
             {
-                ModelState.AddModelError(string.Empty, result.ValidationError ?? throw new Exception($"Null reference {nameof(result.ValidationError)}"));
+                ModelState.AddModelError(string.Empty, result.ValidationError);
             }
 
             if (result.ShowView)
@@ -128,12 +128,6 @@ namespace Jackdaw.IdentityServer.Controllers
         /*****************************************/
         private async Task<ProcessConsentResult> ProcessConsent(ConsentInputModel model)
         {
-            if (model == null)
-                throw new Exception($"Null reference {nameof(model)}");
-
-            if (model.ReturnUrl == null)
-                throw new Exception($"Null reference {nameof(model.ReturnUrl)}");
-
             var result = new ProcessConsentResult();
 
             // validate return url is still valid

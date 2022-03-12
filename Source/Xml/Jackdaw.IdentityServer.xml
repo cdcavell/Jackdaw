@@ -277,6 +277,48 @@
             <returns>ScopeViewModel</returns>
             <method>CreateScopeViewModel(ParsedScopeValue parsedScopeValue, ApiScope apiScope, bool check)</method>
         </member>
+        <member name="T:Jackdaw.IdentityServer.Controllers.DiagnosticsController">
+            <summary>
+            Diagnostics Controller
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 03/12/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Controllers.DiagnosticsController.#ctor(Microsoft.Extensions.Logging.ILogger{Jackdaw.IdentityServer.Controllers.DiagnosticsController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.IdentityServer.Controllers.DiagnosticsController},Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.ClassLibrary.Mvc.Localization.SharedResource})">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="logger">ILogger</param>
+            <param name="webHostEnvironment">IWebHostEnvironment</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <param name="appSettingsService">IAppSettingsService</param>
+            <param name="localizer">IStringLocalizer&lt;T&gt;</param>
+            <param name="sharedLocalizer">IStringLocalizer&lt;SharedResource&gt;</param>
+            <method>
+            public DiagnosticsController(
+                ILogger&lt;DiagnosticsController&gt; logger,
+                IWebHostEnvironment webHostEnvironment,
+                IHttpContextAccessor httpContextAccessor,
+                IAppSettingsService appSettingsService,
+                IStringLocalizer&lt;DiagnosticsController&gt; localizer,
+                IStringLocalizer&lt;SharedResource&gt; sharedLocalizer
+            ) : base(logger, webHostEnvironment, httpContextAccessor, appSettingsService)
+            </method>
+        </member>
+        <member name="M:Jackdaw.IdentityServer.Controllers.DiagnosticsController.Index">
+            <summary>
+            Index method
+            </summary>
+            <returns>Task&lt;IActionResult&gt;</returns>
+            <method>Index()</method>
+        </member>
         <member name="T:Jackdaw.IdentityServer.Controllers.HomeController">
             <summary>
             Home controller class
@@ -1027,7 +1069,7 @@
             __Revisions:__~~
             | Contributor | Build | Revison Date | Description |~
             |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.2 | 03/04/2022 | Duende IdentityServer Integration |~ 
+            | Christopher D. Cavell | 0.0.0.2 | 03/12/2022 | Duende IdentityServer Integration |~ 
             </revision>
         </member>
         <member name="M:Jackdaw.IdentityServer.Models.Diagnostics.DiagnosticsViewModel.#ctor(Microsoft.AspNetCore.Authentication.AuthenticateResult)">
