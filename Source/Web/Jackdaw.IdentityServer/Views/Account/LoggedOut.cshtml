@@ -1,0 +1,41 @@
+﻿@model Jackdaw.IdentityServer.Models.Account.LoggedOutViewModel
+@{ 
+    // set this so the layout rendering sees an anonymous user
+    ViewData["signed-out"] = true;
+}
+
+<div class="container h-100">
+    <div class="row h-100 align-items-center justify-content-center">
+        <div class="col-12 col-lg-8 page-content text-center">
+            <h2 lang="@ViewBag.CultureName">@Localizer["Heading"]</h2>
+            <p lang="@ViewBag.CultureName">@Localizer["Text-1"]</p>
+            @if (Model.PostLogoutRedirectUri != null)
+            {
+                <div class="mt-2" lang="@ViewBag.CultureName">
+                    @Localizer["Text-2A"] <a class="PostLogoutRedirectUri" href="@Model.PostLogoutRedirectUri" lang="@ViewBag.CultureName">@Localizer["Text-2B"]</a> @Localizer["Text-2C"]
+                    <span lang="@ViewBag.CultureName">@Model.ClientName</span> @Localizer["Text-2D"]
+                </div>
+            }
+
+            @if (Model.SignOutIframeUrl != null)
+            {
+                <iframe width="0" height="0" class="signout" src="@Model.SignOutIframeUrl"></iframe>
+            }
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    @if (Model.AutomaticRedirectAfterSignOut)
+    {
+    <script type="text/javascript" nonce="@ViewBag.ScriptNonce">
+        window.addEventListener("load", function () {
+            var a = document.querySelector("a.PostLogoutRedirectUri");
+            if (a) {
+                window.location = a.href;
+            }
+        });
+    </script>
+    }
+}
