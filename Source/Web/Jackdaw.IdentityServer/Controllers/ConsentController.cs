@@ -23,7 +23,7 @@ namespace Jackdaw.IdentityServer.Controllers
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.2 | 03/12/2022 | Duende IdentityServer Integration |~ 
+    /// | Christopher D. Cavell | 0.0.0.2 | 03/13/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
     public class ConsentController : ApplicationBaseController<ConsentController>
     {
@@ -104,7 +104,7 @@ namespace Jackdaw.IdentityServer.Controllers
                 {
                     // The client is native, so this change in how to
                     // return the response is for better UX for the end user.
-                    return this.LoadingPage("Redirect", result.RedirectUri ?? _appSettings.HomeRedirect);
+                    return this.LoadingPage(result.RedirectUri ?? _appSettings.HomeRedirect);
                 }
 
                 return Redirect(result.RedirectUri ?? _appSettings.HomeRedirect);

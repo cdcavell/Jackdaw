@@ -28,7 +28,7 @@ namespace Jackdaw.IdentityServer.Controllers
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.2 | 03/12/2022 | Duende IdentityServer Integration |~ 
+    /// | Christopher D. Cavell | 0.0.0.2 | 03/13/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
     [AllowAnonymous]
     public class AccountController : ApplicationBaseController<AccountController>
@@ -157,7 +157,7 @@ namespace Jackdaw.IdentityServer.Controllers
                     {
                         // The client is native, so this change in how to
                         // return the response is for better UX for the end user.
-                        return this.LoadingPage("Redirect", model.ReturnUrl ?? _appSettings.HomeRedirect);
+                        return this.LoadingPage(model.ReturnUrl ?? _appSettings.HomeRedirect);
                     }
 
                     return Redirect(model.ReturnUrl ?? _appSettings.HomeRedirect);
@@ -183,7 +183,7 @@ namespace Jackdaw.IdentityServer.Controllers
                         {
                             // The client is native, so this change in how to
                             // return the response is for better UX for the end user.
-                            return this.LoadingPage("Redirect", model.ReturnUrl ?? _appSettings.HomeRedirect);
+                            return this.LoadingPage(model.ReturnUrl ?? _appSettings.HomeRedirect);
                         }
 
                         // we can trust model.ReturnUrl since GetAuthorizationContextAsync returned non-null
