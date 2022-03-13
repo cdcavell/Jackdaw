@@ -12,9 +12,23 @@ namespace Jackdaw.IdentityServer.Models.Data
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.2 | 03/06/2022 | Duende IdentityServer Integration |~ 
+    /// | Christopher D. Cavell | 0.0.0.2 | 03/12/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
     public class ApplicationUser : IdentityUser
     {
+        /// <summary>
+        /// Initializes a user identity
+        /// </summary>
+        public ApplicationUser()
+        {
+            Id = Guid.NewGuid().ToString();
+        }
+
+        /// <value>string</value>
+        public string SubjectId { get => this.Id; }
+        /// <value>string</value>
+        public string DisplayName { get; set; } = "Anonymous";
+        /// <value>ICollection&lt;IdentityUserClaim&lt;string&gt;&gt;</value>
+        public virtual ICollection<IdentityUserClaim<string>> Claims { get; set; } = new List<IdentityUserClaim<string>>();
     }
 }

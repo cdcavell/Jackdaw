@@ -1,0 +1,19 @@
+﻿@model Jackdaw.IdentityServer.Models.Account.RedirectViewModel
+<meta http-equiv="refresh" content="0;url=@Model.RedirectUrl" data-url="@Model.RedirectUrl">
+
+<div class="container h-100">
+    <div class="row h-100 align-items-center justify-content-center">
+        <div class="col-12 col-lg-8 page-content text-center">
+            <h2 lang="@ViewBag.CultureName">@Localizer["Heading"]</h2>
+            <p lang="@ViewBag.CultureName">@Localizer["Text"]</p>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+<script type="text/javascript" nonce="@ViewBag.ScriptNonce">
+    $(document).ready(function() {
+        window.location.href = document.querySelector("meta[http-equiv=refresh]").getAttribute("data-url");
+    });
+</script>
+}
