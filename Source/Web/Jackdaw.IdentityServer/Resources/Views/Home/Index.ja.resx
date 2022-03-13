@@ -117,4 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Heading" xml:space="preserve">
+    <value>Duende&amp;trade; IdentityServerバージョン</value>
+  </data>
+  <data name="Text-1A" xml:space="preserve">
+    <value>CDCavellは</value>
+  </data>
+  <data name="Text-1B" xml:space="preserve">
+    <value>証拠開示文書</value>
+  </data>
+  <data name="Text-1C" xml:space="preserve">
+    <value>ここでは、すべてのエンドポイント、主要な資料などへのメタデータとリンクを見つけることができます。</value>
+  </data>
+  <data name="Text-2A" xml:space="preserve">
+    <value>クリック</value>
+  </data>
+  <data name="Text-2C" xml:space="preserve">
+    <value>現在のセッションのクレームを確認します。</value>
+  </data>
+  <data name="Text-3A" xml:space="preserve">
+    <value>クリック</value>
+  </data>
+  <data name="Text-3B" xml:space="preserve">
+    <value>ここ</value>
+  </data>
+  <data name="Text-3C" xml:space="preserve">
+    <value>保存された助成金を管理します。</value>
+  </data>
+  <data name="Text-4A" xml:space="preserve">
+    <value>ここにへのリンクがあります</value>
+  </data>
+  <data name="Text-4B" xml:space="preserve">
+    <value>ソースコードリポジトリ</value>
+  </data>
+  <data name="Text-4C" xml:space="preserve">
+    <value>と</value>
+  </data>
+  <data name="Text-4D" xml:space="preserve">
+    <value>すぐに使用できるサンプル</value>
+  </data>
+  <data name="Text2B" xml:space="preserve">
+    <value>ここ</value>
+  </data>
 </root>

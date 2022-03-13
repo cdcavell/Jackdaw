@@ -117,4 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Heading" xml:space="preserve">
+    <value>Duende&amp;trade; Versión del servidor de identidad</value>
+  </data>
+  <data name="Text-1A" xml:space="preserve">
+    <value>CDCavell publica una</value>
+  </data>
+  <data name="Text-1B" xml:space="preserve">
+    <value>documento de descubrimiento</value>
+  </data>
+  <data name="Text-1C" xml:space="preserve">
+    <value>donde puede encontrar metadatos y enlaces a todos los puntos finales, material clave, etc.</value>
+  </data>
+  <data name="Text-2A" xml:space="preserve">
+    <value>Hacer clic</value>
+  </data>
+  <data name="Text-2B" xml:space="preserve">
+    <value>aquí</value>
+  </data>
+  <data name="Text-2C" xml:space="preserve">
+    <value>para ver las reclamaciones de su sesión actual.</value>
+  </data>
+  <data name="Text-3A" xml:space="preserve">
+    <value>Hacer clic</value>
+  </data>
+  <data name="Text-3B" xml:space="preserve">
+    <value>aquí</value>
+  </data>
+  <data name="Text-3C" xml:space="preserve">
+    <value>para administrar sus concesiones almacenadas.</value>
+  </data>
+  <data name="Text-4A" xml:space="preserve">
+    <value>Aquí hay enlaces a la</value>
+  </data>
+  <data name="Text-4B" xml:space="preserve">
+    <value>repositorio de código fuente</value>
+  </data>
+  <data name="Text-4C" xml:space="preserve">
+    <value>y</value>
+  </data>
+  <data name="Text-4D" xml:space="preserve">
+    <value>muestras listas para usar</value>
+  </data>
 </root>

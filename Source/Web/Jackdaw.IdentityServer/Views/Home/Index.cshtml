@@ -5,23 +5,23 @@
 <div class="container h-100">
     <div class="row h-100 align-items-center justify-content-center">
         <div class="col-12 col-lg-8 page-content text-center">
-            <h2>Duende&trade; IdentityServer version @version</h2>
+            <h2 lang="@ViewBag.CultureName">@Localizer["Heading"] @version</h2>
             <ul class="text-left">
-                <li>
-                    CDCavell publishes a
-                    <a href="~/.well-known/openid-configuration">discovery document</a>
-                    where you can find metadata and links to all the endpoints, key material, etc.
+                <li lang="@ViewBag.CultureName">
+                    @Localizer["Text-1A"]
+                    <a href="~/.well-known/openid-configuration">@Localizer["Text-1B"]</a>
+                    @Localizer["Text-1C"]
                 </li>
-                <li>
-                    Click <a href="~/diagnostics">here</a> to see the claims for your current session.
+                <li lang="@ViewBag.CultureName">
+                    @Localizer["Text-2A"] <a href="~/diagnostics">@Localizer["Text-2B"]</a> @Localizer["Text-2C"]
                 </li>
-                <li>
-                    Click <a href="~/grants">here</a> to manage your stored grants.
+                <li lang="@ViewBag.CultureName">
+                    @Localizer["Text-3A"] <a href="~/grants">@Localizer["Text-3B"]</a> @Localizer["Text-3C"]
                 </li>
-                <li>
-                    Here are links to the
-                    <a href="https://github.com/duendesoftware/IdentityServer">source code repository</a>,
-                    and <a href="https://github.com/duendesoftware/samples">ready to use samples</a>.
+                <li lang="@ViewBag.CultureName">
+                    @Localizer["Text-4A"]
+                    <a href="https://github.com/duendesoftware/IdentityServer">@Localizer["Text-4B"]</a>,
+                    @Localizer["Text-4C"] <a href="https://github.com/duendesoftware/samples">@Localizer["Text-4D"]</a>.
                 </li>
             </ul>
         </div>

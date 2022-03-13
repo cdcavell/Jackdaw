@@ -117,4 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Heading" xml:space="preserve">
+    <value>Duende&amp;trade; Версія IdentityServer</value>
+  </data>
+  <data name="Text-1A" xml:space="preserve">
+    <value>CDCavell публікує a</value>
+  </data>
+  <data name="Text-1B" xml:space="preserve">
+    <value>документ про відкриття</value>
+  </data>
+  <data name="Text-1C" xml:space="preserve">
+    <value>де ви можете знайти метадані та посилання на всі кінцеві точки, ключовий матеріал тощо.</value>
+  </data>
+  <data name="Text-2A" xml:space="preserve">
+    <value>Натисніть</value>
+  </data>
+  <data name="Text-2B" xml:space="preserve">
+    <value>тут</value>
+  </data>
+  <data name="Text-2C" xml:space="preserve">
+    <value>щоб переглянути претензії для поточного сеансу.</value>
+  </data>
+  <data name="Text-3A" xml:space="preserve">
+    <value>Натисніть</value>
+  </data>
+  <data name="Text-3B" xml:space="preserve">
+    <value>тут</value>
+  </data>
+  <data name="Text-3C" xml:space="preserve">
+    <value>для керування збереженими грантами.</value>
+  </data>
+  <data name="Text-4A" xml:space="preserve">
+    <value>Ось посилання на</value>
+  </data>
+  <data name="Text-4B" xml:space="preserve">
+    <value>репозиторій вихідного коду</value>
+  </data>
+  <data name="Text-4C" xml:space="preserve">
+    <value>і</value>
+  </data>
+  <data name="Text-4D" xml:space="preserve">
+    <value>готові до використання зразки</value>
+  </data>
 </root>

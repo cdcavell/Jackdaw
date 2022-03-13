@@ -118,45 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Heading" xml:space="preserve">
-    <value>Duende&amp;trade; Version du serveur d'identité</value>
+    <value>تم الرفض</value>
   </data>
-  <data name="Text-1A" xml:space="preserve">
-    <value>Le CDCavell publie un</value>
-  </data>
-  <data name="Text-1B" xml:space="preserve">
-    <value>document de découverte</value>
-  </data>
-  <data name="Text-1C" xml:space="preserve">
-    <value>où vous pouvez trouver des métadonnées et des liens vers tous les points de terminaison, le matériel clé, etc.</value>
-  </data>
-  <data name="Text-2A" xml:space="preserve">
-    <value>Cliquez sur</value>
-  </data>
-  <data name="Text-2B" xml:space="preserve">
-    <value>ici</value>
-  </data>
-  <data name="Text-2C" xml:space="preserve">
-    <value>pour voir les réclamations de votre session en cours.</value>
-  </data>
-  <data name="Text-3A" xml:space="preserve">
-    <value>Cliquez sur</value>
-  </data>
-  <data name="Text-3B" xml:space="preserve">
-    <value>ici</value>
-  </data>
-  <data name="Text-3C" xml:space="preserve">
-    <value>pour gérer vos subventions stockées.</value>
-  </data>
-  <data name="Text-4A" xml:space="preserve">
-    <value>Voici des liens vers le</value>
-  </data>
-  <data name="Text-4B" xml:space="preserve">
-    <value>dépôt de code source</value>
-  </data>
-  <data name="Text-4C" xml:space="preserve">
-    <value>et</value>
-  </data>
-  <data name="Text-4D" xml:space="preserve">
-    <value>échantillons prêts à l'emploi</value>
+  <data name="Text" xml:space="preserve">
+    <value>ليس لديك حق الوصول إلى هذا المورد.</value>
   </data>
 </root>

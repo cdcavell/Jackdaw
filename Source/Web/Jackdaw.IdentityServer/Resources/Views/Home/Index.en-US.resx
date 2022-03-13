@@ -117,4 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Heading" xml:space="preserve">
+    <value>Duende&amp;trade; IdentityServer version</value>
+  </data>
+  <data name="Text-1A" xml:space="preserve">
+    <value>CDCavell publishes a</value>
+  </data>
+  <data name="Text-1B" xml:space="preserve">
+    <value>discovery document</value>
+  </data>
+  <data name="Text-1C" xml:space="preserve">
+    <value>where you can find metadata and links to all the endpoints, key material, etc.</value>
+  </data>
+  <data name="Text-2A" xml:space="preserve">
+    <value>Click</value>
+  </data>
+  <data name="Text-2B" xml:space="preserve">
+    <value>here</value>
+  </data>
+  <data name="Text-2C" xml:space="preserve">
+    <value>to see the claims for your current session.</value>
+  </data>
+  <data name="Text-3A" xml:space="preserve">
+    <value>Click</value>
+  </data>
+  <data name="Text-3B" xml:space="preserve">
+    <value>here</value>
+  </data>
+  <data name="Text-3C" xml:space="preserve">
+    <value>to manage your stored grants.</value>
+  </data>
+  <data name="Text-4A" xml:space="preserve">
+    <value>Here are links to the</value>
+  </data>
+  <data name="Text-4B" xml:space="preserve">
+    <value>source code repository</value>
+  </data>
+  <data name="Text-4C" xml:space="preserve">
+    <value>and</value>
+  </data>
+  <data name="Text-4D" xml:space="preserve">
+    <value>ready to use samples</value>
+  </data>
 </root>

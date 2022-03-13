@@ -117,7 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="String1" xml:space="preserve">
-    <value />
+  <data name="Heading" xml:space="preserve">
+    <value>Duende&amp;trade; IdentityServer-versie</value>
+  </data>
+  <data name="Text-1A" xml:space="preserve">
+    <value>CDCavell publiceert een</value>
+  </data>
+  <data name="Text-1B" xml:space="preserve">
+    <value>ontdekkingsdocument</value>
+  </data>
+  <data name="Text-1C" xml:space="preserve">
+    <value>waar u metadata en links naar alle eindpunten, sleutelmateriaal, enz.</value>
+  </data>
+  <data name="Text-2A" xml:space="preserve">
+    <value>Klik</value>
+  </data>
+  <data name="Text-2B" xml:space="preserve">
+    <value>hier</value>
+  </data>
+  <data name="Text-2C" xml:space="preserve">
+    <value>om de claims voor uw huidige sessie te zien.</value>
+  </data>
+  <data name="Text-3A" xml:space="preserve">
+    <value>Klik</value>
+  </data>
+  <data name="Text-3B" xml:space="preserve">
+    <value>hier</value>
+  </data>
+  <data name="Text-3C" xml:space="preserve">
+    <value>om uw opgeslagen subsidies te beheren.</value>
+  </data>
+  <data name="Text-4A" xml:space="preserve">
+    <value>Hier zijn links naar de</value>
+  </data>
+  <data name="Text-4B" xml:space="preserve">
+    <value>broncode opslagplaats</value>
+  </data>
+  <data name="Text-4C" xml:space="preserve">
+    <value>en</value>
+  </data>
+  <data name="Text-4D" xml:space="preserve">
+    <value>klaar voor gebruik monsters</value>
   </data>
 </root>

@@ -117,4 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Heading" xml:space="preserve">
+    <value>إصدار Duende&amp;trade; IdentityServer</value>
+  </data>
+  <data name="Text-1A" xml:space="preserve">
+    <value>CDCavell تنشر ملف</value>
+  </data>
+  <data name="Text-1B" xml:space="preserve">
+    <value>وثيقة الاكتشاف</value>
+  </data>
+  <data name="Text-1C" xml:space="preserve">
+    <value>حيث يمكنك العثور على بيانات وصفية وروابط لجميع نقاط النهاية والمواد الرئيسية وما إلى ذلك.</value>
+  </data>
+  <data name="Text-2A" xml:space="preserve">
+    <value>انقر</value>
+  </data>
+  <data name="Text-2B" xml:space="preserve">
+    <value>هنا</value>
+  </data>
+  <data name="Text-2C" xml:space="preserve">
+    <value>لمشاهدة المطالبات لجلستك الحالية.</value>
+  </data>
+  <data name="Text-3A" xml:space="preserve">
+    <value>انقر</value>
+  </data>
+  <data name="Text-3B" xml:space="preserve">
+    <value>هنا</value>
+  </data>
+  <data name="Text-3C" xml:space="preserve">
+    <value>لإدارة المنح المخزنة الخاصة بك.</value>
+  </data>
+  <data name="Text-4A" xml:space="preserve">
+    <value>فيما يلي روابط إلى</value>
+  </data>
+  <data name="Text-4B" xml:space="preserve">
+    <value>مستودع كود المصدر</value>
+  </data>
+  <data name="Text-4C" xml:space="preserve">
+    <value>و</value>
+  </data>
+  <data name="Text-4D" xml:space="preserve">
+    <value>عينات جاهزة للاستخدام</value>
+  </data>
 </root>
