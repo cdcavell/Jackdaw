@@ -10,11 +10,11 @@
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.2 | 03/11/2022 | Duende IdentityServer Integration |~ 
+    /// | Christopher D. Cavell | 0.0.0.2 | 03/15/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
     public class AccountOptions
     {
-        private static bool allowLocalLogin = false;
+        private static bool allowLocalLogin = true;
         private static bool allowRememberLogin = true;
         private static TimeSpan rememberMeLoginDuration = TimeSpan.FromDays(30);
         private static bool showLogoutPrompt = false;
