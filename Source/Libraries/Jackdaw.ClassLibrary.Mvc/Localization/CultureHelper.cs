@@ -63,10 +63,18 @@
         /// <summary>
         /// Returns default culture name which is the first name decalared (e.g. en-US)
         /// </summary>
-        /// <returns></returns>
+        /// <returns>string</returns>
         public static string GetDefaultCulture()
         {
             return _cultures[0]; // return Default culture
+        }
+        /// <summary>
+        /// Returns list of supported culture names
+        /// </summary>
+        /// <returns>List&lt;string&gt;</returns>
+        public static List<string> GetSupportedCultures()
+        {
+            return _cultures;
         }
         /// <summary>
         /// Returns current culture name

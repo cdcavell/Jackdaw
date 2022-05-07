@@ -120,7 +120,13 @@
             <summary>
             Returns default culture name which is the first name decalared (e.g. en-US)
             </summary>
-            <returns></returns>
+            <returns>string</returns>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Mvc.Localization.CultureHelper.GetSupportedCultures">
+            <summary>
+            Returns list of supported culture names
+            </summary>
+            <returns>List&lt;string&gt;</returns>
         </member>
         <member name="M:Jackdaw.ClassLibrary.Mvc.Localization.CultureHelper.GetCurrentCulture">
             <summary>
