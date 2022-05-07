@@ -100,20 +100,13 @@ namespace Microsoft.AspNetCore.Builder
             }
 
             // Localization support
-            var supportedCultures = new[]
-            {
-                new CultureInfo("en-US"),
-                new CultureInfo("nl"),
-                new CultureInfo("fr"),
-                new CultureInfo("es"),
-                new CultureInfo("ja"),
-                new CultureInfo("ar"),
-                new CultureInfo("uk")
-            };
+            List<CultureInfo> supportedCultures = CultureHelper.GetSupportedCultures()
+                .Select(culture => new CultureInfo(culture))
+                .ToList();
 
             app.UseRequestLocalization(new RequestLocalizationOptions
             {
-                DefaultRequestCulture = new RequestCulture("en-US"),
+                DefaultRequestCulture = new RequestCulture(CultureHelper.GetDefaultCulture()),
                 SupportedCultures = supportedCultures,
                 SupportedUICultures = supportedCultures
             });
