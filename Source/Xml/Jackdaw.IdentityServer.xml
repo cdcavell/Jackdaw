@@ -38,10 +38,10 @@
             __Revisions:__~~
             | Contributor | Build | Revison Date | Description |~
             |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.2 | 03/13/2022 | Duende IdentityServer Integration |~ 
+            | Christopher D. Cavell | 0.0.0.2 | 05/07/2022 | Duende IdentityServer Integration |~ 
             </revision>
         </member>
-        <member name="M:Jackdaw.IdentityServer.Controllers.AccountController.#ctor(Microsoft.Extensions.Logging.ILogger{Jackdaw.IdentityServer.Controllers.AccountController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.IdentityServer.Controllers.AccountController},Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.ClassLibrary.Mvc.Localization.SharedResource},Duende.IdentityServer.Services.IIdentityServerInteractionService,Duende.IdentityServer.Stores.IClientStore,Microsoft.AspNetCore.Authentication.IAuthenticationSchemeProvider,Duende.IdentityServer.Services.IEventService,Microsoft.AspNetCore.Identity.UserManager{Jackdaw.IdentityServer.Models.Data.ApplicationUser},Microsoft.AspNetCore.Identity.SignInManager{Jackdaw.IdentityServer.Models.Data.ApplicationUser},Microsoft.AspNetCore.Authentication.IAuthenticationHandlerProvider)">
+        <member name="M:Jackdaw.IdentityServer.Controllers.AccountController.#ctor(Microsoft.Extensions.Logging.ILogger{Jackdaw.IdentityServer.Controllers.AccountController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.IdentityServer.Controllers.AccountController},Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.ClassLibrary.Mvc.Localization.SharedResource},Duende.IdentityServer.Services.IIdentityServerInteractionService,Duende.IdentityServer.Stores.IClientStore,Microsoft.AspNetCore.Authentication.IAuthenticationSchemeProvider,Duende.IdentityServer.Services.IEventService,Microsoft.AspNetCore.Identity.UserManager{Jackdaw.ClassLibrary.Data.Models.ApplicationUser},Microsoft.AspNetCore.Identity.SignInManager{Jackdaw.ClassLibrary.Data.Models.ApplicationUser},Microsoft.AspNetCore.Authentication.IAuthenticationHandlerProvider)">
             <summary>
             Constructor method
             </summary>
@@ -120,7 +120,7 @@
             __Revisions:__~~
             | Contributor | Build | Revison Date | Description |~
             |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.2 | 03/05/2022 | Duende IdentityServer Integration |~ 
+            | Christopher D. Cavell | 0.0.0.2 | 05/07/2022 | Duende IdentityServer Integration |~ 
             </revision>
         </member>
         <member name="F:Jackdaw.IdentityServer.Controllers.ApplicationBaseController`1._appSettings">
@@ -158,7 +158,7 @@
             __Revisions:__~~
             | Contributor | Build | Revison Date | Description |~
             |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.2 | 03/13/2022 | Duende IdentityServer Integration |~ 
+            | Christopher D. Cavell | 0.0.0.2 | 05/07/2022 | Duende IdentityServer Integration |~ 
             </revision>
         </member>
         <member name="M:Jackdaw.IdentityServer.Controllers.ConsentController.#ctor(Microsoft.Extensions.Logging.ILogger{Jackdaw.IdentityServer.Controllers.ConsentController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.IdentityServer.Controllers.ConsentController},Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.ClassLibrary.Mvc.Localization.SharedResource},Duende.IdentityServer.Services.IIdentityServerInteractionService,Duende.IdentityServer.Services.IEventService)">
@@ -219,7 +219,7 @@
             __Revisions:__~~
             | Contributor | Build | Revison Date | Description |~
             |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.2 | 03/12/2022 | Duende IdentityServer Integration |~ 
+            | Christopher D. Cavell | 0.0.0.2 | 05/07/2022 | Duende IdentityServer Integration |~ 
             </revision>
         </member>
         <member name="M:Jackdaw.IdentityServer.Controllers.DeviceController.#ctor(Microsoft.Extensions.Logging.ILogger{Jackdaw.IdentityServer.Controllers.DeviceController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.IdentityServer.Controllers.DeviceController},Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.ClassLibrary.Mvc.Localization.SharedResource},Duende.IdentityServer.Services.IDeviceFlowInteractionService,Duende.IdentityServer.Services.IEventService,Microsoft.Extensions.Options.IOptions{Duende.IdentityServer.Configuration.IdentityServerOptions})">
@@ -288,7 +288,7 @@
             __Revisions:__~~
             | Contributor | Build | Revison Date | Description |~
             |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.2 | 03/12/2022 | Duende IdentityServer Integration |~ 
+            | Christopher D. Cavell | 0.0.0.2 | 05/07/2022 | Duende IdentityServer Integration |~ 
             </revision>
         </member>
         <member name="M:Jackdaw.IdentityServer.Controllers.DiagnosticsController.#ctor(Microsoft.Extensions.Logging.ILogger{Jackdaw.IdentityServer.Controllers.DiagnosticsController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.IdentityServer.Controllers.DiagnosticsController},Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.ClassLibrary.Mvc.Localization.SharedResource})">
@@ -330,10 +330,10 @@
             __Revisions:__~~
             | Contributor | Build | Revison Date | Description |~
             |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.2 | 03/12/2022 | Duende IdentityServer Integration |~ 
+            | Christopher D. Cavell | 0.0.0.2 | 05/07/2022 | Duende IdentityServer Integration |~ 
             </revision>
         </member>
-        <member name="M:Jackdaw.IdentityServer.Controllers.ExternalController.#ctor(Microsoft.Extensions.Logging.ILogger{Jackdaw.IdentityServer.Controllers.ExternalController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.IdentityServer.Controllers.ExternalController},Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.ClassLibrary.Mvc.Localization.SharedResource},Microsoft.AspNetCore.Identity.UserManager{Jackdaw.IdentityServer.Models.Data.ApplicationUser},Microsoft.AspNetCore.Identity.SignInManager{Jackdaw.IdentityServer.Models.Data.ApplicationUser},Duende.IdentityServer.Services.IIdentityServerInteractionService,Duende.IdentityServer.Stores.IClientStore,Duende.IdentityServer.Services.IEventService)">
+        <member name="M:Jackdaw.IdentityServer.Controllers.ExternalController.#ctor(Microsoft.Extensions.Logging.ILogger{Jackdaw.IdentityServer.Controllers.ExternalController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.IdentityServer.Controllers.ExternalController},Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.ClassLibrary.Mvc.Localization.SharedResource},Microsoft.AspNetCore.Identity.UserManager{Jackdaw.ClassLibrary.Data.Models.ApplicationUser},Microsoft.AspNetCore.Identity.SignInManager{Jackdaw.ClassLibrary.Data.Models.ApplicationUser},Duende.IdentityServer.Services.IIdentityServerInteractionService,Duende.IdentityServer.Stores.IClientStore,Duende.IdentityServer.Services.IEventService)">
             <summary>
             Constructor method
             </summary>
@@ -388,7 +388,7 @@
             __Revisions:__~~
             | Contributor | Build | Revison Date | Description |~
             |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.2 | 03/07/2022 | Duende IdentityServer Integration |~ 
+            | Christopher D. Cavell | 0.0.0.2 | 05/07/2022 | Duende IdentityServer Integration |~ 
             </revision>
         </member>
         <member name="M:Jackdaw.IdentityServer.Controllers.HomeController.#ctor(Microsoft.Extensions.Logging.ILogger{Jackdaw.IdentityServer.Controllers.HomeController},Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Http.IHttpContextAccessor,Jackdaw.ClassLibrary.Mvc.Services.AppSettings.IAppSettingsService,Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.IdentityServer.Controllers.HomeController},Microsoft.Extensions.Localization.IStringLocalizer{Jackdaw.ClassLibrary.Mvc.Localization.SharedResource})">
@@ -418,104 +418,6 @@
             </summary>
             <returns>IActionResult</returns>
             <method>Index()</method>
-        </member>
-        <member name="T:Jackdaw.IdentityServer.Data.ApplicationDbContext">
-            <summary>
-            Application Database Context
-            &lt;br /&gt;&lt;br /&gt;
-            Copyright (c) Duende Software. All rights reserved.
-            See https://duendesoftware.com/license/identityserver.pdf for license information. 
-            </summary>
-            <seealso cref="T:Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext" />
-            <revision>
-            __Revisions:__~~
-            | Contributor | Build | Revison Date | Description |~
-            |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.2 | 03/06/2022 | Duende IdentityServer Integration |~ 
-            </revision>
-        </member>
-        <member name="M:Jackdaw.IdentityServer.Data.ApplicationDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Jackdaw.IdentityServer.Data.ApplicationDbContext},Microsoft.Extensions.Logging.ILogger{Jackdaw.IdentityServer.Data.ApplicationDbContext},Microsoft.AspNetCore.Http.IHttpContextAccessor)">
-            <summary>
-            Constructor method
-            </summary>
-            <param name="options">DbContextOptions&lt;ApplicationDbContext&gt;</param>
-            <param name="logger">ILogger&lt;ApplicationDbContext&gt;</param>
-            <param name="httpContextAccessor">IHttpContextAccessor</param>
-            <method>
-            ApplicationDbContext(
-                DbContextOptions&lt;ApplicationDbContext&gt; options
-            ) : base(options)
-            </method>
-        </member>
-        <member name="P:Jackdaw.IdentityServer.Data.ApplicationDbContext.AuditHistory">
-            <value>DbSet&lt;AuditHistory&gt;</value>
-        </member>
-        <member name="M:Jackdaw.IdentityServer.Data.ApplicationDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
-            <summary>
-            OnModelCreating method
-            &lt;br /&gt;&lt;br /&gt;
-            Customize the ASP.NET Identity model and override the defaults if needed.
-            For example, you can rename the ASP.NET Identity table names and more.
-            Add your customizations after calling base.OnModelCreating(builder);
-            </summary>
-            <param name="builder">ModelBuilder</param>
-            <method>OnModelCreating(ModelBuilder builder)</method>
-        </member>
-        <member name="M:Jackdaw.IdentityServer.Data.ApplicationDbContext.HasUnsavedChanges">
-            <summary>
-            Checks for any unsaved INSERT, UPDATE, DELETE history.
-            </summary>
-            <returns>bool</returns>
-            <method>HasUnsavedChanges()</method>
-        </member>
-        <member name="M:Jackdaw.IdentityServer.Data.ApplicationDbContext.SaveChanges(System.Boolean)">
-            <summary>
-            Override to record all the data change history in a table named ```Audit```, this table 
-            contains INSERT, UPDATE, DELETE history.
-            </summary>
-            <returns>int</returns>
-            <method>SaveChanges(bool acceptAllChangesOnSuccess = true)</method>
-        </member>
-        <member name="M:Jackdaw.IdentityServer.Data.ApplicationDbContext.SaveChangesAsync(System.Threading.CancellationToken)">
-            <summary>
-            Override to record all the data change history in a table named ```Audit```, this table 
-            contains INSERT, UPDATE, DELETE history.
-            </summary>
-            <param name="cancellationToken">CancellationToken</param>
-            <returns>Task&lt;int&gt;</returns>
-            <method>SaveChangesAsync(CancellationToken cancellationToken = default(CancellationToken))</method>
-        </member>
-        <member name="M:Jackdaw.IdentityServer.Data.ApplicationDbContext.OnBeforeSaveChanges(System.String,System.String)">
-            <summary>
-            Save audit entities that have all the modifications and return list of entries 
-            where the value of some properties are unknown at this step.
-            &lt;br/&gt;&lt;br/&gt;
-            https://www.meziantou.net/entity-framework-core-history-audit-table.htm
-            </summary>
-            <returns>List&lt;AuditEntry&gt;</returns>
-            <method>OnBeforeSaveChanges(string userId)</method>
-        </member>
-        <member name="M:Jackdaw.IdentityServer.Data.ApplicationDbContext.OnAfterSaveChanges(System.Collections.Generic.List{Jackdaw.IdentityServer.Models.Data.AuditEntry})">
-            <summary>
-            Save audit entities where the value of some properties were unknown at previous step.
-            &lt;br/&gt;&lt;br/&gt;
-            https://www.meziantou.net/entity-framework-core-history-audit-table.htm
-            </summary>
-            <method>OnAfterSaveChanges(List&lt;AuditEntry&gt; auditEntries)</method>
-        </member>
-        <member name="M:Jackdaw.IdentityServer.Data.ApplicationDbContext.OnAfterSaveChangesAsync(System.Collections.Generic.List{Jackdaw.IdentityServer.Models.Data.AuditEntry})">
-            <summary>
-            Save audit entities where the value of some properties were unknown at previous step.
-            &lt;br/&gt;&lt;br/&gt;
-            https://www.meziantou.net/entity-framework-core-history-audit-table.htm
-            </summary>
-            <method>OnAfterSaveChangesAsync(List&lt;AuditEntry&gt; auditEntries)</method>
-        </member>
-        <member name="M:Jackdaw.IdentityServer.Data.ApplicationDbContext.RemoveAuditRecords">
-            <summary>
-            Remove audit records greater than 7 days old
-            </summary>
-            <method>RemoveAuditRecords()</method>
         </member>
         <member name="T:Jackdaw.IdentityServer.Filters.SecurityHeadersAttribute">
             <summary>
@@ -553,61 +455,6 @@
             </summary>
             <param name="context">ActionExecutedContext</param>
             <method>OnActionExecuted(ActionExecutedContext context)</method>
-        </member>
-        <member name="T:Jackdaw.IdentityServer.HostingExtensions">
-            <summary>
-            The HostingExtensions internal static class configures services and the application's request pipeline&lt;br /&gt;&lt;br /&gt;
-            _Services_ are components that are used by the app. For example, a logging component is a service. Code to configure (_or register_) services are added to the ```ConfigureServices``` method.&lt;br /&gt;&lt;br /&gt;
-            The request handling pipeline is composed as a series of _middleware_ components. For example, a middleware might handle requests for static files or redirect HTTP requests to HTTPS. Each middleware performs asynchronous operations on an ```HttpContext``` and then either invokes the next middleware in the pipeline or terminates the request. Code to configure the request handling pipeline is added to the ```ConfigurePipeline``` method.
-            </summary>
-            <revision>
-            __Revisions:__~~
-            | Contributor | Build | Revison Date | Description |~
-            |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.2 | 03/06/2022 | Duende IdentityServer Integration |~ 
-            </revision>
-        </member>
-        <member name="M:Jackdaw.IdentityServer.HostingExtensions.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
-            <summary>
-            Method used to add services to the container.
-            </summary>
-            <param name="builder">WebApplicationBuilder</param>
-            <returns>WebApplication</returns>
-            <method>ConfigureServices(this WebApplicationBuilder builder)</method>
-        </member>
-        <member name="M:Jackdaw.IdentityServer.HostingExtensions.ConfigurePipeline(Microsoft.AspNetCore.Builder.WebApplication)">
-            <summary>
-            Method used to configure the HTTP request pipeline.
-            </summary>
-            <param name="app">WebApplication</param>
-            <returns>WebApplication</returns>
-            <method>ConfigurePipeline(this WebApplication app)</method>
-        </member>
-        <member name="M:Jackdaw.IdentityServer.HostingExtensions.InitializeDatabase(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
-            <summary>
-            InitializeDatabase private method
-            &lt;br /&gt;
-            To Initialize: 
-            &lt;br /&gt;`dotnet ef migrations add InitialCreate_PersistedGrantDb --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb`
-            &lt;br /&gt;`dotnet ef migrations add InitialCreate_ConfigurationDb --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb`
-            &lt;br /&gt;`dotnet ef migrations add InitialCreate_ApplicationDb --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb`
-            &lt;br /&gt;
-            &lt;br /&gt;
-            To Update:     
-            &lt;br /&gt;`dotnet ef migrations add Update_PersistedGrantDb --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb`
-            &lt;br /&gt;`dotnet ef migrations add Update_ConfigurationDb --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb`
-            &lt;br /&gt;`dotnet ef migrations add Update_ApplicationDb --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb`
-            &lt;br /&gt;&lt;br /&gt;
-            EF Core tools reference: https://docs.microsoft.com/en-us/ef/core/cli/dotnet
-            &lt;br /&gt;
-            Install EF Core Tools: `dotnet tool install --global dotnet-ef`
-            &lt;br /&gt;
-            Upgrade EF Core Tools: `dotnet tool update --global dotnet-ef`
-            &lt;br /&gt;&lt;br /&gt;
-            _Before you can use the tools on a specific project, you'll need to add the `Microsoft.EntityFrameworkCore.Design` package to it._
-            </summary>
-            <param name="app">IApplicationBuilder</param>
-            <method>InitializeDatabase(IApplicationBuilder app)</method>
         </member>
         <member name="T:Jackdaw.IdentityServer.Models.Account.ExternalProvider">
             <summary>
@@ -973,129 +820,6 @@
         <member name="P:Jackdaw.IdentityServer.Models.Consent.ScopeViewModel.Checked">
             <value>bool</value>
         </member>
-        <member name="T:Jackdaw.IdentityServer.Models.Data.ApplicationUser">
-            <summary>
-            ApplicationUser Entity
-            &lt;br /&gt;&lt;br /&gt;
-            Copyright (c) Duende Software. All rights reserved.
-            See https://duendesoftware.com/license/identityserver.pdf for license information. 
-            </summary>
-            <revision>
-            __Revisions:__~~
-            | Contributor | Build | Revison Date | Description |~
-            |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.2 | 03/12/2022 | Duende IdentityServer Integration |~ 
-            </revision>
-        </member>
-        <member name="M:Jackdaw.IdentityServer.Models.Data.ApplicationUser.#ctor">
-            <summary>
-            Initializes a user identity
-            </summary>
-        </member>
-        <member name="P:Jackdaw.IdentityServer.Models.Data.ApplicationUser.SubjectId">
-            <value>string</value>
-        </member>
-        <member name="P:Jackdaw.IdentityServer.Models.Data.ApplicationUser.DisplayName">
-            <value>string</value>
-        </member>
-        <member name="P:Jackdaw.IdentityServer.Models.Data.ApplicationUser.Claims">
-            <value>ICollection&lt;IdentityUserClaim&lt;string&gt;&gt;</value>
-        </member>
-        <member name="T:Jackdaw.IdentityServer.Models.Data.AuditEntry">
-            <summary>
-            CDCavell AuditEntry record
-            </summary>
-            <revision>
-            __Revisions:__~~
-            | Contributor | Build | Revison Date | Description |~
-            |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.2 | 03/06/2022 | Duende IdentityServer Integration |~ 
-            </revision>
-        </member>
-        <member name="M:Jackdaw.IdentityServer.Models.Data.AuditEntry.#ctor(Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry)">
-            <summary>
-            Constructor method
-            </summary>
-            <param name="entry">EntityEntry</param>
-            <method>AuditEntry(EntityEntry entry)</method>
-        </member>
-        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditEntry.Entry">
-            <value>EntityEntry</value>
-        </member>
-        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditEntry.TableName">
-            <value>string</value>
-        </member>
-        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditEntry.State">
-            <value>string</value>
-        </member>
-        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditEntry.Application">
-            <value>string</value>
-        </member>
-        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditEntry.ModifiedBy">
-            <value>string</value>
-        </member>
-        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditEntry.ModifiedOn">
-            <value>DateTime</value>
-        </member>
-        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditEntry.KeyValues">
-            <value>Dictionary&lt;string, object&gt;</value>
-        </member>
-        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditEntry.OriginalValues">
-            <value>Dictionary&lt;string, object&gt;</value>
-        </member>
-        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditEntry.CurrentValues">
-            <value>Dictionary&lt;string, object&gt;</value>
-        </member>
-        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditEntry.TemporaryProperties">
-            <value>List&lt;PropertyEntry&gt;</value>
-        </member>
-        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditEntry.HasTemporaryProperties">
-            <value>bool</value>
-        </member>
-        <member name="M:Jackdaw.IdentityServer.Models.Data.AuditEntry.ToAuditHistory">
-            <summary>
-            Audit History record to write
-            </summary>
-            <method>ToAuditHistory()</method>
-        </member>
-        <member name="T:Jackdaw.IdentityServer.Models.Data.AuditHistory">
-            <summary>
-            Authorization Service AuditHistory Entity
-            </summary>
-            <revision>
-            __Revisions:__~~
-            | Contributor | Build | Revison Date | Description |~
-            |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.2 | 03/06/2022 | Duende IdentityServer Integration |~ 
-            </revision>
-        </member>
-        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditHistory.Id">
-            <value>long</value>
-        </member>
-        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditHistory.ModifiedBy">
-            <value>string</value>
-        </member>
-        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditHistory.ModifiedOn">
-            <value>DateTime?</value>
-        </member>
-        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditHistory.Application">
-            <value>string</value>
-        </member>
-        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditHistory.Entity">
-            <value>string</value>
-        </member>
-        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditHistory.State">
-            <value>string</value>
-        </member>
-        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditHistory.KeyValues">
-            <value>string</value>
-        </member>
-        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditHistory.OriginalValues">
-            <value>string</value>
-        </member>
-        <member name="P:Jackdaw.IdentityServer.Models.Data.AuditHistory.CurrentValues">
-            <value>string</value>
-        </member>
         <member name="T:Jackdaw.IdentityServer.Models.Device.DeviceAuthorizationInputModel">
             <summary>
             Device Authorization Input Model
@@ -1319,6 +1043,61 @@
             </summary>
             <returns>IActionResult</returns>
             <method>LoadingPage(this Controller controller, string viewName, string redirectUri)</method>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Builder.WebApplicationExtensions">
+            <summary>
+            The WebApplicationExtensions internal static class configures services and the application's request pipeline&lt;br /&gt;&lt;br /&gt;
+            _Services_ are components that are used by the app. For example, a logging component is a service. Code to configure (_or register_) services are added to the ```ConfigureServices``` method.&lt;br /&gt;&lt;br /&gt;
+            The request handling pipeline is composed as a series of _middleware_ components. For example, a middleware might handle requests for static files or redirect HTTP requests to HTTPS. Each middleware performs asynchronous operations on an ```HttpContext``` and then either invokes the next middleware in the pipeline or terminates the request. Code to configure the request handling pipeline is added to the ```ConfigurePipeline``` method.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 05/07/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.WebApplicationExtensions.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <summary>
+            Method used to add services to the container.
+            </summary>
+            <param name="builder">WebApplicationBuilder</param>
+            <returns>WebApplication</returns>
+            <method>ConfigureServices(this WebApplicationBuilder builder)</method>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.WebApplicationExtensions.ConfigurePipeline(Microsoft.AspNetCore.Builder.WebApplication)">
+            <summary>
+            Method used to configure the HTTP request pipeline.
+            </summary>
+            <param name="app">WebApplication</param>
+            <returns>WebApplication</returns>
+            <method>ConfigurePipeline(this WebApplication app)</method>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.WebApplicationExtensions.InitializeDatabase(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            InitializeDatabase private method
+            &lt;br /&gt;
+            To Initialize: 
+            &lt;br /&gt;`dotnet ef migrations add InitialCreate_PersistedGrantDb --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb`
+            &lt;br /&gt;`dotnet ef migrations add InitialCreate_ConfigurationDb --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb`
+            &lt;br /&gt;`dotnet ef migrations add InitialCreate_ApplicationDb --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb`
+            &lt;br /&gt;
+            &lt;br /&gt;
+            To Update:     
+            &lt;br /&gt;`dotnet ef migrations add Update_PersistedGrantDb --context PersistedGrantDbContext --output-dir Data/Migrations/PersistedGrantDb`
+            &lt;br /&gt;`dotnet ef migrations add Update_ConfigurationDb --context ConfigurationDbContext --output-dir Data/Migrations/ConfigurationDb`
+            &lt;br /&gt;`dotnet ef migrations add Update_ApplicationDb --context ApplicationDbContext --output-dir Data/Migrations/ApplicationDb`
+            &lt;br /&gt;&lt;br /&gt;
+            EF Core tools reference: https://docs.microsoft.com/en-us/ef/core/cli/dotnet
+            &lt;br /&gt;
+            Install EF Core Tools: `dotnet tool install --global dotnet-ef`
+            &lt;br /&gt;
+            Upgrade EF Core Tools: `dotnet tool update --global dotnet-ef`
+            &lt;br /&gt;&lt;br /&gt;
+            _Before you can use the tools on a specific project, you'll need to add the `Microsoft.EntityFrameworkCore.Design` package to it._
+            </summary>
+            <param name="app">IApplicationBuilder</param>
+            <method>InitializeDatabase(IApplicationBuilder app)</method>
         </member>
     </members>
 </doc>

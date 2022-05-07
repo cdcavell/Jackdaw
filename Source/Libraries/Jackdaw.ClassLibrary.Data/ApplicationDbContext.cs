@@ -1,10 +1,12 @@
 ﻿using Duende.IdentityServer.Models;
-using Jackdaw.IdentityServer.Models.Data;
+using Jackdaw.ClassLibrary.Data.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System.Security.Claims;
 
-namespace Jackdaw.IdentityServer.Data
+namespace Jackdaw.ClassLibrary.Data
 {
     /// <summary>
     /// Application Database Context
@@ -17,7 +19,7 @@ namespace Jackdaw.IdentityServer.Data
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.2 | 03/06/2022 | Duende IdentityServer Integration |~ 
+    /// | Christopher D. Cavell | 0.0.0.2 | 05/07/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
@@ -58,7 +60,7 @@ namespace Jackdaw.IdentityServer.Data
                 else
                     _userId = remoteIp ?? "Anonymous";
 
-                Claim? clientIdClaim = (user != null) ? user.FindFirst("client_id") : null;
+                Claim? clientIdClaim = user?.FindFirst("client_id");
                 if (clientIdClaim != null)
                     _clientId = clientIdClaim.Value;
             }
@@ -70,8 +72,8 @@ namespace Jackdaw.IdentityServer.Data
                 _clientId = app;
             }
 
-            _userId = _userId ?? "Anonymous";
-            _clientId = _clientId ?? "Anonymous";
+            _userId ??= "Anonymous";
+            _clientId ??= "Anonymous";
         }
 
         /// <value>DbSet&lt;AuditHistory&gt;</value>
@@ -125,8 +127,8 @@ namespace Jackdaw.IdentityServer.Data
         /// </summary>
         /// <param name="cancellationToken">CancellationToken</param>
         /// <returns>Task&lt;int&gt;</returns>
-        /// <method>SaveChangesAsync(CancellationToken cancellationToken = default(CancellationToken))</method>
-        public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default(CancellationToken))
+        /// <method>SaveChangesAsync(CancellationToken cancellationToken = default)</method>
+        public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
             // uncomment to have audit records greated than 7 days old removed from dbo.AuditHistory table
             RemoveAuditRecords();
@@ -155,12 +157,14 @@ namespace Jackdaw.IdentityServer.Data
                 if (entry.Entity is AuditHistory || entry.State == EntityState.Detached || entry.State == EntityState.Unchanged)
                     continue;
 
-                var auditEntry = new AuditEntry(entry);
-                auditEntry.TableName = entry.Metadata.GetTableName() ?? string.Empty;
-                auditEntry.Application = clientId;
-                auditEntry.ModifiedBy = userId;
-                auditEntry.ModifiedOn = DateTime.UtcNow;
-                auditEntry.State = entry.State.ToString();
+                var auditEntry = new AuditEntry(entry)
+                {
+                    TableName = entry.Metadata.GetTableName() ?? string.Empty,
+                    Application = clientId,
+                    ModifiedBy = userId,
+                    ModifiedOn = DateTime.UtcNow,
+                    State = entry.State.ToString()
+                };
                 auditEntries.Add(auditEntry);
 
                 foreach (var property in entry.Properties)

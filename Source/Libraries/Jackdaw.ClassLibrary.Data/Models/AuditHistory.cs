@@ -2,24 +2,20 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.CodeAnalysis;
 
-namespace Jackdaw.IdentityServer.Models.Data
+namespace Jackdaw.ClassLibrary.Data.Models
 {
     /// <summary>
-    /// Authorization Service AuditHistory Entity
+    /// Jackdaw AuditHistory Entity
     /// </summary>
     /// <revision>
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.2 | 03/06/2022 | Duende IdentityServer Integration |~ 
+    /// | Christopher D. Cavell | 0.0.0.2 | 05/07/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
     [Table("AuditHistory")]
-    public class AuditHistory
+    public class AuditHistory : DataModel<AuditHistory>
     {
-        /// <value>long</value>
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid Id { get; set; } = Guid.NewGuid();
         /// <value>string</value>
         [DataType(DataType.Text)]
         public string ModifiedBy { get; set; } = string.Empty;

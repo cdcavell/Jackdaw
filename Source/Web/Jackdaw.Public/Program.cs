@@ -1,8 +1,4 @@
-using Jackdaw.Public;
-using Microsoft.AspNetCore.HttpOverrides;
-using Microsoft.AspNetCore.Localization;
 using Serilog;
-using System.Globalization;
 
 var config = new ConfigurationBuilder()
     .AddJsonFile($"appsettings.json", optional: false)

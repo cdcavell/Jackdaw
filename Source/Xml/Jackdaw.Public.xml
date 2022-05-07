@@ -116,35 +116,6 @@
             <param name="context">ActionExecutedContext</param>
             <method>OnActionExecuted(ActionExecutedContext context)</method>
         </member>
-        <member name="T:Jackdaw.Public.HostingExtensions">
-            <summary>
-            The HostingExtensions internal static class configures services and the application's request pipeline&lt;br /&gt;&lt;br /&gt;
-            _Services_ are components that are used by the app. For example, a logging component is a service. Code to configure (_or register_) services are added to the ```ConfigureServices``` method.&lt;br /&gt;&lt;br /&gt;
-            The request handling pipeline is composed as a series of _middleware_ components. For example, a middleware might handle requests for static files or redirect HTTP requests to HTTPS. Each middleware performs asynchronous operations on an ```HttpContext``` and then either invokes the next middleware in the pipeline or terminates the request. Code to configure the request handling pipeline is added to the ```ConfigurePipeline``` method.
-            </summary>
-            <revision>
-            __Revisions:__~~
-            | Contributor | Build | Revison Date | Description |~
-            |-------------|-------|--------------|-------------|~
-            | Christopher D. Cavell | 0.0.0.2 | 02/27/2022 | Duende IdentityServer Integration |~ 
-            </revision>
-        </member>
-        <member name="M:Jackdaw.Public.HostingExtensions.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
-            <summary>
-            Method used to add services to the container.
-            </summary>
-            <param name="builder">WebApplicationBuilder</param>
-            <returns>WebApplication</returns>
-            <method>ConfigureServices(this WebApplicationBuilder builder)</method>
-        </member>
-        <member name="M:Jackdaw.Public.HostingExtensions.ConfigurePipeline(Microsoft.AspNetCore.Builder.WebApplication)">
-            <summary>
-            Method used to configure the HTTP request pipeline.
-            </summary>
-            <param name="app">WebApplication</param>
-            <returns>WebApplication</returns>
-            <method>ConfigurePipeline(this WebApplication app)</method>
-        </member>
         <member name="T:Jackdaw.Public.Models.AppSettings.AppSettings">
             <summary>
             Application settings information.
@@ -162,6 +133,35 @@
             </summary>
             <param name="configuration">IConfiguration</param>
             <method>AppSettings(IConfiguration configuration)</method>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Builder.WebApplicationExtensions">
+            <summary>
+            The WebApplicationExtensions internal static class configures services and the application's request pipeline&lt;br /&gt;&lt;br /&gt;
+            _Services_ are components that are used by the app. For example, a logging component is a service. Code to configure (_or register_) services are added to the ```ConfigureServices``` method.&lt;br /&gt;&lt;br /&gt;
+            The request handling pipeline is composed as a series of _middleware_ components. For example, a middleware might handle requests for static files or redirect HTTP requests to HTTPS. Each middleware performs asynchronous operations on an ```HttpContext``` and then either invokes the next middleware in the pipeline or terminates the request. Code to configure the request handling pipeline is added to the ```ConfigurePipeline``` method.
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 05/06/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.WebApplicationExtensions.ConfigureServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <summary>
+            Method used to add services to the container.
+            </summary>
+            <param name="builder">WebApplicationBuilder</param>
+            <returns>WebApplication</returns>
+            <method>ConfigureServices(this WebApplicationBuilder builder)</method>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.WebApplicationExtensions.ConfigurePipeline(Microsoft.AspNetCore.Builder.WebApplication)">
+            <summary>
+            Method used to configure the HTTP request pipeline.
+            </summary>
+            <param name="app">WebApplication</param>
+            <returns>WebApplication</returns>
+            <method>ConfigurePipeline(this WebApplication app)</method>
         </member>
     </members>
 </doc>

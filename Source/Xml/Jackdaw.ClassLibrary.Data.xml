@@ -1,0 +1,296 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Jackdaw.ClassLibrary.Data</name>
+    </assembly>
+    <members>
+        <member name="T:Jackdaw.ClassLibrary.Data.ApplicationDbContext">
+            <summary>
+            Application Database Context
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext" />
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 05/07/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Data.ApplicationDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Jackdaw.ClassLibrary.Data.ApplicationDbContext},Microsoft.Extensions.Logging.ILogger{Jackdaw.ClassLibrary.Data.ApplicationDbContext},Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="options">DbContextOptions&lt;ApplicationDbContext&gt;</param>
+            <param name="logger">ILogger&lt;ApplicationDbContext&gt;</param>
+            <param name="httpContextAccessor">IHttpContextAccessor</param>
+            <method>
+            ApplicationDbContext(
+                DbContextOptions&lt;ApplicationDbContext&gt; options
+            ) : base(options)
+            </method>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Data.ApplicationDbContext.AuditHistory">
+            <value>DbSet&lt;AuditHistory&gt;</value>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Data.ApplicationDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            OnModelCreating method
+            &lt;br /&gt;&lt;br /&gt;
+            Customize the ASP.NET Identity model and override the defaults if needed.
+            For example, you can rename the ASP.NET Identity table names and more.
+            Add your customizations after calling base.OnModelCreating(builder);
+            </summary>
+            <param name="builder">ModelBuilder</param>
+            <method>OnModelCreating(ModelBuilder builder)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Data.ApplicationDbContext.HasUnsavedChanges">
+            <summary>
+            Checks for any unsaved INSERT, UPDATE, DELETE history.
+            </summary>
+            <returns>bool</returns>
+            <method>HasUnsavedChanges()</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Data.ApplicationDbContext.SaveChanges(System.Boolean)">
+            <summary>
+            Override to record all the data change history in a table named ```Audit```, this table 
+            contains INSERT, UPDATE, DELETE history.
+            </summary>
+            <returns>int</returns>
+            <method>SaveChanges(bool acceptAllChangesOnSuccess = true)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Data.ApplicationDbContext.SaveChangesAsync(System.Threading.CancellationToken)">
+            <summary>
+            Override to record all the data change history in a table named ```Audit```, this table 
+            contains INSERT, UPDATE, DELETE history.
+            </summary>
+            <param name="cancellationToken">CancellationToken</param>
+            <returns>Task&lt;int&gt;</returns>
+            <method>SaveChangesAsync(CancellationToken cancellationToken = default)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Data.ApplicationDbContext.OnBeforeSaveChanges(System.String,System.String)">
+            <summary>
+            Save audit entities that have all the modifications and return list of entries 
+            where the value of some properties are unknown at this step.
+            &lt;br/&gt;&lt;br/&gt;
+            https://www.meziantou.net/entity-framework-core-history-audit-table.htm
+            </summary>
+            <returns>List&lt;AuditEntry&gt;</returns>
+            <method>OnBeforeSaveChanges(string userId)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Data.ApplicationDbContext.OnAfterSaveChanges(System.Collections.Generic.List{Jackdaw.ClassLibrary.Data.Models.AuditEntry})">
+            <summary>
+            Save audit entities where the value of some properties were unknown at previous step.
+            &lt;br/&gt;&lt;br/&gt;
+            https://www.meziantou.net/entity-framework-core-history-audit-table.htm
+            </summary>
+            <method>OnAfterSaveChanges(List&lt;AuditEntry&gt; auditEntries)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Data.ApplicationDbContext.OnAfterSaveChangesAsync(System.Collections.Generic.List{Jackdaw.ClassLibrary.Data.Models.AuditEntry})">
+            <summary>
+            Save audit entities where the value of some properties were unknown at previous step.
+            &lt;br/&gt;&lt;br/&gt;
+            https://www.meziantou.net/entity-framework-core-history-audit-table.htm
+            </summary>
+            <method>OnAfterSaveChangesAsync(List&lt;AuditEntry&gt; auditEntries)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Data.ApplicationDbContext.RemoveAuditRecords">
+            <summary>
+            Remove audit records greater than 7 days old
+            </summary>
+            <method>RemoveAuditRecords()</method>
+        </member>
+        <member name="T:Jackdaw.ClassLibrary.Data.Models.ApplicationUser">
+            <summary>
+            ApplicationUser Entity
+            &lt;br /&gt;&lt;br /&gt;
+            Copyright (c) Duende Software. All rights reserved.
+            See https://duendesoftware.com/license/identityserver.pdf for license information. 
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 05/07/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Data.Models.ApplicationUser.#ctor">
+            <summary>
+            Initializes a user identity
+            </summary>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Data.Models.ApplicationUser.SubjectId">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Data.Models.ApplicationUser.DisplayName">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Data.Models.ApplicationUser.Claims">
+            <value>ICollection&lt;IdentityUserClaim&lt;string&gt;&gt;</value>
+        </member>
+        <member name="T:Jackdaw.ClassLibrary.Data.Models.AuditEntry">
+            <summary>
+            CDCavell AuditEntry record
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 05/07/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Data.Models.AuditEntry.#ctor(Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry)">
+            <summary>
+            Constructor method
+            </summary>
+            <param name="entry">EntityEntry</param>
+            <method>AuditEntry(EntityEntry entry)</method>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Data.Models.AuditEntry.Entry">
+            <value>EntityEntry</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Data.Models.AuditEntry.TableName">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Data.Models.AuditEntry.State">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Data.Models.AuditEntry.Application">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Data.Models.AuditEntry.ModifiedBy">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Data.Models.AuditEntry.ModifiedOn">
+            <value>DateTime</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Data.Models.AuditEntry.KeyValues">
+            <value>Dictionary&lt;string, object&gt;</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Data.Models.AuditEntry.OriginalValues">
+            <value>Dictionary&lt;string, object&gt;</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Data.Models.AuditEntry.CurrentValues">
+            <value>Dictionary&lt;string, object&gt;</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Data.Models.AuditEntry.TemporaryProperties">
+            <value>List&lt;PropertyEntry&gt;</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Data.Models.AuditEntry.HasTemporaryProperties">
+            <value>bool</value>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Data.Models.AuditEntry.ToAuditHistory">
+            <summary>
+            Audit History record to write
+            </summary>
+            <method>ToAuditHistory()</method>
+        </member>
+        <member name="T:Jackdaw.ClassLibrary.Data.Models.AuditHistory">
+            <summary>
+            Jackdaw AuditHistory Entity
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 05/07/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Data.Models.AuditHistory.ModifiedBy">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Data.Models.AuditHistory.ModifiedOn">
+            <value>DateTime?</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Data.Models.AuditHistory.Application">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Data.Models.AuditHistory.Entity">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Data.Models.AuditHistory.State">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Data.Models.AuditHistory.KeyValues">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Data.Models.AuditHistory.OriginalValues">
+            <value>string</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Data.Models.AuditHistory.CurrentValues">
+            <value>string</value>
+        </member>
+        <member name="T:Jackdaw.ClassLibrary.Data.Models.DataModel`1">
+            <summary>
+            DataModel Class
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 05/07/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Data.Models.DataModel`1.Guid">
+            <value>Guid</value>
+        </member>
+        <member name="P:Jackdaw.ClassLibrary.Data.Models.DataModel`1.IsNew">
+            <value>bool</value>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Data.Models.DataModel`1.AddUpdate(Jackdaw.ClassLibrary.Data.ApplicationDbContext)">
+            <summary>
+            Method used to add new or update existing entity record.
+            </summary>
+            <param name="dbContext">ApplicationDbContext</param>
+            <method>AddUpdate(ApplicationDbContext dbContext)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Data.Models.DataModel`1.Delete(Jackdaw.ClassLibrary.Data.ApplicationDbContext)">
+            <summary>
+            Method used to remove existing entity record.
+            </summary>
+            <param name="dbContext">ApplicationDbContext</param>
+            <method>Delete(ApplicationDbContext dbContext)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Data.Models.DataModel`1.Equals(Jackdaw.ClassLibrary.Data.Models.DataModel{`0})">
+            <summary>
+            Equality method.
+            </summary>
+            <param name="obj">DataModel&lt;T&gt;</param>
+            <method>Equals(DataModel&lt;T&gt; obj)</method>
+        </member>
+        <member name="T:Jackdaw.ClassLibrary.Data.Models.IDataModel`1">
+            <summary>
+            DataModel Interface
+            </summary>
+            <revision>
+            __Revisions:__~~
+            | Contributor | Build | Revison Date | Description |~
+            |-------------|-------|--------------|-------------|~
+            | Christopher D. Cavell | 0.0.0.2 | 05/07/2022 | Duende IdentityServer Integration |~ 
+            </revision>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Data.Models.IDataModel`1.AddUpdate(Jackdaw.ClassLibrary.Data.ApplicationDbContext)">
+            <summary>
+            Method used to add new or update existing entity record.
+            </summary>
+            <param name="dbContext">ApplicationDbContext</param>
+            <method>AddUpdate(ApplicationDbContext dbContext)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Data.Models.IDataModel`1.Delete(Jackdaw.ClassLibrary.Data.ApplicationDbContext)">
+            <summary>
+            Method used to remove existing entity record.
+            </summary>
+            <param name="dbContext">ApplicationDbContext</param>
+            <method>Delete(ApplicationDbContext dbContext)</method>
+        </member>
+        <member name="M:Jackdaw.ClassLibrary.Data.Models.IDataModel`1.Equals(`0)">
+            <summary>
+            Equality method.
+            </summary>
+            <param name="obj">DataModel&lt;T&gt;</param>
+            <method>Equals(DataModel&lt;T&gt; obj)</method>
+        </member>
+    </members>
+</doc>

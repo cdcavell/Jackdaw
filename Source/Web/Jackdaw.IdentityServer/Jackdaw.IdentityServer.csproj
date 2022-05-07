@@ -22,17 +22,17 @@
     <PackageReference Include="Duende.IdentityServer" Version="6.0.4" />
     <PackageReference Include="Duende.IdentityServer.AspNetIdentity" Version="6.0.4" />
     <PackageReference Include="Duende.IdentityServer.EntityFramework" Version="6.0.4" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="6.0.3" />
-    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="6.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.3" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.3" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.3">
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.3" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.3">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -43,6 +43,7 @@
   </ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\Libraries\Jackdaw.ClassLibrary.Data\Jackdaw.ClassLibrary.Data.csproj" />
 		<ProjectReference Include="..\..\Libraries\Jackdaw.ClassLibrary.Mvc\Jackdaw.ClassLibrary.Mvc.csproj" />
 	</ItemGroup>
 
@@ -51,6 +52,11 @@
 		<_findDllFile Include="../../../Source/Xml/XmlToMarkdown.dll" />
 		<_findJsonFile Include="../../../Source/Xml/XmlToMarkdown.runtimeconfig.json" />
 		<_findLibraryFile Include="../../../Source/Xml/Jackdaw.ClassLibrary.Common.dll" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <Folder Include="Data\" />
 	</ItemGroup>
 
 	<Target Name="BuildXmlToMarkdown" AfterTargets="AfterBuild" DependsOnTargets="AfterBuild" Condition="Exists('@(_findDllFile)') AND Exists('@(_findJsonFile)') AND Exists('@(_findLibraryFile)')">

@@ -1,14 +1,14 @@
 ﻿using Duende.IdentityServer;
 using Duende.IdentityServer.EntityFramework.DbContexts;
 using Duende.IdentityServer.EntityFramework.Mappers;
-using Duende.IdentityServer.Stores;
 using IdentityModel;
+using Jackdaw.ClassLibrary.Data;
+using Jackdaw.ClassLibrary.Data.Models;
 using Jackdaw.ClassLibrary.Mvc.Localization;
 using Jackdaw.ClassLibrary.Mvc.Services.AppSettings;
-using Jackdaw.IdentityServer.Data;
+using Jackdaw.IdentityServer;
 using Jackdaw.IdentityServer.Filters;
 using Jackdaw.IdentityServer.Models.AppSettings;
-using Jackdaw.IdentityServer.Models.Data;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
@@ -19,10 +19,10 @@ using System.Globalization;
 using System.Reflection;
 using System.Security.Claims;
 
-namespace Jackdaw.IdentityServer
+namespace Microsoft.AspNetCore.Builder
 {
     /// <summary>
-    /// The HostingExtensions internal static class configures services and the application's request pipeline&lt;br /&gt;&lt;br /&gt;
+    /// The WebApplicationExtensions internal static class configures services and the application's request pipeline&lt;br /&gt;&lt;br /&gt;
     /// _Services_ are components that are used by the app. For example, a logging component is a service. Code to configure (_or register_) services are added to the ```ConfigureServices``` method.&lt;br /&gt;&lt;br /&gt;
     /// The request handling pipeline is composed as a series of _middleware_ components. For example, a middleware might handle requests for static files or redirect HTTP requests to HTTPS. Each middleware performs asynchronous operations on an ```HttpContext``` and then either invokes the next middleware in the pipeline or terminates the request. Code to configure the request handling pipeline is added to the ```ConfigurePipeline``` method.
     /// </summary>
@@ -30,9 +30,9 @@ namespace Jackdaw.IdentityServer
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.2 | 03/06/2022 | Duende IdentityServer Integration |~ 
+    /// | Christopher D. Cavell | 0.0.0.2 | 05/07/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
-    internal static class HostingExtensions
+    internal static class WebApplicationExtensions
     {
         private static AppSettings? _appSettings;
 

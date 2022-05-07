@@ -1,4 +1,3 @@
-using Jackdaw.IdentityServer;
 using Serilog;
 
 var config = new ConfigurationBuilder()

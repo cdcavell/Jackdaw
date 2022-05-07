@@ -13,7 +13,7 @@ namespace Jackdaw.IdentityServer.Controllers
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.2 | 03/07/2022 | Duende IdentityServer Integration |~ 
+    /// | Christopher D. Cavell | 0.0.0.2 | 05/07/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
     public class HomeController : ApplicationBaseController<HomeController>
     {

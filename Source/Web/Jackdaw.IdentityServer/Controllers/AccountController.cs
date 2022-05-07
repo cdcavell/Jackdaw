@@ -5,10 +5,10 @@ using Duende.IdentityServer.Models;
 using Duende.IdentityServer.Services;
 using Duende.IdentityServer.Stores;
 using IdentityModel;
+using Jackdaw.ClassLibrary.Data.Models;
 using Jackdaw.ClassLibrary.Mvc.Localization;
 using Jackdaw.ClassLibrary.Mvc.Services.AppSettings;
 using Jackdaw.IdentityServer.Models.Account;
-using Jackdaw.IdentityServer.Models.Data;
 using Jackdaw.IdentityServer.Options;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
@@ -28,7 +28,7 @@ namespace Jackdaw.IdentityServer.Controllers
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.2 | 03/13/2022 | Duende IdentityServer Integration |~ 
+    /// | Christopher D. Cavell | 0.0.0.2 | 05/07/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
     [AllowAnonymous]
     public class AccountController : ApplicationBaseController<AccountController>
