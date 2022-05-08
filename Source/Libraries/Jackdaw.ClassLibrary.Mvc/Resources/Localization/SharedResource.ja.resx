@@ -162,6 +162,9 @@
   <data name="From" xml:space="preserve">
     <value>から</value>
   </data>
+  <data name="Invalid Model State" xml:space="preserve">
+    <value>無効なモデル状態</value>
+  </data>
   <data name="License" xml:space="preserve">
     <value>ライセンス</value>
   </data>

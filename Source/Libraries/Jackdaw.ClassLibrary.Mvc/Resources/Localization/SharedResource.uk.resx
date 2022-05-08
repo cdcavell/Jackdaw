@@ -162,6 +162,9 @@
   <data name="From" xml:space="preserve">
     <value>Від</value>
   </data>
+  <data name="Invalid Model State" xml:space="preserve">
+    <value>Недійсний стан моделі</value>
+  </data>
   <data name="License" xml:space="preserve">
     <value>Ліцензія</value>
   </data>

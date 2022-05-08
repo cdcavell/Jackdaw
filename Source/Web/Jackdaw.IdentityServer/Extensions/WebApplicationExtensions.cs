@@ -30,7 +30,7 @@ namespace Microsoft.AspNetCore.Builder
     /// __Revisions:__~~
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
-    /// | Christopher D. Cavell | 0.0.0.2 | 05/07/2022 | Duende IdentityServer Integration |~ 
+    /// | Christopher D. Cavell | 0.0.0.2 | 05/08/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
     internal static class WebApplicationExtensions
     {
@@ -86,7 +86,11 @@ namespace Microsoft.AspNetCore.Builder
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlite(
                     _appSettings.ConnectionStrings.EntityFrameworkConnection,
-                    sql => sql.MigrationsAssembly(migrationsAssembly)
+                    sql =>
+                    {
+                        sql.MigrationsAssembly(migrationsAssembly);
+                        sql.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery);
+                    }
                 ));
 
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
@@ -107,14 +111,22 @@ namespace Microsoft.AspNetCore.Builder
                 {
                     options.ConfigureDbContext = b => b.UseSqlite(
                         _appSettings.ConnectionStrings.EntityFrameworkConnection,
-                        sql => sql.MigrationsAssembly(migrationsAssembly)
+                        sql =>
+                        {
+                            sql.MigrationsAssembly(migrationsAssembly);
+                            sql.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery);
+                        }
                     );
                 })
                 .AddOperationalStore(options =>
                 {
                     options.ConfigureDbContext = b => b.UseSqlite(
                         _appSettings.ConnectionStrings.EntityFrameworkConnection,
-                        sql => sql.MigrationsAssembly(migrationsAssembly)
+                        sql =>
+                        {
+                            sql.MigrationsAssembly(migrationsAssembly);
+                            sql.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery);
+                        }
                     );
 
                     // this enables automatic token cleanup. this is optional.

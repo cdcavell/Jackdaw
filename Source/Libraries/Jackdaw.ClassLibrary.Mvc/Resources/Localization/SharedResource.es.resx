@@ -162,6 +162,9 @@
   <data name="From" xml:space="preserve">
     <value>Desde</value>
   </data>
+  <data name="Invalid Model State" xml:space="preserve">
+    <value>Estado de modelo no válido</value>
+  </data>
   <data name="License" xml:space="preserve">
     <value>Licencia</value>
   </data>

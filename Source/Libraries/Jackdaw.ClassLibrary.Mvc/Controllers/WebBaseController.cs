@@ -29,7 +29,7 @@ namespace Jackdaw.ClassLibrary.Mvc.Controllers
     /// | Contributor | Build | Revison Date | Description |~
     /// |-------------|-------|--------------|-------------|~
     /// | Christopher D. Cavell | 0.0.0.1 | 12/19/2021 | Initial Development |~ 
-    /// | Christopher D. Cavell | 0.0.0.2 | 03/04/2022 | Duende IdentityServer Integration |~ 
+    /// | Christopher D. Cavell | 0.0.0.2 | 05/08/2022 | Duende IdentityServer Integration |~ 
     /// </revision>
     [Controller]
     [Authorize]
@@ -96,17 +96,7 @@ namespace Jackdaw.ClassLibrary.Mvc.Controllers
 
             _cultureName = CultureHelper.GetImplementedCulture(requestCultureFeature.RequestCulture.Culture.Name);
             ViewBag.CultureName = _cultureName;
-
-            _invalidModelState = _cultureName switch
-            {
-                "nl" => "Ongeldige modelstatus",
-                "fr" => "État du modèle non valide",
-                "es" => "Estado de modelo no válido",
-                "ja" => "無効なモデル状態",
-                "ar" => "حالة النموذج غير صالحة",
-                "uk" => "Недійсний стан моделі",
-                _ => "Invalid Model State"
-            };
+            _invalidModelState = _sharedLocalizer["Invalid Model State"];
 
             string currentUrl = UriHelper.GetDisplayUrl(Request).Trim('/');
             currentUrl += (currentUrl.Contains('?')) ? "&" : "?";

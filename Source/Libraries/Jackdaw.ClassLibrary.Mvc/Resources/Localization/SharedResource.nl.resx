@@ -162,6 +162,9 @@
   <data name="From" xml:space="preserve">
     <value>Van</value>
   </data>
+  <data name="Invalid Model State" xml:space="preserve">
+    <value>Ongeldige modelstatus</value>
+  </data>
   <data name="License" xml:space="preserve">
     <value>Vergunning</value>
   </data>
