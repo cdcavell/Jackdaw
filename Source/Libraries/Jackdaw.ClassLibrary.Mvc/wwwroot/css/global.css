@@ -17,7 +17,7 @@
     font-weight: 600;
 }
 
-.body-content {
+.error-content {
     position: relative;
     top: 30px !important;
     word-wrap: anywhere;
@@ -60,7 +60,10 @@
     top: 5vh;
     padding-top: 3%;
     height: 100vh;
-    height: calc(var(--vh, 1vh) * 80);
+    min-height: calc(var(--vh, 1vh) * 80);
+    max-height: calc(var(--vh, 1vh) * 80);
     max-width: 100vw;
     max-width: calc(var(--vw, 1vw) * 70);
+    overflow-y: auto;
+    overflow-x: hidden;
 }
