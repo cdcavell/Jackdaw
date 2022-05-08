@@ -14,7 +14,7 @@
             | Contributor | Build | Revison Date | Description |~
             |-------------|-------|--------------|-------------|~
             | Christopher D. Cavell | 0.0.0.1 | 12/19/2021 | Initial Development |~ 
-            | Christopher D. Cavell | 0.0.0.2 | 03/04/2022 | Duende IdentityServer Integration |~ 
+            | Christopher D. Cavell | 0.0.0.2 | 05/08/2022 | Duende IdentityServer Integration |~ 
             </revision>
         </member>
         <member name="F:Jackdaw.ClassLibrary.Mvc.Controllers.WebBaseController`1._logger">

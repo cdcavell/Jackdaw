@@ -1,0 +1,63 @@
+﻿@using System.Security.Claims
+@model Jackdaw.IdentityServer.Models.Diagnostics.DiagnosticsViewModel
+
+<div class="container h-100">
+    <div class="row h-100 align-items-center justify-content-center">
+        <div class="col-12 col-lg-8 page-content text-center">
+            <h2 lang="@ViewBag.CultureName">@Localizer["Heading"]</h2>
+
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Claims</h2>
+                        </div>
+                        <div class="card-body">
+                            <dl>
+                                @foreach (var claim in (Model.AuthenticateResult.Principal?.Claims ?? new List<Claim>()))
+                                {
+                                    <dt>@claim.Type</dt>
+                                    <dd>@claim.Value</dd>
+                                }
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Properties</h2>
+                        </div>
+                        <div class="card-body">
+                            <dl>
+                                @foreach (var prop in (Model.AuthenticateResult.Properties?.Items ?? new Dictionary<string, string?>()))
+                                {
+                                    <dt>@prop.Key</dt>
+                                    <dd>@prop.Value</dd>
+                                }
+                                @if (Model.Clients.Any())
+                                {
+                                    <dt>Clients</dt>
+                                    <dd>
+                                    @{
+                                        var clients = Model.Clients.ToArray();
+                                        for(var i = 0; i < clients.Length; i++)
+                                        {
+                                            <text>@clients[i]</text>
+                                            if (i < clients.Length - 1)
+                                            {
+                                                <text>, </text>
+                                            }
+                                        }
+                                    }
+                                    </dd>
+                                }
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
